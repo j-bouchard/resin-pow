@@ -1,0 +1,14 @@
+name: Post-Merge Org Snapshot
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+jobs:
+  snapshot:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger org snapshot
+        run: |
+          echo "TODO: Trigger /snapshot-org via Claude Code routine API"
+          echo "This will be configured once cloud routines are set up."

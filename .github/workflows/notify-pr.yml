@@ -1,0 +1,15 @@
+name: Notify Slack on PR
+on:
+  pull_request:
+    types: [opened, ready_for_review]
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: slackapi/slack-github-action@v2
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          payload: |
+            {
+              "text": "PR ready for review: *${{ github.repository }}*\n*${{ github.event.pull_request.title }}*\n${{ github.event.pull_request.html_url }}"
+            }

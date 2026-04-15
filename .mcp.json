@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "salesforce": {
+      "command": "npx",
+      "args": [
+        "-y", "@salesforce/mcp",
+        "--orgs", "sandbox,production",
+        "--toolsets", "orgs,metadata,data,users",
+        "--tools", "run_apex_tests",
+        "--allow-non-ga-tools"
+      ]
+    }
+  }
+}
