@@ -55,6 +55,6 @@
     <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CLOSE_DATE</dateColumn>
-        <interval>THIS_YEAR</interval>
+        <interval>INTERVAL_CURY</interval>
     </timeFrameFilter>
 </Report>
