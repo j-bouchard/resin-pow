@@ -6,7 +6,6 @@
     <oauthConfig>
         <callbackUrl>https://localhost:1717/OauthRedirect</callbackUrl>
         <isAdminApproved>true</isAdminApproved>
-        <isClientCredentialsEnabled>true</isClientCredentialsEnabled>
         <scopes>Api</scopes>
         <scopes>RefreshToken</scopes>
     </oauthConfig>
