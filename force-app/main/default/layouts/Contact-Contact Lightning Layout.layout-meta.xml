@@ -179,6 +179,10 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Preferred_Communication_Method__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>npe01__PreferredPhone__c</field>
             </layoutItems>
             <layoutItems>
