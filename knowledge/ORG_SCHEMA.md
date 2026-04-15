@@ -6,7 +6,7 @@ Generated: 2026-04-15 | Org: protectourwinters.org
 | Metric | Count |
 |--------|-------|
 | Custom Objects | 12 (+1 Custom Metadata Type, +1 Platform Event) |
-| Custom Fields on Standard Objects | Account: 37, Contact: 169, Opportunity: 39 |
+| Custom Fields on Standard Objects | Account: 36, Contact: 169, Opportunity: 39 |
 | Installed Packages | 29 |
 | Record Types (custom objects) | 1 (Partnership_Deliverables__c) |
 
@@ -196,6 +196,119 @@ Key field categories:
 | POW_Data_Sharing_Opt_Out__c | POW Data Sharing Opt Out |
 | Stage__c | Stage |
 
+**Profile & Demographics (~15 fields)**
+| API Name | Label |
+|----------|-------|
+| Age_Group__c | Age Group |
+| Gender__c | Gender |
+| Race__c | Race |
+| Veteran__c | Veteran |
+| City__c | City |
+| Postal_Code__c | Postal Code |
+| Region__c | Region |
+| Regional_Affiliation__c | Regional Affiliation |
+| Regional_Area_of_Expertise__c | Regional Area of Expertise |
+| Registration_Street__c | Registration Street |
+| Registration_City__c | Registration City |
+| Registration_State__c | Registration State |
+| Registration_Country__c | Registration Country |
+| Shipping_address_is_different_from_billi__c | Shipping different from billing |
+
+**Donor/Membership Analytics (~15 fields)**
+| API Name | Label |
+|----------|-------|
+| Last_Membership_or_Donation_Date__c | Last Membership or Donation Date |
+| Soft_Credit_Three_Years_Ago__c | Soft Credit Three Years Ago |
+| Soft_Credits_Last_18_Months__c | Soft Credits Last 18 Months |
+| Total_Gifts_Memb_Soft_Credit_Last_Year__c | Total Gifts (Memb+Soft Credit) Last Year |
+| Total_Gifts_Memb_Soft_Credit_This_Year__c | Total Gifts (Memb+Soft Credit) This Year |
+| Total_Gifts_Memb_Soft_Last_18_Months__c | Total Gifts (Memb+Soft) Last 18 Months |
+| Total_Gifts_Memb_Soft_Three_Years_Ago__c | Total Gifts (Memb+Soft) Three Years Ago |
+| Total_Gifts_Memb_Soft_Two_Years_Ago__c | Total Gifts (Memb+Soft) Two Years Ago |
+| Total_Gifts_Memb_soft_Credit__c | Total Gifts (Memb+Soft Credit) |
+| Total_Gifts_X_Years_Ago__c | Total Gifts X Years Ago |
+| Total_Gifts_and_Member_Last_18_Months__c | Total Gifts and Member Last 18 Months |
+| Total_Gifts_and_Membership_Last_Year__c | Total Gifts and Membership Last Year |
+| Total_Gifts_and_Membership_This_Year__c | Total Gifts and Membership This Year |
+| Total_Membership_Three_Years_Ago__c | Total Membership Three Years Ago |
+| Total_Membership_Two_Years_Ago__c | Total Membership Two Years Ago |
+
+**Additional Voting/Election Fields (~10 fields)**
+| API Name | Label |
+|----------|-------|
+| X2014_Primary_Election_Party__c | 2014 Primary Election Party |
+| X2016_Presidential_Primary_Election_Part__c | 2016 Presidential Primary Party |
+| X2016_Primary_Election_Method__c | 2016 Primary Election Method |
+| X2016_Primary_Election_Party__c | 2016 Primary Election Party |
+| X2016_Primary_Election_Voting_Method__c | 2016 Primary Election Voting Method |
+| X2018_Primary_Election_Party__c | 2018 Primary Election Party |
+| X2018_Primary_Election_Voting_Method__c | 2018 Primary Election Voting Method |
+| X2020_Presidential_Election_Voting_Metho__c | 2020 Presidential Election Voting Method |
+| X2020_Primary_Election_Voting_Method__c | 2020 Primary Election Voting Method |
+| Ballot_Requested_Date__c | Ballot Requested Date |
+| Ballot_Returned_Date__c | Ballot Returned Date |
+| Ballot_Sent_Date__c | Ballot Sent Date |
+| P2A_Country__c | P2A Country |
+
+**Email/Communication Fields (~10 fields)**
+| API Name | Label |
+|----------|-------|
+| CiviClick_Email__c | CiviClick Email |
+| Business_Facebook_del__c | Business Facebook (deprecated) |
+| Business_Instagram__c | Business Instagram |
+| FB_business__c | FB Business |
+| New_Email__c | New Email |
+| New_Phone__c | New Phone |
+| MailChimp_Bounce_Data__c | MailChimp Bounce Data |
+| POW_Internal_T__c | POW Internal Team |
+| Team_POW_Email_Communications__c | Team POW Email Communications |
+
+**Membership/Entry Point Fields (~10 fields)**
+| API Name | Label |
+|----------|-------|
+| Initial_Entry_Point__c | Initial Entry Point |
+| most_recent_entry_point__c | Most Recent Entry Point |
+| member_entry_points__c | Member Entry Points |
+| Membership_Status_del__c | Membership Status (deprecated) |
+| Received_Membership_Kit_and_T_shirt__c | Received Membership Kit and T-shirt |
+| Send_Membership_Kit_and_T_shirt__c | Send Membership Kit and T-shirt |
+| Opt_Out_of_Swag__c | Opt Out of Swag |
+
+**Research & Alliance (~10 fields)**
+| API Name | Label |
+|----------|-------|
+| Research_Contribution_to__c | Research Contribution |
+| Number_of_Publications__c | Number of Publications |
+| Experiences_or_Accomplishments__c | Experiences or Accomplishments |
+| Additional_Comments__c | Additional Comments |
+| Additional_Research_Needed__c | Additional Research Needed |
+| Interest_in_joining__c | Interest in Joining |
+| alliance_training__c | Alliance Training |
+| W9_Received__c | W9 Received |
+
+**Other/Admin Fields**
+| API Name | Label |
+|----------|-------|
+| Engagement__c | Engagement (lookup) |
+| Campaign__c | Campaign |
+| Context__c | Context |
+| POW__c | POW (Mailchimp audience flag) |
+| POW_AF_Data_Sharing_Opt_Out__c | POW AF Data Sharing Opt Out |
+| Portfolio_Owner__c | Portfolio Owner |
+| Prospect_Status__c | Prospect Status |
+| Referred_by__c | Referred by |
+| Team__c | Team |
+| Current_Month__c | Current Month |
+| Data_Privacy_Request__c | Data Privacy Request |
+| Mobilization__c | Mobilization |
+| Training__c | Training |
+| Volunteered__c | Volunteered |
+| Other_causes__c | Other Causes |
+| Best__c | Best |
+| toggle__c | Toggle |
+| X10x__c | 10x |
+| X80_20__c | 80/20 (8000ers) |
+
 **Contact Layouts:** Alliance Member, Alliance Member - Captains, Contact Lightning, Legislators, POW Contact, Volunteers Contact
 
 ### Opportunity (39 custom fields)
@@ -306,6 +419,10 @@ Key field categories:
 ### Zip_Code__c (3 fields)
 **Purpose:** Zip code lookup table to auto-populate state on Account
 **Required fields:** Zip_Code__c
+
+### Shopify_Config__c (1 field)
+**Purpose:** Configuration for Shopify e-commerce integration
+**Fields:** Webhook_Secret__c (stores Shopify webhook secret for order processing)
 
 ### Testing__mdt
 **Type:** Custom Metadata Type (no fields deployed)
