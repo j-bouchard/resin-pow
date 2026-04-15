@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Involved_in_other_causes_or_orgs__c</fullName>
+    <inlineHelpText>Are you involved in other causes or organizations? If so, please list the top 1-3 that you dedicate the most time to right now.</inlineHelpText>
+    <label>Involved in other causes or orgs?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

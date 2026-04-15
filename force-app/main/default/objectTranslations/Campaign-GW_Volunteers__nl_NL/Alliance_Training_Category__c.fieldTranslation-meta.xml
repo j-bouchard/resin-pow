@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Alliance Training Category --></label>
+    <name>Alliance_Training_Category__c</name>
+    <picklistValues>
+        <masterLabel>Customized Coaching</masterLabel>
+        <translation><!-- Customized Coaching --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Semi-Structured Training</masterLabel>
+        <translation><!-- Semi-Structured Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summit</masterLabel>
+        <translation><!-- Summit --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

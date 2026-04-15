@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_does_your_research_contribute_to_cli__c</fullName>
+    <description>How does your research contribute to climate solutions?</description>
+    <inlineHelpText>How does your research contribute to climate solutions?</inlineHelpText>
+    <label>Research contributes to climate change</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

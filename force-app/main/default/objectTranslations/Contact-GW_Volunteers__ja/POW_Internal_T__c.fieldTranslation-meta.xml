@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If checked, contact will be added to POW internal communications --></help>
+    <label><!-- POW Internal Team --></label>
+    <name>POW_Internal_T__c</name>
+</CustomFieldTranslation>

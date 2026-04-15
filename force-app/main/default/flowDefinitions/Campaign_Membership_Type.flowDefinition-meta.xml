@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>4</activeVersionNumber>
+    <description>When a Campaign is created, this flow sets its type (e.g., Donation, Advocacy, Event) for membership tracking.</description>
+    <masterLabel>Membership Flow - Campaign Membership Type</masterLabel>
+</FlowDefinition>

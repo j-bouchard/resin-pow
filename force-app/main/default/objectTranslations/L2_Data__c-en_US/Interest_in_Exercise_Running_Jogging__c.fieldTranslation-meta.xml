@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Interest in Exercise Running Jogging in Household --></help>
+    <label><!-- Interest in Exercise Running Jogging --></label>
+    <name>Interest_in_Exercise_Running_Jogging__c</name>
+</CustomFieldTranslation>

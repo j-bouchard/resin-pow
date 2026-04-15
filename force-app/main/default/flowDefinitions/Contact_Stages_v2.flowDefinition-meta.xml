@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>31</activeVersionNumber>
+    <description>Every day, this flow checks if a Contact is current or lapsed based on recent giving, and updates their stage accordingly.</description>
+    <masterLabel>Contact Stages - v2</masterLabel>
+</FlowDefinition>

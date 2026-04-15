@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>2</activeVersionNumber>
+    <description>Fills in the Contact’s Mailing and Other State fields based on their postal codes, using a Zip Code lookup, whenever a Contact is created or updated.</description>
+    <masterLabel>Contact - Update State from Zip Code</masterLabel>
+</FlowDefinition>

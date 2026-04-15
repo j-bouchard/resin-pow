@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Partnership Deliverables</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Partnership Deliverables</value>
+    </caseValues>
+    <layouts>
+        <layout>Partnership Deliverables Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Partnership Deliverables --></label>
+        <name>Partnership_Deliverables</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- A value needs to be added to either POW Deliverable or Partner Action. Values cannot exist in both fields. --></errorMessage>
+        <name>Partner_Action_OR_POW_Deliverable</name>
+    </validationRules>
+</CustomObjectTranslation>

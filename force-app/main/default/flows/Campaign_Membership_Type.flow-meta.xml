@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <description>Donation
+Merch Purchase
+P2A Advocacy
+POW Opt-In
+Partner Opt-In
+Attend Event</description>
+        <name>Membership_Campaign_Type2</name>
+        <label>Membership Campaign Type</label>
+        <locationX>446</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Membership_Campaign_Type_Donation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.stayclassy__sc_event_id__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Membership_Campaign</targetReference>
+            </connector>
+            <label>Donation</label>
+        </rules>
+        <rules>
+            <name>P2A_Advocacy</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CiviClick_Campaign_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Records_3</targetReference>
+            </connector>
+            <label>Advocacy Advocacy</label>
+        </rules>
+        <rules>
+            <name>Membership_Campaign_Type_Event_Attendee</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.conference360__Event__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Records_4</targetReference>
+            </connector>
+            <label>Event Attendee</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Campaign Membership Type {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Membership Flow - Campaign Membership Type</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Membership_Campaign</name>
+        <label>Donation Membership Campaign Type</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Membership_Campaign_Type__c</field>
+            <value>
+                <stringValue>Donation</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Records_3</name>
+        <label>Advocacy Action Membership Campaign Type</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Membership_Campaign_Type__c</field>
+            <value>
+                <stringValue>Advocacy Action</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Records_4</name>
+        <label>Event Attendee Membership Campaign Type</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Membership_Campaign_Type__c</field>
+            <value>
+                <stringValue>Event Attendee</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Membership_Campaign_Type2</targetReference>
+        </connector>
+        <object>Campaign</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

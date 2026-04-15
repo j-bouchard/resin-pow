@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total gifts and membership in the last 18 months --></help>
+    <label><!-- Total Gifts and Member. Last 18 Months --></label>
+    <name>Total_Gifts_and_Member_Last_18_Months__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The link at which the user entered their address --></help>
+    <label><!-- Initial Referrer Link --></label>
+    <name>initial_referrer_link_br__c</name>
+</CustomFieldTranslation>

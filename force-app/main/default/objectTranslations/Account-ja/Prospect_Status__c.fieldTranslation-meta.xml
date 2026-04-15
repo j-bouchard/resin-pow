@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Prospect Status --></label>
+    <name>Prospect_Status__c</name>
+    <picklistValues>
+        <masterLabel>Cold</masterLabel>
+        <translation><!-- Cold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cultivating</masterLabel>
+        <translation><!-- Cultivating --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Funding</masterLabel>
+        <translation><!-- Funding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proposal</masterLabel>
+        <translation><!-- Proposal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualifying</masterLabel>
+        <translation><!-- Qualifying --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

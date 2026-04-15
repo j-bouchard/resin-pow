@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Based on their support in fundraising, bringing in new partners, funding asks. 3 being highly skilled and 1 being very little experience. --></help>
+    <label><!-- Development Score --></label>
+    <name>Development_Score__c</name>
+    <picklistValues>
+        <masterLabel>1</masterLabel>
+        <translation><!-- 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2</masterLabel>
+        <translation><!-- 2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3</masterLabel>
+        <translation><!-- 3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA</masterLabel>
+        <translation><!-- NA --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

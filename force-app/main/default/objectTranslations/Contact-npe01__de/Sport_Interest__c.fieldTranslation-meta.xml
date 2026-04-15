@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sport Interest --></label>
+    <name>Sport_Interest__c</name>
+    <picklistValues>
+        <masterLabel>Adaptive Skier</masterLabel>
+        <translation><!-- Adaptive Skier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>All Categories</masterLabel>
+        <translation><!-- All Categories --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alpine Climber</masterLabel>
+        <translation><!-- Alpine Climber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Backcountry Skier</masterLabel>
+        <translation><!-- Backcountry Skier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Backcountry Snowboarder</masterLabel>
+        <translation><!-- Backcountry Snowboarder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Biathelete</masterLabel>
+        <translation><!-- Biathelete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bike</masterLabel>
+        <translation><!-- Bike --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Boulderer</masterLabel>
+        <translation><!-- Boulderer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Climb</masterLabel>
+        <translation><!-- Climb --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Climber</masterLabel>
+        <translation><!-- Climber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cyclist</masterLabel>
+        <translation><!-- Cyclist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Downhill Skier</masterLabel>
+        <translation><!-- Downhill Skier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Explorer</masterLabel>
+        <translation><!-- Explorer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fish</masterLabel>
+        <translation><!-- Fish --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fly Fisher</masterLabel>
+        <translation><!-- Fly Fisher --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hand Cycler</masterLabel>
+        <translation><!-- Hand Cycler --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hiker</masterLabel>
+        <translation><!-- Hiker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hunter</masterLabel>
+        <translation><!-- Hunter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ice Skater</masterLabel>
+        <translation><!-- Ice Skater --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kayker</masterLabel>
+        <translation><!-- Kayker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mountain Biker</masterLabel>
+        <translation><!-- Mountain Biker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mountaineer</masterLabel>
+        <translation><!-- Mountaineer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nordic Skier</masterLabel>
+        <translation><!-- Nordic Skier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rafter</masterLabel>
+        <translation><!-- Rafter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Runner</masterLabel>
+        <translation><!-- Runner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Snowboarder</masterLabel>
+        <translation><!-- Snowboarder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Snowsport</masterLabel>
+        <translation><!-- Snowsport --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sport Climber</masterLabel>
+        <translation><!-- Sport Climber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stand Up Paddle Boarder</masterLabel>
+        <translation><!-- Stand Up Paddle Boarder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surfer</masterLabel>
+        <translation><!-- Surfer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trad Climber</masterLabel>
+        <translation><!-- Trad Climber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trail</masterLabel>
+        <translation><!-- Trail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Windsurfer</masterLabel>
+        <translation><!-- Windsurfer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

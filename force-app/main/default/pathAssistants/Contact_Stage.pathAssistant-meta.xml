@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Contact</entityName>
+    <fieldName>Stage__c</fieldName>
+    <masterLabel>Contact Stage</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;em style=&quot;font-size: 10pt; font-family: Arial;&quot;&gt;Last gift within previous 2 fiscal years&lt;/em&gt;&lt;/p&gt;</info>
+        <picklistValueName>Current</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;em style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;Flag for review&lt;/em&gt;&lt;/p&gt;</info>
+        <picklistValueName>Disqualified</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;em style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;Last gift outside of previous 2 fiscal years&lt;/em&gt;&lt;/p&gt;</info>
+        <picklistValueName>Lapsed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;em style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;Not an auto level; manual option&lt;/em&gt;&lt;/p&gt;</info>
+        <picklistValueName>Lost</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;em style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;Never donated&lt;/em&gt;&lt;/p&gt;</info>
+        <picklistValueName>Prospect</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Contact</recordTypeName>
+</PathAssistant>

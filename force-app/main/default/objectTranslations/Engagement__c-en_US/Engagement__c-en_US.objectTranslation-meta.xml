@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Engagement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Engagements</value>
+    </caseValues>
+    <layouts>
+        <layout>Engagement Layout</layout>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <section>Campaigns</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Events --></label>
+            <section>Events</section>
+        </sections>
+        <sections>
+            <label><!-- Onboarding --></label>
+            <section>Onboarding</section>
+        </sections>
+        <sections>
+            <label><!-- Posts --></label>
+            <section>Posts</section>
+        </sections>
+        <sections>
+            <label><!-- Total Stats --></label>
+            <section>Total Stats</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

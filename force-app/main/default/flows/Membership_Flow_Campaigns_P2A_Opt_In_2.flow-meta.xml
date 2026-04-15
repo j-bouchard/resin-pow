@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Last_Membership_Date_Campaign_Member_Created_Date</name>
+        <label>Last Membership Date &gt; Campaign Member Created Date</label>
+        <locationX>182</locationX>
+        <locationY>623</locationY>
+        <defaultConnector>
+            <targetReference>Membership_Years</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Last_Membership_Date_Campaign_Member_Created_Date2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedDate</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Contact.Last_Membership_Date_v2__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Update_contact_last_membership_date</targetReference>
+            </connector>
+            <label>Last Membership Date &gt; Campaign Member Created Date</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>New_Member</name>
+        <label>New Member</label>
+        <locationX>182</locationX>
+        <locationY>1031</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Membership_Join_Date_Initial_Entry_Point</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact.Membership_Join_Date_v2__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Join_Date_and_Initial_Entry_Point</targetReference>
+            </connector>
+            <label>Membership Join Date/Initial Entry Point</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>POW_AF_In_Campaign_Name</name>
+        <label>POW AF In Campaign Name</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Last_Membership_Date_Campaign_Member_Created_Date</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>POW_Action_FUund</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Campaign.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>POW AF</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Records_4</targetReference>
+            </connector>
+            <label>POW AF in Campaign Name</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>entry_points_p2a</name>
+        <dataType>String</dataType>
+        <expression>IF(
+CONTAINS(PRIORVALUE({!$Record.Contact.member_entry_points__c}), {!$Record.membership_campaign_member_type__c}), 
+{!$Record.Contact.member_entry_points__c},
+IF(
+ISBLANK({!$Record.Contact.member_entry_points__c}), 
+{!$Record.membership_campaign_member_type__c},
+{!$Record.Contact.member_entry_points__c} + &quot;, &quot; + {!$Record.membership_campaign_member_type__c}
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>membership_years_p2a</name>
+        <dataType>String</dataType>
+        <expression>IF(
+CONTAINS(PRIORVALUE({!$Record.Contact.Membership_Years__c}), TEXT(YEAR({!$Record.Contact.Last_Membership_Date_v2__c}))), 
+{!$Record.Contact.Membership_Years__c},
+IF(ISBLANK({!$Record.Contact.Membership_Years__c}),
+TEXT(YEAR({!$Record.Contact.Last_Membership_Date_v2__c})),
+PRIORVALUE({!$Record.Contact.Membership_Years__c}) + &quot;, &quot; + TEXT(YEAR({!$Record.Contact.Last_Membership_Date_v2__c}))
+)
+)</expression>
+    </formulas>
+    <interviewLabel>Membership Flow - Campaigns (P2A/Opt In) 2 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Membership Flow - Campaigns (P2A/Opt In) 2</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Copy_1_of_Update_contact_last_membership_date</name>
+        <label>Update contact last membership date</label>
+        <locationX>50</locationX>
+        <locationY>731</locationY>
+        <connector>
+            <targetReference>Membership_Years</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Last_Membership_Date_v2__c</field>
+            <value>
+                <elementReference>$Record.CreatedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>most_recent_entry_point__c</field>
+            <value>
+                <elementReference>$Record.membership_campaign_member_type__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Contact</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Membership_Years</name>
+        <label>Membership Years</label>
+        <locationX>182</locationX>
+        <locationY>923</locationY>
+        <connector>
+            <targetReference>New_Member</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Membership_Years__c</field>
+            <value>
+                <elementReference>membership_years_p2a</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>member_entry_points__c</field>
+            <value>
+                <elementReference>entry_points_p2a</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Contact</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Join_Date_and_Initial_Entry_Point</name>
+        <label>Update Join Date and Initial Entry Point</label>
+        <locationX>50</locationX>
+        <locationY>1139</locationY>
+        <inputAssignments>
+            <field>Initial_Entry_Point__c</field>
+            <value>
+                <elementReference>$Record.Contact.most_recent_entry_point__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Membership_Join_Date_v2__c</field>
+            <value>
+                <elementReference>$Record.Contact.Last_Membership_Date_v2__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Contact</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the POW Action Fund field on the contact record to Yes</description>
+        <name>Update_Records_4</name>
+        <label>Update POW Action Fund on Contact Record</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Last_Membership_Date_Campaign_Member_Created_Date</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>POW_Action_Fund__c</field>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Contact</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>POW_AF_In_Campaign_Name</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>membership_campaign_member_type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Advocacy Action</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>membership_campaign_member_type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>POW Opt-In</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>membership_campaign_member_type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Partner Opt-In</stringValue>
+            </value>
+        </filters>
+        <object>CampaignMember</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

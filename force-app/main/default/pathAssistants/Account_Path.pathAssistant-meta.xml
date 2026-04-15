@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Account</entityName>
+    <fieldName>Stage__c</fieldName>
+    <masterLabel>Account Path</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Montserrat, sans-serif; font-size: 10pt;&quot;&gt;Current and active donor (has given in the last year)&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Current</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Montserrat, sans-serif; font-size: 10pt;&quot;&gt;Someone who was a suspect/prospect we decided not to pursue&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Disqualified</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Montserrat, sans-serif; font-size: 10pt;&quot;&gt;Hasn’t given in 1-2 years&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Lapsed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Montserrat, sans-serif; font-size: 10pt;&quot;&gt;Hasn’t given in 2+ years, explicitly stated they will not give. &lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Lost</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Montserrat, sans-serif; font-size: 10pt;&quot;&gt;Identified, accessible within 1-2 moves, actively being qualified, cultivated. &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Montserrat, sans-serif; font-size: 10pt;&quot;&gt;Criteria: have taken action (volunteered, CTA)&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Prospect</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Organization</recordTypeName>
+</PathAssistant>

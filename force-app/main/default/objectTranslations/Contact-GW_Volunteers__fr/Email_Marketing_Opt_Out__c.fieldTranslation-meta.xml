@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Individual has opted out of email marketing messages, via MailChimp or other channel --></help>
+    <label><!-- Email Marketing Opt Out --></label>
+    <name>Email_Marketing_Opt_Out__c</name>
+</CustomFieldTranslation>

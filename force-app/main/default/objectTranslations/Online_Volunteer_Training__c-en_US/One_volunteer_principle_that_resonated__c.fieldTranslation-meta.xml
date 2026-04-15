@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What is one volunteer principle that resonated with you? --></help>
+    <label><!-- One volunteer principle that resonated? --></label>
+    <name>One_volunteer_principle_that_resonated__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Contact1.GW_Volunteers__Volunteer_Skills__c --></help>
+    <label><!-- Volunteer Skills --></label>
+    <name>Volunteer_Skills__c</name>
+    <picklistValues>
+        <masterLabel>Event Planning/Management</masterLabel>
+        <translation><!-- Event Planning/Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation><!-- Fundraising --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Photography</masterLabel>
+        <translation><!-- Photography --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Media</masterLabel>
+        <translation><!-- Social Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Writing</masterLabel>
+        <translation><!-- Writing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

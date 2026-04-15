@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Data Privacy Request --></label>
+    <name>Data_Privacy_Request__c</name>
+    <picklistValues>
+        <masterLabel>Right of Portability</masterLabel>
+        <translation><!-- Right of Portability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Right to Access</masterLabel>
+        <translation><!-- Right to Access --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Right to Correct</masterLabel>
+        <translation><!-- Right to Correct --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Right to Delete</masterLabel>
+        <translation><!-- Right to Delete --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

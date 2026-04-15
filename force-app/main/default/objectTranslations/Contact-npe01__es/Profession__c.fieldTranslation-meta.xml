@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What is/are the Alliance Member&apos;s profession(s)? --></help>
+    <label><!-- Profession --></label>
+    <name>Profession__c</name>
+    <picklistValues>
+        <masterLabel>Arctic Explorer</masterLabel>
+        <translation><!-- Arctic Explorer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Artist</masterLabel>
+        <translation><!-- Artist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Biathalon</masterLabel>
+        <translation><!-- Biathalon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Biking</masterLabel>
+        <translation><!-- Biking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cinematographer</masterLabel>
+        <translation><!-- Cinematographer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Climbing</masterLabel>
+        <translation><!-- Climbing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cross-Country Skiing</masterLabel>
+        <translation><!-- Cross-Country Skiing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Designer</masterLabel>
+        <translation><!-- Designer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Director</masterLabel>
+        <translation><!-- Director --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Filmmaker</masterLabel>
+        <translation><!-- Filmmaker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fishing</masterLabel>
+        <translation><!-- Fishing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hunting</masterLabel>
+        <translation><!-- Hunting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Luge</masterLabel>
+        <translation><!-- Luge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mixed Media</masterLabel>
+        <translation><!-- Mixed Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mountaineer</masterLabel>
+        <translation><!-- Mountaineer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Musician</masterLabel>
+        <translation><!-- Musician --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Photographer</masterLabel>
+        <translation><!-- Photographer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Print</masterLabel>
+        <translation><!-- Print --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Running</masterLabel>
+        <translation><!-- Running --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scientist</masterLabel>
+        <translation><!-- Scientist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skiing</masterLabel>
+        <translation><!-- Skiing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Snowboarding</masterLabel>
+        <translation><!-- Snowboarding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Snowmobiling</masterLabel>
+        <translation><!-- Snowmobiling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Videographer</masterLabel>
+        <translation><!-- Videographer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Writer</masterLabel>
+        <translation><!-- Writer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

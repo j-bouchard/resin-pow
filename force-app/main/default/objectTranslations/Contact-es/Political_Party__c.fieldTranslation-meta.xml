@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Political Party --></label>
+    <name>Political_Party__c</name>
+    <picklistValues>
+        <masterLabel>Citizens Party</masterLabel>
+        <translation><!-- Citizens Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conservative Party</masterLabel>
+        <translation><!-- Conservative Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Constitution Party</masterLabel>
+        <translation><!-- Constitution Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Decline To State</masterLabel>
+        <translation><!-- Decline To State --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Democratic Party</masterLabel>
+        <translation><!-- Democratic Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Green Party</masterLabel>
+        <translation><!-- Green Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Independent Party</masterLabel>
+        <translation><!-- Independent Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Libertarian Party</masterLabel>
+        <translation><!-- Libertarian Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Party Affiliation</masterLabel>
+        <translation><!-- No Party Affiliation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reform Party</masterLabel>
+        <translation><!-- Reform Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Republican Party</masterLabel>
+        <translation><!-- Republican Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Socialist Party</masterLabel>
+        <translation><!-- Socialist Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Socialist Workers Party</masterLabel>
+        <translation><!-- Socialist Workers Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Working Families Party</masterLabel>
+        <translation><!-- Working Families Party --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

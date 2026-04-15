@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Alliance Tier --></label>
+    <name>Alliance_Tier__c</name>
+    <picklistValues>
+        <masterLabel>Category Leader (&gt;100k followers)</masterLabel>
+        <translation><!-- Category Leader (&gt;100k followers) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Local Legend (&lt;10k followers)</masterLabel>
+        <translation><!-- Local Legend (&lt;10k followers) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mentor</masterLabel>
+        <translation><!-- Mentor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nationally Recognized  (10k-100k followers)</masterLabel>
+        <translation><!-- Nationally Recognized  (10k-100k followers) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

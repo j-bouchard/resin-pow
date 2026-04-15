@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Your company’s senior leadership makes an internal statement on your company’s stance on climate, POW, and what each employee can do to fight climate change. --></help>
+    <label><!-- CEO Presentation --></label>
+    <name>CEO_Presentation__c</name>
+</CustomFieldTranslation>

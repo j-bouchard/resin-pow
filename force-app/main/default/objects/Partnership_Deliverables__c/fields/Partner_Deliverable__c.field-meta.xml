@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Deliverable__c</fullName>
+    <inlineHelpText>Which deliverable did the partner complete?</inlineHelpText>
+    <label>Partner Action Taken</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Attended Lobby Day</fullName>
+                <default>false</default>
+                <label>Attended Lobby Day</label>
+            </value>
+            <value>
+                <fullName>Attended POW Summit</fullName>
+                <default>false</default>
+                <label>Attended POW Summit</label>
+            </value>
+            <value>
+                <fullName>Launched collab product</fullName>
+                <default>false</default>
+                <label>Launched collab product</label>
+            </value>
+            <value>
+                <fullName>Donated in-kind product</fullName>
+                <default>false</default>
+                <label>Donated in-kind product</label>
+            </value>
+            <value>
+                <fullName>Hosted custom education/training</fullName>
+                <default>false</default>
+                <label>Hosted custom education/training</label>
+            </value>
+            <value>
+                <fullName>Hosted activation/program/event</fullName>
+                <default>false</default>
+                <label>Hosted activation/program/event</label>
+            </value>
+            <value>
+                <fullName>Reshared POW social content</fullName>
+                <default>false</default>
+                <label>Reshared POW social content</label>
+            </value>
+            <value>
+                <fullName>Posted original social content featuring POW</fullName>
+                <default>false</default>
+                <label>Posted original social content featuring POW</label>
+            </value>
+            <value>
+                <fullName>Signed sign-on letter</fullName>
+                <default>false</default>
+                <label>Signed sign-on letter</label>
+            </value>
+            <value>
+                <fullName>Wrote op-ed</fullName>
+                <default>false</default>
+                <label>Wrote op-ed</label>
+            </value>
+            <value>
+                <fullName>Featured POW in internal or external email comms</fullName>
+                <default>false</default>
+                <label>Featured POW in internal or external email comms</label>
+            </value>
+            <value>
+                <fullName>Attended In The Weeds training session</fullName>
+                <default>false</default>
+                <label>Attended In The Weeds training session</label>
+            </value>
+            <value>
+                <fullName>Promoted Team POW</fullName>
+                <default>false</default>
+                <label>Promoted Team POW</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Carbon Offsets</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Carbon Offsets</label>
+            </value>
+            <value>
+                <fullName>Divest from Fossil Fuels</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Divest from Fossil Fuels</label>
+            </value>
+            <value>
+                <fullName>OIA Sustainability Working Group</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OIA Sustainability Working Group</label>
+            </value>
+            <value>
+                <fullName>POW CTA Distribution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>POW CTA Distribution</label>
+            </value>
+            <value>
+                <fullName>POW_Carbon</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>POW Carbon Neutral</label>
+            </value>
+            <value>
+                <fullName>POW Presentation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>POW Presentation</label>
+            </value>
+            <value>
+                <fullName>Social Post</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Social Post</label>
+            </value>
+            <value>
+                <fullName>Website_Pres</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Website Presence</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

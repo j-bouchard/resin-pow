@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Assess the investment portfolio of your financial institution and reinvest with POW partners who have eliminated fossil fuels from their portfolio. --></help>
+    <label><!-- Divest From Fossil Fuels --></label>
+    <name>Divest_From_Fossil_Fuels__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development_Score__c</fullName>
+    <description>Rate the Alliance member on their skills during development related activities. ie. fundraising events, sweepstakes, etc.</description>
+    <inlineHelpText>Based on their support in fundraising, bringing in new partners, funding asks. 3 being highly skilled and 1 being very little experience.</inlineHelpText>
+    <label>Development Score</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NA</fullName>
+                <default>true</default>
+                <label>NA</label>
+            </value>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>1</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>2</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>3</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

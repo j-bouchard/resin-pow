@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_CTA_s_Taken__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If the Call to Action is related to a Blackthorn Event, please leave blank. A running nightly automation will update this #.
+
+If adding a Call to Action to an Event Campaign, please estimate # of CTA&apos;s taken at the event.</inlineHelpText>
+    <label># of CTA&apos;s Taken</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

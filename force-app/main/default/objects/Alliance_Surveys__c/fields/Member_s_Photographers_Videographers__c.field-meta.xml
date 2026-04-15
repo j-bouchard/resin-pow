@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Member_s_Photographers_Videographers__c</fullName>
+    <description>Provide the names of 1 or more of your favorite photographers and videographers you work with</description>
+    <label>Member&apos;s Photographers/Videographers</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

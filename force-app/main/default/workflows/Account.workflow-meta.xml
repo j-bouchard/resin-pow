@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Account_Foundation_Stage_Lapsed</fullName>
+        <description>Changes the stage on the account to lapsed</description>
+        <field>Stage__c</field>
+        <literalValue>Lapsed</literalValue>
+        <name>Account Stage - Lapsed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Foundation_Stage_Lost</fullName>
+        <description>Account foundation stage will be changed to lost</description>
+        <field>Stage__c</field>
+        <literalValue>Lost</literalValue>
+        <name>Account Foundation Stage - Lost</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>account_foundation_stage_current</fullName>
+        <description>Updated Stage field on organization accounts to Current</description>
+        <field>Stage__c</field>
+        <literalValue>Current</literalValue>
+        <name>Account Foundation Stage - Current</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Caucus_Former_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Caucus_Former</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Caucus Former RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Caucus_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Caucus</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Caucus RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Committee_Former_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Committee_Former</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Committee Former RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Committee_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Account_Committee</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Committee RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Former_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Former</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Former RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Member_Former_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Legislative_Member_Former</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Member Former RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Member_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Account_Member</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Member RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Office_Former_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Account_Officer_Former</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Office Former RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Office_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Account_Officer</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Office RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Account Foundation Stage - Lapsed</fullName>
+        <active>true</active>
+        <description>When a organization account hasn&apos;t donated in greater than 365 days but less than 730 days, this workflow changes the account stage to Lapsed</description>
+        <formula>AND((npo02__LastCloseDate__c &gt; (TODAY() - 365)) &amp;&amp;(npo02__LastCloseDate__c) &lt; (TODAY() - 730)) &amp;&amp; (RecordType.Id)  = &quot;0124P0000014gPPQAY&quot;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Account_Foundation_Stage_Lapsed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Account.npo02__LastCloseDate__c</offsetFromField>
+            <timeLength>366</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Account Foundation Stage - Lost</fullName>
+        <active>true</active>
+        <description>A foundation account&apos;s stage will change to lost after not donating for over 730 days</description>
+        <formula>AND (npo02__LastCloseDate__c &gt; (TODAY() - 730)) &amp;&amp; ( RecordType.Id  = &quot;0124P0000014gPPQAY&quot;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Account_Foundation_Stage_Lost</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Account.npo02__LastCloseDate__c</offsetFromField>
+            <timeLength>731</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Account Partner Stage - Current</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.npo02__OppAmountLastNDays__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <description>When an organization has donated within the last 365 days, they will be marked as current</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account Partner Stage - Lapsed</fullName>
+        <active>true</active>
+        <description>When a partner account hasn&apos;t donated in greater than 365 days but less than 730 days, this workflow changes the account stage to Lapsed</description>
+        <formula>AND((npo02__LastCloseDate__c &gt; (TODAY() - 365)) &amp;&amp;(npo02__LastCloseDate__c) &lt; (TODAY() - 730)) &amp;&amp; (RecordType.Id)  = &quot;0124P000000hQ6SQAU&quot;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account Partner Stage - Lost</fullName>
+        <active>true</active>
+        <description>A partner account&apos;s stage will change to lost after not donating for over 730 days</description>
+        <formula>AND (npo02__LastCloseDate__c &gt; (TODAY() - 730)) &amp;&amp; ( RecordType.Id  = &quot;0124P000000hQ6SQAU&quot;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Account_Foundation_Stage_Lost</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Account.npo02__LastCloseDate__c</offsetFromField>
+            <timeLength>731</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Account Partner%2FOrg Stage - Current</fullName>
+        <actions>
+            <name>account_foundation_stage_current</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Organization</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.npo02__OppAmountLastNDays__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Partner</value>
+        </criteriaItems>
+        <description>When an organization has donated within the last 365 days, they will be marked as current</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Partner Contract Expiring</fullName>
+        <actions>
+            <name>Partnership_Expiring</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Partner_Level__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Renewal_Date__c</field>
+            <operation>equals</operation>
+            <value>NEXT 31 DAYS</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Caucus Former RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Caucus_Former_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>AccountCaucusFormer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Caucus RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Caucus_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>AccountCaucus</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Committee Former RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Committee_Former_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>AccountCommitteeFormer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Committee RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Committee_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>AccountCommittee</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Former RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Former_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>AccountFormer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Member Former RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Member_Former_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>AccountMemberFormer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Member RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Member_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>AccountMember</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Office Former RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Office_Former_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>AccountOfficerFormer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Office RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Office_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>AccountOfficer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Partnership_Expiring</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>POW Partnership is expiring in 30 days, please follow up with Partner for renewal.</description>
+        <dueDateOffset>-30</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Account.Renewal_Date__c</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Partnership Expiring</subject>
+    </tasks>
+</Workflow>

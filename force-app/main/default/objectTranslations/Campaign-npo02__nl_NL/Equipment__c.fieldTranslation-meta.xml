@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Equipment --></label>
+    <name>Equipment__c</name>
+    <picklistValues>
+        <masterLabel>6ft table</masterLabel>
+        <translation><!-- 6ft table --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banners</masterLabel>
+        <translation><!-- Banners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Buttons</masterLabel>
+        <translation><!-- Buttons --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dip Jars?</masterLabel>
+        <translation><!-- Dip Jars? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Giant Jenga</masterLabel>
+        <translation><!-- Giant Jenga --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Give-always - Consumables</masterLabel>
+        <translation><!-- Give-always - Consumables --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Materials</masterLabel>
+        <translation><!-- Marketing Materials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Possibly new options</masterLabel>
+        <translation><!-- Possibly new options --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Postcards</masterLabel>
+        <translation><!-- Postcards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Posters</masterLabel>
+        <translation><!-- Posters --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Raffle - only with speaker</masterLabel>
+        <translation><!-- Raffle - only with speaker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special Activation</masterLabel>
+        <translation><!-- Special Activation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stickers</masterLabel>
+        <translation><!-- Stickers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Table Clothes</masterLabel>
+        <translation><!-- Table Clothes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tent Topper/10x10</masterLabel>
+        <translation><!-- Tent Topper/10x10 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VR Headsets</masterLabel>
+        <translation><!-- VR Headsets --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

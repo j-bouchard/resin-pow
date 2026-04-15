@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendance_Rate_Mobilize__c</fullName>
+    <formula>IF((Invited_Mobilize_Campaign__c + Attended_Mobilize_Campaign__c) &gt; 0, Attended_Mobilize_Campaign__c / (Attended_Mobilize_Campaign__c +  Invited_Mobilize_Campaign__c ) , NULL)</formula>
+    <label>Attendance Rate - Mobilize</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

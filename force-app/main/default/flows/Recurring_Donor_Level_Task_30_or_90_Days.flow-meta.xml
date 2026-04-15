@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <decisions>
+        <name>Copy_1_of_Owner_Active</name>
+        <label>Owner Active</label>
+        <locationX>710</locationX>
+        <locationY>468</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Donor_Level_Tasks_30_Days</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Donor_Level_Tasks_30_Days</targetReference>
+            </connector>
+            <label>Active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Number of days since last donor level task</description>
+        <name>Number_of_Days</name>
+        <label>Number of Days</label>
+        <locationX>644</locationX>
+        <locationY>252</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>X90_days</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.npe01__One2OneContact__r.Donor_Level2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>a0lRn000002HeJFIA0</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.npe01__One2OneContact__r.Donor_Level2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>a0lRn000002HeKrIAK</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>completed_date</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>today_minus_90</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_User</targetReference>
+            </connector>
+            <label>90 days</label>
+        </rules>
+        <rules>
+            <name>X30_days</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.npe01__One2OneContact__r.Donor_Level2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>a0lRn000002HeMTIA0</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>completed_date</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>today_minus_30</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Get_User</targetReference>
+            </connector>
+            <label>30 days</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Owner_Active</name>
+        <label>Owner Active</label>
+        <locationX>182</locationX>
+        <locationY>468</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Donor_Level_Tasks_90_Days</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Donor_Level_Tasks_90_Days</targetReference>
+            </connector>
+            <label>Active</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <description>Returns mm/dd/yyyy from mm/dd/yyyy, HH:MM:SS.MS</description>
+        <name>completed_date</name>
+        <dataType>Date</dataType>
+        <expression>DATEVALUE({!$Record.CompletedDateTime})</expression>
+    </formulas>
+    <formulas>
+        <description>Today&apos;s date minus 30 days</description>
+        <name>today_minus_30</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() - 30</expression>
+    </formulas>
+    <formulas>
+        <description>Today&apos;s date minus 90 days</description>
+        <name>today_minus_90</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() - 90</expression>
+    </formulas>
+    <formulas>
+        <description>Today&apos;s date plus 7 days</description>
+        <name>today_plus_7</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() + 7</expression>
+    </formulas>
+    <interviewLabel>Recurring Donor Level Task - 30 or 90 Days {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Recurring Donor Level Task - 30 or 90 Days</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Assigns contact owner a donor level task</description>
+        <name>Copy_1_of_Donor_Level_Tasks_30_Days</name>
+        <label>Donor Level Tasks - 30 Days (Assigned to Joe)</label>
+        <locationX>842</locationX>
+        <locationY>576</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>today_plus_7</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Donor outreach</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>fallback_owner</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Donor Level Task</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Assigns contact owner a donor level task</description>
+        <name>Copy_1_of_Donor_Level_Tasks_90_Days</name>
+        <label>Donor Level Tasks - 90 Days (Assigned to Joe)</label>
+        <locationX>314</locationX>
+        <locationY>576</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>today_plus_7</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Donor outreach</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>fallback_owner</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Donor Level Task</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Assigns contact owner a donor level task</description>
+        <name>Donor_Level_Tasks_30_Days</name>
+        <label>Donor Level Tasks - 30 Days</label>
+        <locationX>578</locationX>
+        <locationY>576</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>today_plus_7</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Donor outreach</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.npe01__One2OneContact__r.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Donor Level Task</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Assigns contact owner a donor level task</description>
+        <name>Donor_Level_Tasks_90_Days</name>
+        <label>Donor Level Tasks - 90 Days</label>
+        <locationX>50</locationX>
+        <locationY>576</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>today_plus_7</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Donor outreach</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.npe01__One2OneContact__r.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Donor Level Task</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Copy_1_of_Get_User</name>
+        <label>Get User</label>
+        <locationX>710</locationX>
+        <locationY>360</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Copy_1_of_Owner_Active</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account.npe01__One2OneContact__r.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_User</name>
+        <label>Get User</label>
+        <locationX>182</locationX>
+        <locationY>360</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Owner_Active</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account.npe01__One2OneContact__r.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>518</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Number_of_Days</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Subject</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Donor Level Task</stringValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <schedule>
+            <dayOfMonthToRun>0</dayOfMonthToRun>
+            <frequency>Daily</frequency>
+            <frequencyNumber>0</frequencyNumber>
+            <startDate>2024-07-21</startDate>
+            <startTime>00:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>fallback_owner</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>0054P00000AqAHkQAN</stringValue>
+        </value>
+    </variables>
+</Flow>

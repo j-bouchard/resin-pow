@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alert_Lindsey_on_Campaign_Member_Add</fullName>
+        <description>Alert Lindsey on Campaign Member Add</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>lindsey@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Campaign_Member_Add</template>
+    </alerts>
+    <rules>
+        <fullName>Add Campaign Member to Event Parent Campaign</fullName>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Campaign.Campaign_ID__c</field>
+            <operation>equals</operation>
+            <value>7014P000001BbPeQAK</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Campaign_ID__c</field>
+            <operation>equals</operation>
+            <value>7014P000001BbOWQA0</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Added to Pledge to Vote Campaign</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Campaign.Name</field>
+            <operation>contains</operation>
+            <value>Pledge to Vote</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Campaign_ID__c</field>
+            <operation>notEqual</operation>
+            <value>7014P000001vXqcQAE</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

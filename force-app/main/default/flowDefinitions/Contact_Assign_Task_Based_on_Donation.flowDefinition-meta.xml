@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creates a follow-up Task for Contact owners based on recent donation activity and donor tier. Added additional criteria on the get records element for first time donors to look for first time donor tasks before creating a new one.</description>
+    <masterLabel>Contact - Assign Task Based on Donation</masterLabel>
+</FlowDefinition>

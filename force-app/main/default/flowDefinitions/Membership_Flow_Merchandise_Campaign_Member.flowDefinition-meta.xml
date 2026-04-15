@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Sets the Primary Campaign Source on Membership Opportunities to the designated merchandise campaign when the record is created or updated.</description>
+    <masterLabel>Membership Flow - Merchandise Campaign Member</masterLabel>
+</FlowDefinition>

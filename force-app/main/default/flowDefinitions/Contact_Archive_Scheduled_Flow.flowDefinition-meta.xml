@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>4</activeVersionNumber>
+    <description>This flow will set &apos;Archived&apos; = TRUE on the contact record according to POW&apos;s Data Retention Policy.
+(Every week, this flow marks Contacts as archived if they haven’t donated, have opted out of email, and meet other criteria, and are older than 3 years.)</description>
+    <masterLabel>Data Retention Policy - Contact Archive Scheduled Flow</masterLabel>
+</FlowDefinition>

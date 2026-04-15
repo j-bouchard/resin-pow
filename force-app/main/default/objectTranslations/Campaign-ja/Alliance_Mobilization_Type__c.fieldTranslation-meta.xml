@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Alliance Mobilization Type --></label>
+    <name>Alliance_Mobilization_Type__c</name>
+    <picklistValues>
+        <masterLabel>Advocacy/Policy</masterLabel>
+        <translation><!-- Advocacy/Policy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Educating the Alliance</masterLabel>
+        <translation><!-- Educating the Alliance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Educating the Outdoor State</masterLabel>
+        <translation><!-- Educating the Outdoor State --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraiser</masterLabel>
+        <translation><!-- Fundraiser --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grants</masterLabel>
+        <translation><!-- Grants --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interview</masterLabel>
+        <translation><!-- Interview --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opportunistic</masterLabel>
+        <translation><!-- Opportunistic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public Speaking/Events</masterLabel>
+        <translation><!-- Public Speaking/Events --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Media</masterLabel>
+        <translation><!-- Social Media --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

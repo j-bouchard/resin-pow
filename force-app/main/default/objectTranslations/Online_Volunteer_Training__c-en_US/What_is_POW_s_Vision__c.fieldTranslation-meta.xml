@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What is POW’s Vision? --></help>
+    <label><!-- What is POW’s Vision? --></label>
+    <name>What_is_POW_s_Vision__c</name>
+</CustomFieldTranslation>

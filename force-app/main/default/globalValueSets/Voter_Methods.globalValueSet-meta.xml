@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Absentee</fullName>
+        <default>false</default>
+        <label>Absentee</label>
+    </customValue>
+    <customValue>
+        <fullName>EarlyVote</fullName>
+        <default>false</default>
+        <label>earlyVote</label>
+    </customValue>
+    <customValue>
+        <fullName>Mail</fullName>
+        <default>false</default>
+        <label>Mail</label>
+    </customValue>
+    <customValue>
+        <fullName>Polling</fullName>
+        <default>false</default>
+        <label>Polling</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown</fullName>
+        <default>false</default>
+        <label>Unknown</label>
+    </customValue>
+    <customValue>
+        <fullName>No Record</fullName>
+        <default>false</default>
+        <label>No Record</label>
+    </customValue>
+    <masterLabel>Voter Methods</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

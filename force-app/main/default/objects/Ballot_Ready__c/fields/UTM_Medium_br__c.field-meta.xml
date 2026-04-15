@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UTM_Medium_br__c</fullName>
+    <description>The advertising or marketing medium, for example</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The advertising or marketing medium, for example</inlineHelpText>
+    <label>UTM Medium</label>
+    <length>100</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Age Group --></label>
+    <name>Age_Group__c</name>
+    <picklistValues>
+        <masterLabel>18-24</masterLabel>
+        <translation><!-- 18-24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>25-34</masterLabel>
+        <translation><!-- 25-34 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>35-44</masterLabel>
+        <translation><!-- 35-44 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>45-54</masterLabel>
+        <translation><!-- 45-54 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>55-64</masterLabel>
+        <translation><!-- 55-64 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>&lt;18</masterLabel>
+        <translation><!-- &lt;18 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>&gt;65</masterLabel>
+        <translation><!-- &gt;65 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

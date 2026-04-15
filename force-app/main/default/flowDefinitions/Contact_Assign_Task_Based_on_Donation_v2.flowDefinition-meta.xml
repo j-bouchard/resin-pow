@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>When a Contact’s number of closed donations changes, creates a follow-up Task based on their recent donation amount, with different actions for different donation tiers.</description>
+    <masterLabel>Contact - Assign Task Based on Donation v2</masterLabel>
+</FlowDefinition>

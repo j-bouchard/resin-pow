@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- 2020 Presidential Primary Voting Method --></label>
+    <name>X2020_Presidential_Election_Voting_Metho__c</name>
+</CustomFieldTranslation>

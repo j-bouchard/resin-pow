@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Climate related post describing your company’s stance on climate. --></help>
+    <label><!-- Social Post --></label>
+    <name>Social_Post__c</name>
+</CustomFieldTranslation>

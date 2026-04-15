@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sport Category --></label>
+    <name>Sport_Category__c</name>
+    <picklistValues>
+        <masterLabel>All Categories</masterLabel>
+        <translation><!-- All Categories --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Climb</masterLabel>
+        <translation><!-- Climb --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Snow</masterLabel>
+        <translation><!-- Snow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trail</masterLabel>
+        <translation><!-- Trail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Water</masterLabel>
+        <translation><!-- Water --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

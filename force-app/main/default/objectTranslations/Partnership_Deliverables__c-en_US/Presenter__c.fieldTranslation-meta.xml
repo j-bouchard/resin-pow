@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If POW Presentation, who was the presenter? --></help>
+    <label><!-- Presenter --></label>
+    <name>Presenter__c</name>
+    <relationshipLabel><!-- Partnership Deliverables --></relationshipLabel>
+</CustomFieldTranslation>

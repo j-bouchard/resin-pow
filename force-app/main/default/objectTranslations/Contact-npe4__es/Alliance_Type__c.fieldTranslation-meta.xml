@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If Alliance Member, choose Alliance type(s). --></help>
+    <label><!-- Alliance Type --></label>
+    <name>Alliance_Type__c</name>
+    <picklistValues>
+        <masterLabel>Athlete</masterLabel>
+        <translation><!-- Athlete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CEO</masterLabel>
+        <translation><!-- CEO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Creative</masterLabel>
+        <translation><!-- Creative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Science</masterLabel>
+        <translation><!-- Science --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

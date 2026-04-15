@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Campaign Type --></label>
+    <name>Campaign_Type__c</name>
+    <picklistValues>
+        <masterLabel>Civic Engagement/Election</masterLabel>
+        <translation><!-- Civic Engagement/Election --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Federal Policy</masterLabel>
+        <translation><!-- Federal Policy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>High Impact/Decision Maker</masterLabel>
+        <translation><!-- High Impact/Decision Maker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opportunistic Action</masterLabel>
+        <translation><!-- Opportunistic Action --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Policy</masterLabel>
+        <translation><!-- State Policy --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

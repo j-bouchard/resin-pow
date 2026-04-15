@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Why are you interested in being involved with Protect Our Winters? --></help>
+    <label><!-- Why are you interested in POW? --></label>
+    <name>Why_are_you_interested_in_POW__c</name>
+</CustomFieldTranslation>

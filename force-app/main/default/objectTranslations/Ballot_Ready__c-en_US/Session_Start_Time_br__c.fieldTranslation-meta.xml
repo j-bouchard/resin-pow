@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The date at which each user starts their session without time. Ballot Ready field = ds --></help>
+    <label><!-- Session Start Time --></label>
+    <name>Session_Start_Time_br__c</name>
+</CustomFieldTranslation>

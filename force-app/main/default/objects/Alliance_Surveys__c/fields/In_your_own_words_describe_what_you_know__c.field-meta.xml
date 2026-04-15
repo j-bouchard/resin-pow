@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_your_own_words_describe_what_you_know__c</fullName>
+    <inlineHelpText>In your own words describe what you know about Protect Our Winters and what we do?</inlineHelpText>
+    <label>Describe what you know about POW</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

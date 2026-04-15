@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Method by which the record cast a vote in the 2014 General election --></help>
+    <label><!-- 2014 General Election Voting Method --></label>
+    <name>X2014_General_Election_Method__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Deletes Mailchimp Event records daily if they are older than 30 days and not related to Alliance Members.</description>
+    <masterLabel>Delete Mailchimp Events from 30 Days Ago</masterLabel>
+</FlowDefinition>

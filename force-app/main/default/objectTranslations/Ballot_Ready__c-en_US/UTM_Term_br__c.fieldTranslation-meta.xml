@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Identify paid search keywords. If you&apos;re manually tagging paid keyword campaigns, you should also use utm_term to specify the keyword. --></help>
+    <label><!-- UTM Term --></label>
+    <name>UTM_Term_br__c</name>
+</CustomFieldTranslation>

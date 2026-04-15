@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>When a soft credit Opportunity is created or updated, this flow updates the member’s join date, entry point, and membership years on the related contact.</description>
+    <masterLabel>Membership Flow - Opportunities (Soft Credits)</masterLabel>
+</FlowDefinition>

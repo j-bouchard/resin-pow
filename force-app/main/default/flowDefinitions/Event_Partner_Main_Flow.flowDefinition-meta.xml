@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>When an Event Partner is linked to an Event, this flow copies the Event’s Campaign to the Event Partner’s Campaign field.</description>
+    <masterLabel>Event Partner Main Flow</masterLabel>
+</FlowDefinition>

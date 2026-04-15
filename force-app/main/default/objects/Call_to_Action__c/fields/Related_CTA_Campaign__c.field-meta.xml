@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_CTA_Campaign__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>The related Call to Action campaign that was asked of event attendees.</inlineHelpText>
+    <label>Related CTA Campaign</label>
+    <referenceTo>Campaign</referenceTo>
+    <relationshipLabel>Calls to Action</relationshipLabel>
+    <relationshipName>Calls_to_Action</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

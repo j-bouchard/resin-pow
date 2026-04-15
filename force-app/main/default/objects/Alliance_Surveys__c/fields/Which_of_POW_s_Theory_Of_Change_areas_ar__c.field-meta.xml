@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Which_of_POW_s_Theory_Of_Change_areas_ar__c</fullName>
+    <inlineHelpText>Which of POW&apos;s Theory Of Change areas are you most interested in:</inlineHelpText>
+    <label>Theory Of Change areas of most interest</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Finance and Technological Solutions</fullName>
+                <default>false</default>
+                <label>Finance and Technological Solutions</label>
+            </value>
+            <value>
+                <fullName>Political Will</fullName>
+                <default>false</default>
+                <label>Political Will</label>
+            </value>
+            <value>
+                <fullName>Cultural Change</fullName>
+                <default>false</default>
+                <label>Cultural Change</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

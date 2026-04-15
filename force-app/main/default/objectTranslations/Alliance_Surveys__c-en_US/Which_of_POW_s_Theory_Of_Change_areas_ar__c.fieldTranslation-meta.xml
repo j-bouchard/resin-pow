@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Which of POW&apos;s Theory Of Change areas are you most interested in: --></help>
+    <label><!-- Theory Of Change areas of most interest --></label>
+    <name>Which_of_POW_s_Theory_Of_Change_areas_ar__c</name>
+    <picklistValues>
+        <masterLabel>Cultural Change</masterLabel>
+        <translation><!-- Cultural Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance and Technological Solutions</masterLabel>
+        <translation><!-- Finance and Technological Solutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Political Will</masterLabel>
+        <translation><!-- Political Will --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

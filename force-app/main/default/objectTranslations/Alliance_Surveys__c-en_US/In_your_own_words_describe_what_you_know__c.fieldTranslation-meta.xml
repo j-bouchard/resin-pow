@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- In your own words describe what you know about Protect Our Winters and what we do? --></help>
+    <label><!-- Describe what you know about POW --></label>
+    <name>In_your_own_words_describe_what_you_know__c</name>
+</CustomFieldTranslation>

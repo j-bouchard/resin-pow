@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interest_in_Exercise_Running_Jogging__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Interest in Exercise Running Jogging in Household</description>
+    <inlineHelpText>Interest in Exercise Running Jogging in Household</inlineHelpText>
+    <label>Interest in Exercise Running Jogging</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

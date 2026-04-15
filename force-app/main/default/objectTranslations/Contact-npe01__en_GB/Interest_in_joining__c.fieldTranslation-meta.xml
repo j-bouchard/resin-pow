@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Question form &quot;Protect Our Winters Alliance Registration&quot;: In two sentences, why are you interested in joining the POW Alliance? --></help>
+    <label><!-- Interest in joining the POW Alliance --></label>
+    <name>Interest_in_joining__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Contacts and Accounts that have the potential to give or get $1,000 annually --></help>
+    <label><!-- 10x --></label>
+    <name>X10x__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Account_Record_Type_Organization2</name>
+        <label>Account Record Type = Organization</label>
+        <locationX>380</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Account_Record_Type_Organization</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0124P0000014gPPQAY</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Foundation</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Family Foundation</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Community Foundation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Last_Soft_Credit_Date_Last_Membership_Date</targetReference>
+            </connector>
+            <label>Account Record Type = Organization</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Last_Soft_Credit_Date_Last_Membership_Date</name>
+        <label>Last Soft Credit Date &gt; Last Membership Date</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Update_Membership_Years_and_Entry_Points</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Last_Soft_Credit_Date_Last_Membership_Date_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CloseDate</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.npsp__Primary_Contact__r.Last_Membership_Date_v2__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Primary_Contact</targetReference>
+            </connector>
+            <label>Last Soft Credit Date &gt; Last Membership Date</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>New_Member</name>
+        <label>New Member</label>
+        <locationX>182</locationX>
+        <locationY>839</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>New_Member2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.npsp__Primary_Contact__r.Membership_Join_Date_v2__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Initial_Entry_Point_and_Membership_Join_Date</targetReference>
+            </connector>
+            <label>New Member</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>member_entry_points_soft_credits</name>
+        <dataType>String</dataType>
+        <expression>IF(
+CONTAINS(PRIORVALUE({!$Record.npsp__Primary_Contact__r.member_entry_points__c}), &apos;Donation&apos;), 
+{!$Record.npsp__Primary_Contact__r.member_entry_points__c},
+IF(
+ISBLANK({!$Record.npsp__Primary_Contact__r.member_entry_points__c}), 
+&apos;Donation&apos;,
+{!$Record.npsp__Primary_Contact__r.member_entry_points__c} + &quot;, Donation&quot;
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>membership_years_soft_credit</name>
+        <dataType>String</dataType>
+        <expression>IF(
+CONTAINS(PRIORVALUE({!$Record.npsp__Primary_Contact__r.Membership_Years__c}), TEXT(YEAR({!$Record.CloseDate}))), 
+{!$Record.npsp__Primary_Contact__r.Membership_Years__c},
+IF(ISBLANK({!$Record.npsp__Primary_Contact__r.Membership_Years__c}),
+TEXT(YEAR({!$Record.CloseDate})),
+PRIORVALUE({!$Record.npsp__Primary_Contact__r.Membership_Years__c}) + &quot;, &quot; + TEXT(YEAR({!$Record.CloseDate}))
+)
+)</expression>
+    </formulas>
+    <interviewLabel>Membership Flow - Opportunities (Soft Credits) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Membership Flow - Opportunities (Soft Credits)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Initial_Entry_Point_and_Membership_Join_Date</name>
+        <label>Update Initial Entry Point and Membership Join Date</label>
+        <locationX>50</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>Initial_Entry_Point__c</field>
+            <value>
+                <elementReference>$Record.npsp__Primary_Contact__r.most_recent_entry_point__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Membership_Join_Date_v2__c</field>
+            <value>
+                <elementReference>$Record.npsp__Primary_Contact__r.Last_Membership_Date_v2__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.npsp__Primary_Contact__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Membership_Years_and_Entry_Points</name>
+        <label>Update Membership Years and Entry Points</label>
+        <locationX>182</locationX>
+        <locationY>731</locationY>
+        <connector>
+            <targetReference>New_Member</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Membership_Years__c</field>
+            <value>
+                <elementReference>membership_years_soft_credit</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>member_entry_points__c</field>
+            <value>
+                <elementReference>member_entry_points_soft_credits</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.npsp__Primary_Contact__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Primary_Contact</name>
+        <label>Update Primary Contact Last Membership Date and Last Entry Point</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Update_Membership_Years_and_Entry_Points</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Last_Membership_Date_v2__c</field>
+            <value>
+                <elementReference>$Record.CloseDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>most_recent_entry_point__c</field>
+            <value>
+                <stringValue>Donation</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.npsp__Primary_Contact__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Account_Record_Type_Organization2</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>stayclassy__sc_order_id__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0124P0000014gPQQAY</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

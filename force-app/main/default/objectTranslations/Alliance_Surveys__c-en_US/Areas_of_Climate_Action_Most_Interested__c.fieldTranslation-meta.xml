@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Areas of Climate Action Most Interested --></label>
+    <name>Areas_of_Climate_Action_Most_Interested__c</name>
+    <picklistValues>
+        <masterLabel>Climate Science</masterLabel>
+        <translation><!-- Climate Science --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DEI and Climate Justice</masterLabel>
+        <translation><!-- DEI and Climate Justice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Solutions</masterLabel>
+        <translation><!-- Financial Solutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>How to Address Climate Hypocrisy</masterLabel>
+        <translation><!-- How to Address Climate Hypocrisy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lobbying-Meeting with Elected Officials</masterLabel>
+        <translation><!-- Lobbying-Meeting with Elected Officials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Policy</masterLabel>
+        <translation><!-- Policy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public Speaking/Media Training</masterLabel>
+        <translation><!-- Public Speaking/Media Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Running for Office</masterLabel>
+        <translation><!-- Running for Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Media</masterLabel>
+        <translation><!-- Social Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Storytelling</masterLabel>
+        <translation><!-- Storytelling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tech Solutions (i.e. Renewables)</masterLabel>
+        <translation><!-- Tech Solutions (i.e. Renewables) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

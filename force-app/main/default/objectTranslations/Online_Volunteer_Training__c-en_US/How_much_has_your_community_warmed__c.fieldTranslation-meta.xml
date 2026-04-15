@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Based on the map, Professor Elizabeth Burkowski showed, how much has your community warmed? (Hint: this is around minute 3) --></help>
+    <label><!-- How much has your community warmed? --></label>
+    <name>How_much_has_your_community_warmed__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Question form &quot;Protect Our Winters Alliance Registration&quot;: Describe any experiences or accomplishments, outside of science, that bolster your ability to serve as a POW Science Alliance member. --></help>
+    <label><!-- Experiences Outside of Science --></label>
+    <name>Experiences_or_Accomplishments__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Training --></label>
+    <name>Training__c</name>
+    <picklistValues>
+        <masterLabel>Advocacy</masterLabel>
+        <translation><!-- Advocacy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Climate/Policy</masterLabel>
+        <translation><!-- Climate/Policy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Community Organizing</masterLabel>
+        <translation><!-- Community Organizing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation><!-- Fundraising --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Media</masterLabel>
+        <translation><!-- Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Storytelling</masterLabel>
+        <translation><!-- Storytelling --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

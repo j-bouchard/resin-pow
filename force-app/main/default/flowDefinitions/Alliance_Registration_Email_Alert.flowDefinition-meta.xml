@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>2</activeVersionNumber>
+    <description>When someone submits an Alliance Registration, this flow emails the right team member based on the registrant’s group.</description>
+    <masterLabel>Alliance Registration Email Alert</masterLabel>
+</FlowDefinition>

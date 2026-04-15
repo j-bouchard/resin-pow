@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Contact --></label>
+    <lookupFilter>
+        <errorMessage><!-- contact record type must be alliance to create an engagement record --></errorMessage>
+    </lookupFilter>
+    <name>Contact__c</name>
+    <relationshipLabel><!-- Engagements --></relationshipLabel>
+</CustomFieldTranslation>

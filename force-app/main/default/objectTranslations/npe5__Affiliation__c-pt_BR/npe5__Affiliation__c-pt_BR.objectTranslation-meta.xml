@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Afiliação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Afiliações</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Board Member</layout>
+        <sections>
+            <label><!-- Affiliation Information --></label>
+            <section>Affiliation Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome da afiliação</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Board Member --></label>
+        <name>Board_Member</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Default --></label>
+        <name>Default</name>
+    </recordTypes>
+</CustomObjectTranslation>

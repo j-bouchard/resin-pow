@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>3</activeVersionNumber>
+    <description>Before saving an Account, fills in the Billing and Shipping State fields based on postal codes using a Zip Code lookup, and sets a flag to bypass duplicate rules if needed.</description>
+    <masterLabel>Account - Update Billing State</masterLabel>
+</FlowDefinition>

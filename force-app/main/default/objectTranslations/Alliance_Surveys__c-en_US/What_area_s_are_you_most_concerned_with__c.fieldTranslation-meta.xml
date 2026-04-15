@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What area(s) are you most concerned with when speaking up about climate change? --></help>
+    <label><!-- What area(s) are you most concerned with --></label>
+    <name>What_area_s_are_you_most_concerned_with__c</name>
+    <picklistValues>
+        <masterLabel>A lack of understanding of the science (what is climate change, the negative impacts, etc...)</masterLabel>
+        <translation><!-- A lack of understanding of the science (what is climate change, the negative impacts, etc...) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Being perceived as a hypocrite</masterLabel>
+        <translation><!-- Being perceived as a hypocrite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Calling elected officials</masterLabel>
+        <translation><!-- Calling elected officials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Challenges building presentations</masterLabel>
+        <translation><!-- Challenges building presentations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Don&apos;t know where to start or how to help</masterLabel>
+        <translation><!-- Don&apos;t know where to start or how to help --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engaging with media</masterLabel>
+        <translation><!-- Engaging with media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fear of questions from followers and fans you may not know the answers to</masterLabel>
+        <translation><!-- Fear of questions from followers and fans you may not know the answers to --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hesitation speaking up on your social media</masterLabel>
+        <translation><!-- Hesitation speaking up on your social media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Just feeling overwhelmed</masterLabel>
+        <translation><!-- Just feeling overwhelmed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of understanding of the solutions (solar, wind, etc...)</masterLabel>
+        <translation><!-- Lack of understanding of the solutions (solar, wind, etc...) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of understanding on how policy influences solutions</masterLabel>
+        <translation><!-- Lack of understanding on how policy influences solutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of understanding on how to lobby</masterLabel>
+        <translation><!-- Lack of understanding on how to lobby --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of understanding on policy process (i.e. how bills become laws, which lawmakers have decision making power, etc...)</masterLabel>
+        <translation><!-- Lack of understanding on policy process (i.e. how bills become laws, which lawmakers have decision making power, etc...) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Losing followers</masterLabel>
+        <translation><!-- Losing followers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negatively impacting your personal brand</masterLabel>
+        <translation><!-- Negatively impacting your personal brand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public speaking skills</masterLabel>
+        <translation><!-- Public speaking skills --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Writing skills</masterLabel>
+        <translation><!-- Writing skills --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

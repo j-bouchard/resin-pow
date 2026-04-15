@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Changing_climate_affect_your_sport__c</fullName>
+    <inlineHelpText>How might a changing climate affect your sport?</inlineHelpText>
+    <label>Changing climate affect your sport?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

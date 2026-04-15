@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Residence Address State --></label>
+    <name>Residence_Address_State_l2__c</name>
+</CustomFieldTranslation>

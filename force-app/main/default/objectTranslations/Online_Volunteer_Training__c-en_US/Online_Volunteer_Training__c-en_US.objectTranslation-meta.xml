@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Online Volunteer Training</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Online Volunteer Trainings</value>
+    </caseValues>
+    <layouts>
+        <layout>Online Volunteer Training Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Module 1 Questions --></label>
+            <section>Module 1 Questions</section>
+        </sections>
+        <sections>
+            <label><!-- Module 2 Questions --></label>
+            <section>Module 2 Questions</section>
+        </sections>
+        <sections>
+            <label><!-- Module 3 Questions --></label>
+            <section>Module 3 Questions</section>
+        </sections>
+        <sections>
+            <label><!-- Module 4 Questions --></label>
+            <section>Module 4 Questions</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Engagement Area --></label>
+    <name>Engagement_Area__c</name>
+    <picklistValues>
+        <masterLabel>Advocacy/Policy</masterLabel>
+        <translation><!-- Advocacy/Policy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Climate Science</masterLabel>
+        <translation><!-- Climate Science --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation><!-- Fundraising --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Media</masterLabel>
+        <translation><!-- Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POW 101</masterLabel>
+        <translation><!-- POW 101 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Story Development/Storytelling</masterLabel>
+        <translation><!-- Story Development/Storytelling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Writing</masterLabel>
+        <translation><!-- Writing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

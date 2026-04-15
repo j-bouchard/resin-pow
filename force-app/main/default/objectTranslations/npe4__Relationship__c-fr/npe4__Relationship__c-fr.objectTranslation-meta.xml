@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Relation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Relations</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Alliance Page Layout</layout>
+        <sections>
+            <label>Informations de relation</label>
+            <section>Relationship Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Numéro de relation</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

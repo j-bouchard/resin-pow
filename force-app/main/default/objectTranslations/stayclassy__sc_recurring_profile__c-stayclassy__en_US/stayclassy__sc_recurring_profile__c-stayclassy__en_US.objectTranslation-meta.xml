@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>GoFundMe Pro Recurring Donors</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>GoFundMe Pro Recurring Donors</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <workflowTasks>
+        <name>Canceled_Recurring_Donation</name>
+        <subject><!-- Canceled/Failed Recurring Donation --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

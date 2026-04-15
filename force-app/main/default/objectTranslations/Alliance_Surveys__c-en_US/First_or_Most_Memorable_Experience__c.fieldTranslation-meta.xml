@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Write about your first (or most memorable) experience with seeing or learning about climate change (400 characters or less) --></help>
+    <label><!-- First or Most Memorable Experience --></label>
+    <name>First_or_Most_Memorable_Experience__c</name>
+</CustomFieldTranslation>

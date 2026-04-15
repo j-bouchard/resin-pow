@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Require brand ambassadors to mitigate and support the offsetting of their carbon footprint through POW’s Carbon Neutral program. Offer the program to your end consumer. --></help>
+    <label><!-- POW Carbon Neutral --></label>
+    <name>POW_Carbon_Neutral__c</name>
+</CustomFieldTranslation>

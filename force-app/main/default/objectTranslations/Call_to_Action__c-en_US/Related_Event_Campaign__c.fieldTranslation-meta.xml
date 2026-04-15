@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Related Event Campaign --></label>
+    <name>Related_Event_Campaign__c</name>
+    <relationshipLabel><!-- Calls to Action (Related Event Campaign) --></relationshipLabel>
+</CustomFieldTranslation>

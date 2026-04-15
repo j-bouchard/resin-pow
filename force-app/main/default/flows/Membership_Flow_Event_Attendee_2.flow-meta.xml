@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Last_Membership_Date_Event_Start_Date</name>
+        <label>Last Membership Date &gt; Attendee Last Modified Date</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Update_Membership_Years</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Last_Membership_Date_Event_Start_Date2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LastModifiedDate</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.conference360__Contact__r.Last_Membership_Date_v2__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Last_Membership_Date_and_Last_Entry_Point</targetReference>
+            </connector>
+            <label>Last Membership Date &gt; Attendee Last Modified Date</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>New_Member</name>
+        <label>New Member</label>
+        <locationX>182</locationX>
+        <locationY>731</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Membership_Join_Date_Initial_Entry_Point2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.conference360__Contact__r.Membership_Join_Date_v2__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Membership_Join_Date_and_Initial_Entry_Point2</targetReference>
+            </connector>
+            <label>Membership Join Date/Initial Entry Point</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>entry_points_event_attendee</name>
+        <dataType>String</dataType>
+        <expression>IF(
+CONTAINS(PRIORVALUE({!$Record.conference360__Contact__r.member_entry_points__c}), &apos;Event Attendee&apos;), 
+{!$Record.conference360__Contact__r.member_entry_points__c},
+IF(
+ISBLANK({!$Record.conference360__Contact__r.member_entry_points__c}), 
+&apos;Event Attendee&apos;,
+{!$Record.conference360__Contact__r.member_entry_points__c} + &quot;, Event Attendee&quot;
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>membership_years_event_attendee</name>
+        <dataType>String</dataType>
+        <expression>IF(
+CONTAINS(PRIORVALUE({!$Record.conference360__Contact__r.Membership_Years__c}), TEXT(YEAR({!$Record.conference360__Contact__r.Last_Membership_Date_v2__c}))), 
+{!$Record.conference360__Contact__r.Membership_Years__c},
+IF(ISBLANK({!$Record.conference360__Contact__r.Membership_Years__c}),
+TEXT(YEAR({!$Record.conference360__Contact__r.Last_Membership_Date_v2__c})),
+PRIORVALUE({!$Record.conference360__Contact__r.Membership_Years__c}) + &quot;, &quot; + TEXT(YEAR({!$Record.conference360__Contact__r.Last_Membership_Date_v2__c}))
+)
+)</expression>
+    </formulas>
+    <interviewLabel>Membership Flow - Event Attendee {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Membership Flow - Event Attendee 2</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Last_Membership_Date_and_Last_Entry_Point</name>
+        <label>Last Membership Date and Last Entry Point</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Update_Membership_Years</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Last_Membership_Date_v2__c</field>
+            <value>
+                <elementReference>$Record.LastModifiedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>most_recent_entry_point__c</field>
+            <value>
+                <stringValue>Event Attendee</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.conference360__Contact__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Membership_Join_Date_and_Initial_Entry_Point2</name>
+        <label>Update Membership Join Date and Initial Entry Point</label>
+        <locationX>50</locationX>
+        <locationY>839</locationY>
+        <inputAssignments>
+            <field>Initial_Entry_Point__c</field>
+            <value>
+                <elementReference>$Record.conference360__Contact__r.most_recent_entry_point__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Membership_Join_Date_v2__c</field>
+            <value>
+                <elementReference>$Record.conference360__Contact__r.Last_Membership_Date_v2__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.conference360__Contact__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Membership_Years</name>
+        <label>Update Membership Years and Entry Points</label>
+        <locationX>182</locationX>
+        <locationY>623</locationY>
+        <connector>
+            <targetReference>New_Member</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Membership_Years__c</field>
+            <value>
+                <elementReference>membership_years_event_attendee</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>member_entry_points__c</field>
+            <value>
+                <elementReference>entry_points_event_attendee</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.conference360__Contact__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Last_Membership_Date_Event_Start_Date</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>conference360__Attendance_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Attended</stringValue>
+            </value>
+        </filters>
+        <object>conference360__Attendee__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

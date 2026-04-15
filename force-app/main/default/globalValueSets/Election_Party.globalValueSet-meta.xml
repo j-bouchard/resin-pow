@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>DEM</fullName>
+        <default>false</default>
+        <label>DEM</label>
+    </customValue>
+    <customValue>
+        <fullName>REP</fullName>
+        <default>false</default>
+        <label>REP</label>
+    </customValue>
+    <masterLabel>Election Party</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

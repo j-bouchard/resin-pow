@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Payment Vehicle --></label>
+    <name>Payment__c</name>
+    <picklistValues>
+        <masterLabel>Amazon Smile Program</masterLabel>
+        <translation><!-- Amazon Smile Program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>America&apos;s Charities</masterLabel>
+        <translation><!-- America&apos;s Charities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benevity</masterLabel>
+        <translation><!-- Benevity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bright Funds</masterLabel>
+        <translation><!-- Bright Funds --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cauze.com</masterLabel>
+        <translation><!-- Cauze.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cherry on Top Foundation/CharityonTop.org</masterLabel>
+        <translation><!-- Cherry on Top Foundation/CharityonTop.org --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Community Shares of Colorado</masterLabel>
+        <translation><!-- Community Shares of Colorado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate Match</masterLabel>
+        <translation><!-- Corporate Match --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cybergrants</masterLabel>
+        <translation><!-- Cybergrants --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DonationXchange</masterLabel>
+        <translation><!-- DonationXchange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facebook</masterLabel>
+        <translation><!-- Facebook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Family Fund/Foundation</masterLabel>
+        <translation><!-- Family Fund/Foundation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fidelity</masterLabel>
+        <translation><!-- Fidelity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Frontstream</masterLabel>
+        <translation><!-- Frontstream --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Givinga Foundation</masterLabel>
+        <translation><!-- Givinga Foundation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Goodnation</masterLabel>
+        <translation><!-- Goodnation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gougeon Employee Foundation</masterLabel>
+        <translation><!-- Gougeon Employee Foundation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IBM Employee Services</masterLabel>
+        <translation><!-- IBM Employee Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JP Morgan Charitable Giving Fund</masterLabel>
+        <translation><!-- JP Morgan Charitable Giving Fund --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network for Good</masterLabel>
+        <translation><!-- Network for Good --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Offline Donations</masterLabel>
+        <translation><!-- Offline Donations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online Fundraisers</masterLabel>
+        <translation><!-- Online Fundraisers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Patagonia</masterLabel>
+        <translation><!-- Patagonia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PayPal</masterLabel>
+        <translation><!-- PayPal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pledgling Foundation</masterLabel>
+        <translation><!-- Pledgling Foundation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schwab Charitable</masterLabel>
+        <translation><!-- Schwab Charitable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell Employee Giving Program</masterLabel>
+        <translation><!-- Shell Employee Giving Program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Square</masterLabel>
+        <translation><!-- Square --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T. Rowe Price Charitable</masterLabel>
+        <translation><!-- T. Rowe Price Charitable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TisBest</masterLabel>
+        <translation><!-- TisBest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>United Way King County</masterLabel>
+        <translation><!-- United Way King County --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vanguard Charitable</masterLabel>
+        <translation><!-- Vanguard Charitable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wires &amp; Stock Gifts</masterLabel>
+        <translation><!-- Wires &amp; Stock Gifts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wonderful Giving</masterLabel>
+        <translation><!-- Wonderful Giving --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workplace Giving Program</masterLabel>
+        <translation><!-- Workplace Giving Program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Your Cause</masterLabel>
+        <translation><!-- Your Cause --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Mobilization --></label>
+    <name>Mobilization__c</name>
+    <picklistValues>
+        <masterLabel>Grants</masterLabel>
+        <translation><!-- Grants --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interview</masterLabel>
+        <translation><!-- Interview --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lobbying</masterLabel>
+        <translation><!-- Lobbying --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public Speaking/Events</masterLabel>
+        <translation><!-- Public Speaking/Events --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Media</masterLabel>
+        <translation><!-- Social Media --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

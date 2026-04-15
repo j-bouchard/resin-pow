@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_area_s_are_you_most_concerned_with__c</fullName>
+    <inlineHelpText>What area(s) are you most concerned with when speaking up about climate change?</inlineHelpText>
+    <label>What area(s) are you most concerned with</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Being perceived as a hypocrite</fullName>
+                <default>false</default>
+                <label>Being perceived as a hypocrite</label>
+            </value>
+            <value>
+                <fullName>A lack of understanding of the science (what is climate change, the negative impacts, etc...)</fullName>
+                <default>false</default>
+                <label>A lack of understanding of the science (what is climate change, the negative impacts, etc...)</label>
+            </value>
+            <value>
+                <fullName>Lack of understanding of the solutions (solar, wind, etc...)</fullName>
+                <default>false</default>
+                <label>Lack of understanding of the solutions (solar, wind, etc...)</label>
+            </value>
+            <value>
+                <fullName>Lack of understanding on how policy influences solutions</fullName>
+                <default>false</default>
+                <label>Lack of understanding on how policy influences solutions</label>
+            </value>
+            <value>
+                <fullName>Lack of understanding on policy process (i.e. how bills become laws, which lawmakers have decision making power, etc...)</fullName>
+                <default>false</default>
+                <label>Lack of understanding on policy process (i.e. how bills become laws, which lawmakers have decision making power, etc...)</label>
+            </value>
+            <value>
+                <fullName>Lack of understanding on how to lobby</fullName>
+                <default>false</default>
+                <label>Lack of understanding on how to lobby</label>
+            </value>
+            <value>
+                <fullName>Public speaking skills</fullName>
+                <default>false</default>
+                <label>Public speaking skills</label>
+            </value>
+            <value>
+                <fullName>Challenges building presentations</fullName>
+                <default>false</default>
+                <label>Challenges building presentations</label>
+            </value>
+            <value>
+                <fullName>Fear of questions from followers and fans you may not know the answers to</fullName>
+                <default>false</default>
+                <label>Fear of questions from followers and fans you may not know the answers to</label>
+            </value>
+            <value>
+                <fullName>Negatively impacting your personal brand</fullName>
+                <default>false</default>
+                <label>Negatively impacting your personal brand</label>
+            </value>
+            <value>
+                <fullName>Losing followers</fullName>
+                <default>false</default>
+                <label>Losing followers</label>
+            </value>
+            <value>
+                <fullName>Hesitation speaking up on your social media</fullName>
+                <default>false</default>
+                <label>Hesitation speaking up on your social media</label>
+            </value>
+            <value>
+                <fullName>Writing skills</fullName>
+                <default>false</default>
+                <label>Writing skills</label>
+            </value>
+            <value>
+                <fullName>Calling elected officials</fullName>
+                <default>false</default>
+                <label>Calling elected officials</label>
+            </value>
+            <value>
+                <fullName>Engaging with media</fullName>
+                <default>false</default>
+                <label>Engaging with media</label>
+            </value>
+            <value>
+                <fullName>Just feeling overwhelmed</fullName>
+                <default>false</default>
+                <label>Just feeling overwhelmed</label>
+            </value>
+            <value>
+                <fullName>Don&apos;t know where to start or how to help</fullName>
+                <default>false</default>
+                <label>Don&apos;t know where to start or how to help</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

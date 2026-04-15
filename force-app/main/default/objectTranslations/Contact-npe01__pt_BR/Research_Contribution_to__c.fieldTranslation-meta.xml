@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Question form &quot;Protect Our Winters Alliance Registration&quot;: How does your research contribute to climate solutions? --></help>
+    <label><!-- Research Contrib. to Climate Solutions --></label>
+    <name>Research_Contribution_to__c</name>
+</CustomFieldTranslation>

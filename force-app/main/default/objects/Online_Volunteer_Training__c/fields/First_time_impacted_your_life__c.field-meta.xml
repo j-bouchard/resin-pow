@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_time_impacted_your_life__c</fullName>
+    <inlineHelpText>When was the first time you realized climate change impacted your life?</inlineHelpText>
+    <label>First time impacted your life?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

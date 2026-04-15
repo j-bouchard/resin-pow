@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Active - registered
+Inactive - registered, state has marked them as &quot;inactive&quot; based on their frequency of voting
+Dropped - Were registered voters, but are no longer being listed on the state voter file.
+Multiple Appearances - addresses in 2+ states -->
+    </help>
+    <label><!-- Voter Status --></label>
+    <name>Voter_Status__c</name>
+    <picklistValues>
+        <masterLabel>active</masterLabel>
+        <translation><!-- active --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>dropped</masterLabel>
+        <translation><!-- dropped --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>inactive</masterLabel>
+        <translation><!-- inactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>multiple appearances</masterLabel>
+        <translation><!-- multiple appearances --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>unmatched member</masterLabel>
+        <translation><!-- unmatched member --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>unregistered</masterLabel>
+        <translation><!-- unregistered --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

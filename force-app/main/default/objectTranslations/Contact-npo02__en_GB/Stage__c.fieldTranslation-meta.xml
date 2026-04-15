@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defining  where donors, foundations and corporate partners reside  in the giving lifecycle will identify opportunities for research, cultivation and stewardship. --></help>
+    <label><!-- Stage --></label>
+    <name>Stage__c</name>
+</CustomFieldTranslation>

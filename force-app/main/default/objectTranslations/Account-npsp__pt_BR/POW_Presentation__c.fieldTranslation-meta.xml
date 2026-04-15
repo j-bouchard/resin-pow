@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A POW team member will present—in-person or via webinar depending on partnership level—to your key stakeholders on climate science, communication strategies, and how POW is leading on solutions that you can support. --></help>
+    <label><!-- POW Presentation --></label>
+    <name>POW_Presentation__c</name>
+</CustomFieldTranslation>

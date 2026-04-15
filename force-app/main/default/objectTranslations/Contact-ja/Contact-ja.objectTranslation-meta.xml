@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Alliance Member</layout>
+        <sections>
+            <label><!-- Alliance Information --></label>
+            <section>Alliance Information</section>
+        </sections>
+        <sections>
+            <label><!-- Blank Header --></label>
+            <section>Blank Header</section>
+        </sections>
+        <sections>
+            <label>個人の詳細</label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label>支援情報</label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label>支援総額</label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label><!-- Email Marketing Segmentation --></label>
+            <section>Email Marketing Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Science Information --></label>
+            <section>Science Information</section>
+        </sections>
+        <sections>
+            <label><!-- Soft Credit Total --></label>
+            <section>Soft Credit Total</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Alliance Member - Captains</layout>
+        <sections>
+            <label><!-- Alliance Information --></label>
+            <section>Alliance Information</section>
+        </sections>
+        <sections>
+            <label><!-- Blank Header --></label>
+            <section>Blank Header</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Email Marketing Segmentation --></label>
+            <section>Email Marketing Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Science Information --></label>
+            <section>Science Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact Lightning Layout</layout>
+        <sections>
+            <label>個人の詳細</label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label>支援情報</label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label>支援総額</label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label>世帯の住所</label>
+            <section>Household Address</section>
+        </sections>
+        <sections>
+            <label>世帯の支援情報</label>
+            <section>Household Donation Info</section>
+        </sections>
+        <sections>
+            <label>その他</label>
+            <section>Misc</section>
+        </sections>
+        <sections>
+            <label><!-- POW Membership --></label>
+            <section>POW Membership</section>
+        </sections>
+        <sections>
+            <label><!-- Soft Credit Total --></label>
+            <section>Soft Credit Total</section>
+        </sections>
+        <sections>
+            <label><!-- Volunteer Information --></label>
+            <section>Volunteer Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Legislators</layout>
+        <sections>
+            <label>個人の詳細</label>
+            <section>Contact Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>POW Contact</layout>
+        <sections>
+            <label>個人の詳細</label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label>支援情報</label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label>支援総額</label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label><!-- Email Marketing Segmentation --></label>
+            <section>Email Marketing Segmentation</section>
+        </sections>
+        <sections>
+            <label>世帯の支援情報</label>
+            <section>Household Donation Info</section>
+        </sections>
+        <sections>
+            <label><!-- Membership --></label>
+            <section>Membership</section>
+        </sections>
+        <sections>
+            <label><!-- Merchandise --></label>
+            <section>Merchandise</section>
+        </sections>
+        <sections>
+            <label><!-- Soft Credit Total --></label>
+            <section>Soft Credit Total</section>
+        </sections>
+        <sections>
+            <label><!-- Voter Information --></label>
+            <section>Voter Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Volunteers Contact Layout</layout>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Donation Information --></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label><!-- Donation Totals --></label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label><!-- Household Address --></label>
+            <section>Household Address</section>
+        </sections>
+        <sections>
+            <label><!-- Household Donation Info --></label>
+            <section>Household Donation Info</section>
+        </sections>
+        <sections>
+            <label><!-- Membership Information --></label>
+            <section>Membership Information</section>
+        </sections>
+        <sections>
+            <label><!-- Misc --></label>
+            <section>Misc</section>
+        </sections>
+        <sections>
+            <label><!-- Soft Credit Total --></label>
+            <section>Soft Credit Total</section>
+        </sections>
+        <sections>
+            <label><!-- Volunteer Information --></label>
+            <section>Volunteer Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Opportunity --></label>
+        <name>NewDonation</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Opportunity --></label>
+        <name>NewInKind</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Opportunity --></label>
+        <name>NewMembership</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Open Recurring Donation --></label>
+        <name>New_Open_Recurring_Donation</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Alliance Member --></label>
+        <name>Alliance_Member</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact --></label>
+        <name>Contact</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please select a Preferred Email --></errorMessage>
+        <name>Contact_Preferred_Email</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a Preferred Phone --></errorMessage>
+        <name>Contact_Preferred_Phone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Must choose if POW designation is YES or NO. --></errorMessage>
+        <name>POW_Cannot_be_Blank</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Annual_Tax_Receipt --></label>
+        <name>Annual_Tax_Receipt</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LinkedIn_Look_Up --></label>
+        <name>LinkedIn_Look_Up</name>
+    </webLinks>
+    <workflowTasks>
+        <description>ボランティアにサインアップした個人に自動お礼メールが送信されました。</description>
+        <name>GW_Volunteers__Volunteer_Signup_Thank_You_Sent_Contact</name>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- Task triggered once the &quot;Volunteer Status&quot; on the Contact object is changed to &quot;Online Training 4&quot;. Usually triggered by the 4th form of the Online Volunteer Training. --></description>
+        <name>Online_Volunteer_Training_4</name>
+        <subject><!-- New Volunteer --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Review_Candidate</name>
+        <subject><!-- Review Candidate --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- Ship Alliance welcome swag --></description>
+        <name>Ship_Alliance_Welcome_Swag</name>
+        <subject><!-- Ship Alliance Welcome Swag --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>forrest_Verify_Prospect_joined_Slack</name>
+        <subject><!-- Verify Prospect joined Slack --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>graham_Verify_Prospect_joined_Slack</name>
+        <subject><!-- Verify Prospect joined Slack --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

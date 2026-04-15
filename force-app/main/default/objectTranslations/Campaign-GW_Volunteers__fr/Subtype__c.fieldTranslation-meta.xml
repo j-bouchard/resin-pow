@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Subtype --></label>
+    <name>Subtype__c</name>
+    <picklistValues>
+        <masterLabel>Availability</masterLabel>
+        <translation><!-- Availability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call</masterLabel>
+        <translation><!-- Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>College</masterLabel>
+        <translation><!-- College --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competency</masterLabel>
+        <translation><!-- Competency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate Talks</masterLabel>
+        <translation><!-- Corporate Talks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Digital</masterLabel>
+        <translation><!-- Digital --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Economics</masterLabel>
+        <translation><!-- Economics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Federal</masterLabel>
+        <translation><!-- Federal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HPCA</masterLabel>
+        <translation><!-- HPCA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Person</masterLabel>
+        <translation><!-- In Person --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interview</masterLabel>
+        <translation><!-- Interview --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Large Audience</masterLabel>
+        <translation><!-- Large Audience --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Organic Posts</masterLabel>
+        <translation><!-- Organic Posts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POW Campaigns</masterLabel>
+        <translation><!-- POW Campaigns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POW Knowledge</masterLabel>
+        <translation><!-- POW Knowledge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Passion</masterLabel>
+        <translation><!-- Passion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Photo</masterLabel>
+        <translation><!-- Photo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Professionalism</masterLabel>
+        <translation><!-- Professionalism --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Science</masterLabel>
+        <translation><!-- Science --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State</masterLabel>
+        <translation><!-- State --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Storytelling</masterLabel>
+        <translation><!-- Storytelling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Testify</masterLabel>
+        <translation><!-- Testify --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Text</masterLabel>
+        <translation><!-- Text --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video</masterLabel>
+        <translation><!-- Video --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

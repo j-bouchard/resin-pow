@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- POW Engages in various activations areas to amplify your voice. Please rank your skill in the following areas. This will help us best educate and support you with the right training and resources. (1 being low competency, and 5 being high competency): --></help>
+    <label><!-- Fundraising Rank --></label>
+    <name>Fundraising_Rank__c</name>
+</CustomFieldTranslation>

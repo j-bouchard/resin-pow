@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When was the first time you realized climate change impacted your life? --></help>
+    <label><!-- First time impacted your life? --></label>
+    <name>First_time_impacted_your_life__c</name>
+</CustomFieldTranslation>

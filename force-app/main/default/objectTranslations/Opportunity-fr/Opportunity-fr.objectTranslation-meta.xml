@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Event Ticket</layout>
+        <sections>
+            <label>Informations sur les dons</label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label>Informations sur les dons jumelés</label>
+            <section>Matching Gift Information</section>
+        </sections>
+        <sections>
+            <label>Informations sur l’hommage</label>
+            <section>Tribute Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Merchandise</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>POW Partner Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Deliverable --></label>
+        <name>New_Deliverable</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Corporate --></label>
+        <name>Corporate</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Donation Received --></description>
+        <label><!-- Donation --></label>
+        <name>Donation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Event Ticket --></label>
+        <name>Event_Ticket</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Grant Received --></description>
+        <label><!-- Grant --></label>
+        <name>Grant</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Goods or Services received as In-Kind --></description>
+        <label><!-- In-Kind Gift --></label>
+        <name>InKindGift</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Large Donation from a Major Donor --></description>
+        <label><!-- Major Gift --></label>
+        <name>MajorGift</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Matching Donation from an Donor&apos;s Employer or other Organization --></description>
+        <label><!-- Matching Gift --></label>
+        <name>MatchingGift</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A membership record type --></description>
+        <label><!-- Membership --></label>
+        <name>Membership</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Merchandise --></label>
+        <name>Merchandise</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Partner Commitment --></label>
+        <name>Partner_Commitment</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Opportunities that are Closed Lost, need to have a Closed Lost Reason --></errorMessage>
+        <name>Require_Reason_Closed_Lost</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Account_Receipt --></label>
+        <name>Account_Receipt</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Account_Thanks_no_receipt --></label>
+        <name>Account_Thanks_no_receipt</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Contact_Receipt --></label>
+        <name>Contact_Receipt</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Contact_Thank_You --></label>
+        <name>Contact_Thank_You</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Final_Report_Deadline</name>
+        <subject><!-- Final Report Deadline --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Grant_Application</name>
+        <subject><!-- Grant Application Due --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- POW Partner has donated, please follow up via phone call or email. --></description>
+        <name>Partner_Donation</name>
+        <subject><!-- Partner Donation Follow Up --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Progress_Report_Deadline</name>
+        <subject><!-- Progress Report Deadline --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

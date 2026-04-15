@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>what_is_the_value_of_your_state_s_outdoo__c</fullName>
+    <inlineHelpText>Based on the Outdoor Industry Association report (https://outdoorindustry.org/advocacy/) what is the value of your state’s outdoor recreation economy?</inlineHelpText>
+    <label>State’s outdoor recreation economy?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

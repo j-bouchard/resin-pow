@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>3</activeVersionNumber>
+    <description>Every day, this flow checks donor levels and assigns a new outreach Task if 30 or 90 days have passed since the last one.</description>
+    <masterLabel>Recurring Donor Level Task - 30 or 90 Days</masterLabel>
+</FlowDefinition>

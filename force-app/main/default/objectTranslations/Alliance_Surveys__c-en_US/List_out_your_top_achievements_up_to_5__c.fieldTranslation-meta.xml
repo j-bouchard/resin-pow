@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- List out your top achievements (up to 5) in your career --></help>
+    <label><!-- Top 5 Achievements --></label>
+    <name>List_out_your_top_achievements_up_to_5__c</name>
+</CustomFieldTranslation>

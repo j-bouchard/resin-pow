@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Areas_of_Climate_Action_Most_Interested__c</fullName>
+    <label>Areas of Climate Action Most Interested</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Technological Solutions (i.e. Renewable energy)</fullName>
+                <default>false</default>
+                <label>Tech Solutions (i.e. Renewables)</label>
+            </value>
+            <value>
+                <fullName>Financial Solutions</fullName>
+                <default>false</default>
+                <label>Financial Solutions</label>
+            </value>
+            <value>
+                <fullName>Climate Science</fullName>
+                <default>false</default>
+                <label>Climate Science</label>
+            </value>
+            <value>
+                <fullName>Policy</fullName>
+                <default>false</default>
+                <label>Policy</label>
+            </value>
+            <value>
+                <fullName>Lobbying/Communicating with Elected Officials</fullName>
+                <default>false</default>
+                <label>Lobbying-Meeting with Elected Officials</label>
+            </value>
+            <value>
+                <fullName>Running for Office</fullName>
+                <default>false</default>
+                <label>Running for Office</label>
+            </value>
+            <value>
+                <fullName>Public Speaking/Media Training</fullName>
+                <default>false</default>
+                <label>Public Speaking/Media Training</label>
+            </value>
+            <value>
+                <fullName>How to Address Climate Hypocrisy</fullName>
+                <default>false</default>
+                <label>How to Address Climate Hypocrisy</label>
+            </value>
+            <value>
+                <fullName>Diversity, Equity &amp; Inclusion/Climate Justice</fullName>
+                <default>false</default>
+                <label>DEI and Climate Justice</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <label>Social Media</label>
+            </value>
+            <value>
+                <fullName>Storytelling</fullName>
+                <default>false</default>
+                <label>Storytelling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Engagement Areas No Participation --></label>
+    <name>Engagement_Areas_No_Participation__c</name>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation><!-- Fundraising --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lobbying</masterLabel>
+        <translation><!-- Lobbying --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Media</masterLabel>
+        <translation><!-- Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public Speaking</masterLabel>
+        <translation><!-- Public Speaking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Media</masterLabel>
+        <translation><!-- Social Media --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

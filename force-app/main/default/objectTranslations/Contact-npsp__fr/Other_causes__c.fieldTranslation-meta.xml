@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Question form &quot;Protect Our Winters Alliance Registration&quot;: If you are involved in other causes or organizations, where do you put most of your effort? --></help>
+    <label><!-- Other causes or organizations --></label>
+    <name>Other_causes__c</name>
+</CustomFieldTranslation>

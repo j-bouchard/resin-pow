@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Thank You Gift --></label>
+    <name>Thank_You_Gift__c</name>
+    <picklistValues>
+        <masterLabel>Maximize my impact, no thank you gift please!</masterLabel>
+        <translation><!-- Maximize my impact, no thank you gift please! --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes, please send me a gift!</masterLabel>
+        <translation><!-- Yes, please send me a gift! --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

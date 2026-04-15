@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendance_Rate_Train_Summit__c</fullName>
+    <formula>IF((Invited_Train_Summit_Event__c + Attended_Train_Summit_Event__c) &gt; 0 , Attended_Train_Summit_Event__c /( Attended_Train_Summit_Event__c +  Invited_Train_Summit_Event__c ), NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Attendance Rate - Train/Summit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

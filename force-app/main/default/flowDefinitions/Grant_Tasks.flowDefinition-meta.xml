@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>6</activeVersionNumber>
+    <description>When a Grant Opportunity is created, this flow creates tasks for key grant deadlines.</description>
+    <masterLabel>Grant Tasks</masterLabel>
+</FlowDefinition>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>3</activeVersionNumber>
+    <description>When a Contact with a specific record type is created or updated and does not have an Engagement, this flow creates a new Engagement record and links it to the Contact.</description>
+    <masterLabel>Engagement Record Creation</masterLabel>
+</FlowDefinition>

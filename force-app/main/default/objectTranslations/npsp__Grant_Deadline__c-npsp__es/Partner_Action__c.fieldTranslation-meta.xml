@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Partner Action --></label>
+    <name>Partner_Action__c</name>
+    <picklistValues>
+        <masterLabel>Attended In The Weeds training session</masterLabel>
+        <translation><!-- Attended In The Weeds training session --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attended Lobby Day</masterLabel>
+        <translation><!-- Attended Lobby Day --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attended POW Summit</masterLabel>
+        <translation><!-- Attended POW Summit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Donated in-kind product</masterLabel>
+        <translation><!-- Donated in-kind product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Featured POW in internal or external email comms</masterLabel>
+        <translation><!-- Featured POW in internal or external email comms --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hosted activation/program/event</masterLabel>
+        <translation><!-- Hosted activation/program/event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hosted custom education/training</masterLabel>
+        <translation><!-- Hosted custom education/training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Launched collab product</masterLabel>
+        <translation><!-- Launched collab product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Posted original social content featuring POW</masterLabel>
+        <translation><!-- Posted original social content featuring POW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Promoted Team POW</masterLabel>
+        <translation><!-- Promoted Team POW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reshared POW social content</masterLabel>
+        <translation><!-- Reshared POW social content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signed sign-on letter</masterLabel>
+        <translation><!-- Signed sign-on letter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrote op-ed</masterLabel>
+        <translation><!-- Wrote op-ed --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Case_Alert</fullName>
+        <description>Case Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Development_Emails/New_Salesforce_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>Event_Case_Email</fullName>
+        <description>Event Case Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Cases/Event_Cases_w_Links</template>
+    </alerts>
+    <alerts>
+        <fullName>Media_Requests_Notification</fullName>
+        <ccEmails>lora@deep-communications.com, joebouchard@resin.team</ccEmails>
+        <description>Media Requests Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>joe@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>stacie@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/New_Salesforce_Case_lora</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Case_Assignment</fullName>
+        <description>New Case Assignment</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Case_Assignment_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Case_Assignment_for_Media_Request_Cases</fullName>
+        <ccEmails>pow@finnpartners.com</ccEmails>
+        <description>New Case Assignment for Media Request Cases</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Case_Assignment_Notification</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Assign_Case_Owner_to_usha</fullName>
+        <field>OwnerId</field>
+        <lookupValue>mel@protectourwinters.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Assign Case Owner to Mel</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Owner_Joe</fullName>
+        <field>OwnerId</field>
+        <lookupValue>joe@protectourwinters.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Case Owner = Joe</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Owner_Lindsey</fullName>
+        <description>When the category &quot;Volunteering&quot; is selected on the field &quot;Category&quot; on the &quot;Contact Us&quot; case, Lindsey will become the owner of the case</description>
+        <field>OwnerId</field>
+        <lookupValue>lindsey@protectourwinters.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Case Owner = Lindsey</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Owner_Lora</fullName>
+        <field>OwnerId</field>
+        <lookupValue>stacie@protectourwinters.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Case Owner = Leigh</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Owner_Maddy</fullName>
+        <field>OwnerId</field>
+        <lookupValue>maddy@protectourwinters.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Case Owner = Maddy</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Owner_Torrey</fullName>
+        <field>OwnerId</field>
+        <lookupValue>hannah@protectourwinters.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Case Owner = Hannah</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Owner_Usha</fullName>
+        <field>OwnerId</field>
+        <lookupValue>mel@protectourwinters.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Case Owner = Mel</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_Maddy</fullName>
+        <description>When the category &quot;Events&quot; is selected on the field &quot;Category&quot; on the &quot;Contact Us&quot; case, Maddy will become the owner of the case</description>
+        <field>OwnerId</field>
+        <lookupValue>abbey@protectourwinters.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Owner Abbey</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_Waverley</fullName>
+        <field>OwnerId</field>
+        <lookupValue>mel@protectourwinters.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Owner = Mel</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>owner_hannah</fullName>
+        <description>When the category &quot;Other&quot; is selected on the field &quot;Category&quot; on the &quot;Contact Us&quot; case, Hannah will become the owner of the case</description>
+        <field>OwnerId</field>
+        <lookupValue>hannah@protectourwinters.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Owner = Hannah</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- POW Deliverables --></label>
+    <name>POW_Deliverables__c</name>
+    <picklistValues>
+        <masterLabel>Alliance product seeding</masterLabel>
+        <translation><!-- Alliance product seeding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Included in email newsletter</masterLabel>
+        <translation><!-- Included in email newsletter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invited to Lobby Day</masterLabel>
+        <translation><!-- Invited to Lobby Day --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invited to POW Summit</masterLabel>
+        <translation><!-- Invited to POW Summit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Posted/reshared/featured on social</masterLabel>
+        <translation><!-- Posted/reshared/featured on social --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provided activation/program/event support</masterLabel>
+        <translation><!-- Provided activation/program/event support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provided custom education/training</masterLabel>
+        <translation><!-- Provided custom education/training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supported collab product</masterLabel>
+        <translation><!-- Supported collab product --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

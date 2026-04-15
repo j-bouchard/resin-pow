@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Event Type --></label>
+    <name>Event_Type__c</name>
+    <picklistValues>
+        <masterLabel>Brand Talk</masterLabel>
+        <translation><!-- Brand Talk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>College Talk</masterLabel>
+        <translation><!-- College Talk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Film Talk</masterLabel>
+        <translation><!-- Film Talk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraiser</masterLabel>
+        <translation><!-- Fundraiser --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hot Planet Cool Athletes</masterLabel>
+        <translation><!-- Hot Planet Cool Athletes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lobby/Testify</masterLabel>
+        <translation><!-- Lobby/Testify --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Misc</masterLabel>
+        <translation><!-- Misc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partners</masterLabel>
+        <translation><!-- Partners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trainings/Summits</masterLabel>
+        <translation><!-- Trainings/Summits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Volunteer Training</masterLabel>
+        <translation><!-- Volunteer Training --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

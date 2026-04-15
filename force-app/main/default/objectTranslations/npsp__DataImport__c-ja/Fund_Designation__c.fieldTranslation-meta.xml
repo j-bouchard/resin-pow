@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Opportunity.Fund_Designation__c --></help>
+    <label><!-- Fund Designation --></label>
+    <name>Fund_Designation__c</name>
+    <picklistValues>
+        <masterLabel>POW</masterLabel>
+        <translation><!-- POW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POW Action Fund</masterLabel>
+        <translation><!-- POW Action Fund --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

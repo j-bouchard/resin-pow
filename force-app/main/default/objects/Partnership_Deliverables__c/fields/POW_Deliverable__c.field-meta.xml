@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POW_Deliverable__c</fullName>
+    <label>POW Deliverable</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Supported collab product</fullName>
+                <default>false</default>
+                <label>Supported collab product</label>
+            </value>
+            <value>
+                <fullName>Provided custom education/training</fullName>
+                <default>false</default>
+                <label>Provided custom education/training</label>
+            </value>
+            <value>
+                <fullName>Provided activation/program/event support</fullName>
+                <default>false</default>
+                <label>Provided activation/program/event support</label>
+            </value>
+            <value>
+                <fullName>Posted/reshared/featured on social</fullName>
+                <default>false</default>
+                <label>Posted/reshared/featured on social</label>
+            </value>
+            <value>
+                <fullName>Invited to POW Summit</fullName>
+                <default>false</default>
+                <label>Invited to POW Summit</label>
+            </value>
+            <value>
+                <fullName>Invited to Lobby Day</fullName>
+                <default>false</default>
+                <label>Invited to Lobby Day</label>
+            </value>
+            <value>
+                <fullName>Included in email newsletter</fullName>
+                <default>false</default>
+                <label>Included in email newsletter</label>
+            </value>
+            <value>
+                <fullName>Alliance product seeding</fullName>
+                <default>false</default>
+                <label>Alliance product seeding</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Advocacy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Advocacy</label>
+            </value>
+            <value>
+                <fullName>Collaboration_Product</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Collaboration Product</label>
+            </value>
+            <value>
+                <fullName>Custom Education/Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Custom Education/Training</label>
+            </value>
+            <value>
+                <fullName>Custom Program/Activation/Event</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Custom Program/Activation/Event</label>
+            </value>
+            <value>
+                <fullName>Event_and_activation_branding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Event and activation branding</label>
+            </value>
+            <value>
+                <fullName>Exclusive_Campaign_Collaboration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Exclusive Campaign Collaboration</label>
+            </value>
+            <value>
+                <fullName>Executive Op-Ed Support</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Executive Op-Ed Support</label>
+            </value>
+            <value>
+                <fullName>POW Annual Report Presence</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>POW Annual Report Presence</label>
+            </value>
+            <value>
+                <fullName>POW_Brand</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>POW Brand</label>
+            </value>
+            <value>
+                <fullName>POW_Member_and_Press_Communication</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>POW Member and Press Communication</label>
+            </value>
+            <value>
+                <fullName>POW Social Amplification</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>POW Social Amplification</label>
+            </value>
+            <value>
+                <fullName>POW_Partnership_Deck_Feature</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>POW’s Partnership Deck Feature</label>
+            </value>
+            <value>
+                <fullName>Partners in Advocacy Feature</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Partners in Advocacy Feature</label>
+            </value>
+            <value>
+                <fullName>Team POW Email Highlight</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Team POW Email Highlight</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Web_Presence</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Web Presence</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

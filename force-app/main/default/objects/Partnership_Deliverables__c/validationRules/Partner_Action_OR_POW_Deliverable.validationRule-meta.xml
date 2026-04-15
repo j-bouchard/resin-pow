@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Action_OR_POW_Deliverable</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+    AND(
+        ISBLANK(TEXT(POW_Deliverable__c)),
+        ISBLANK(TEXT(Partner_Deliverable__c))
+    ),
+    AND(
+        NOT(ISBLANK(TEXT(POW_Deliverable__c))),
+        NOT(ISBLANK(TEXT(Partner_Deliverable__c)))
+    )
+)</errorConditionFormula>
+    <errorMessage>A value needs to be added to either POW Deliverable or Partner Action. Values cannot exist in both fields.</errorMessage>
+</ValidationRule>

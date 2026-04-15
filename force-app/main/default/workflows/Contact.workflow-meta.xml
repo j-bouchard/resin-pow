@@ -1,0 +1,1825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>All_Prospect_XYZ_Facebook_In_Progress</fullName>
+        <description>All &quot;Prospect XYZ&quot; Facebook - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>joe@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Facebook_Access_In_Progress</template>
+    </alerts>
+    <alerts>
+        <fullName>All_Prospect_XYZ_Slack_Sign_Up_In_Progress</fullName>
+        <description>All &quot;Prospect XYZ&quot; Slack Sign Up - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>joe@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Slack_Sign_Up_In_Progress</template>
+    </alerts>
+    <alerts>
+        <fullName>Bike_Prospect_XYZ_Event_Activation_In_Progress</fullName>
+        <description>Bike &quot;Prospect XYZ&quot; Event / Activation - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>powbike@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Event_Activation_In_Progress_1645127918704</template>
+    </alerts>
+    <alerts>
+        <fullName>Climb_Prospect_XYZ_Event_Activation_In_Progress</fullName>
+        <description>All &quot;Prospect XYZ&quot; Event / Activation - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>joe@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Event_Activation_In_Progress</template>
+    </alerts>
+    <alerts>
+        <fullName>Creative_Prospect_XYZ_Event_Activation_In_Progress</fullName>
+        <description>Creative &quot;Prospect XYZ&quot; Event / Activation - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aidan@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>donny@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Event_Activation_In_Progress_1645127918704</template>
+    </alerts>
+    <alerts>
+        <fullName>Creative_Prospect_XYZ_Facebook_In_Progress</fullName>
+        <description>Creative &quot;Prospect XYZ&quot; Facebook - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aidan@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>donny@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Facebook_Access_In_Progress</template>
+    </alerts>
+    <alerts>
+        <fullName>Creative_Prospect_XYZ_Onboarding_Process_Completed</fullName>
+        <description>Creative &quot;Prospect XYZ&quot; Onboarding Process Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aidan@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>donny@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Onboarding_Process_Completed</template>
+    </alerts>
+    <alerts>
+        <fullName>Creative_Prospect_XYZ_Survey_In_Progress</fullName>
+        <description>&quot;Creative Prospect XYZ&quot; Survey - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aidan@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>donny@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Survey_In_Progress</template>
+    </alerts>
+    <alerts>
+        <fullName>Creative_Prospect_XYZ_Training_Summit_In_Progress</fullName>
+        <description>Creative &quot;Prospect XYZ&quot; Training / Summit - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aidan@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>donny@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Training_Summit_In_Progress</template>
+    </alerts>
+    <alerts>
+        <fullName>GW_Volunteers__Volunteer_Signup_Notification_Email_Alert_Contact</fullName>
+        <description>Volunteer Signup Notification Email Alert - Contact</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>GW_Volunteers__Volunteers_Email_Templates/GW_Volunteers__Volunteer_Signup_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>GW_Volunteers__Volunteer_Signup_Thank_You_Email_Alert_Contact</fullName>
+        <description>Volunteer Signup Thank You Email Alert - Contact</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>GW_Volunteers__Volunteers_Email_Templates/GW_Volunteers__Volunteer_Signup_Thank_You</template>
+    </alerts>
+    <alerts>
+        <fullName>Prospect_XYZ_Onboarding_Process_Completed</fullName>
+        <description>&quot;Prospect XYZ&quot; Onboarding Process Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>joe@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mario@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Onboarding_Process_Completed</template>
+    </alerts>
+    <alerts>
+        <fullName>Prospect_XYZ_Scouting</fullName>
+        <description>&quot;Prospect XYZ&quot; Scouting</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>joe@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Scouting_Alliance_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>Prospect_XYZ_Slack_Sign_Up_In_Progress</fullName>
+        <description>Snowboard - &quot;Prospect XYZ&quot; Slack Sign Up - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>forrest@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Slack_Sign_Up_In_Progress_1645127851729</template>
+    </alerts>
+    <alerts>
+        <fullName>Prospect_XYZ_Training_Summit_In_Progress</fullName>
+        <description>&quot;Prospect XYZ&quot; Training / Summit - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>joe@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Training_Summit_In_Progress</template>
+    </alerts>
+    <alerts>
+        <fullName>Science_Prospect_XYZ_Event_Activation_In_Progress</fullName>
+        <description>Science &quot;Prospect XYZ&quot; Event / Activation - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sciencealliance@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Event_Activation_In_Progress_1645127918704</template>
+    </alerts>
+    <alerts>
+        <fullName>Ski_Prospect_XYZ_Event_Activation_In_Progress</fullName>
+        <description>Ski &quot;Prospect XYZ&quot; Event / Activation - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>brody@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Event_Activation_In_Progress_1645127918704</template>
+    </alerts>
+    <alerts>
+        <fullName>Snowboard_Prospect_XYZ_Event_Activation_In_Progress</fullName>
+        <description>Snowboard &quot;Prospect XYZ&quot; Event / Activation - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>forrest@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Event_Activation_In_Progress_1645127918704</template>
+    </alerts>
+    <alerts>
+        <fullName>Trail_Prospect_XYZ_Event_Activation_In_Progress</fullName>
+        <description>Trail &quot;Prospect XYZ&quot; Event / Activation - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>stephanie@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Event_Activation_In_Progress_1645127918704</template>
+    </alerts>
+    <alerts>
+        <fullName>creative_Prospect_XYZ_Slack_Sign_Up_In_Progress</fullName>
+        <description>Creative &quot;Prospect XYZ&quot; Slack Sign Up - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aidan@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>donny@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Slack_Sign_Up_In_Progress_1645127851729</template>
+    </alerts>
+    <alerts>
+        <fullName>science_Prospect_XYZ_Slack_Sign_Up_In_Progress</fullName>
+        <description>Science Alliance - &quot;Prospect XYZ&quot; Slack Sign Up - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sciencealliance@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Slack_Sign_Up_In_Progress_1645127851729</template>
+    </alerts>
+    <alerts>
+        <fullName>ski_Prospect_XYZ_Slack_Sign_Up_In_Progress</fullName>
+        <description>Ski &quot;Prospect XYZ&quot; Slack Sign Up - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>caroline@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Slack_Sign_Up_In_Progress_1645127851729</template>
+    </alerts>
+    <alerts>
+        <fullName>survey_Prospect_XYZ_Slack_Sign_Up_In_Progress</fullName>
+        <description>&quot;Prospect XYZ&quot; Survey - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>joe@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Onboarding_Emails/Survey_In_Progress</template>
+    </alerts>
+    <alerts>
+        <fullName>trail_Prospect_XYZ_Slack_Sign_Up_In_Progress</fullName>
+        <description>Trail &quot;Prospect XYZ&quot; Slack Sign Up - In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>graham@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jake@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ross@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>stephanie@protectourwinters.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@protectourwinters.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AllianceOnboardingEmails/Prospect_XYZ_Slack_Sign_Up_In_Progress_1645127851729</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Contact_First_Name_Capitalization</fullName>
+        <description>This workflow will capitalize the first name of the a contact when the contact is edited.</description>
+        <field>FirstName</field>
+        <formula>UPPER(LEFT(FirstName,1))+LOWER(MID(FirstName,2,80))</formula>
+        <name>Contact First Name Capitalization</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contact_Last_Name_Capitalization</fullName>
+        <description>This workflow will automatically capitalize the last name</description>
+        <field>LastName</field>
+        <formula>UPPER(LEFT(LastName,1))+LOWER(MID(LastName,2,80))</formula>
+        <name>Contact Last Name Capitalization</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contact_Stage</fullName>
+        <field>Stage__c</field>
+        <literalValue>Prospect</literalValue>
+        <name>Contact Stage - Prospect</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contact_Stage_Current</fullName>
+        <field>Stage__c</field>
+        <literalValue>Current</literalValue>
+        <name>Contact Stage - Current</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contact_Stage_Lapsed</fullName>
+        <description>Contact Stage field will be updated to Lapsed</description>
+        <field>Stage__c</field>
+        <literalValue>Lapsed</literalValue>
+        <name>Contact Stage - Lapsed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contact_Stage_Lost</fullName>
+        <description>Contact Stage is changed to Lost</description>
+        <field>Stage__c</field>
+        <literalValue>Lost</literalValue>
+        <name>Contact Stage - Lost</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Country_United_States_of_America</fullName>
+        <field>MailingCountryCode</field>
+        <literalValue>US</literalValue>
+        <name>Country - United States of America</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Country_Update</fullName>
+        <field>MailingCountry</field>
+        <formula>&quot;United States of America&quot;</formula>
+        <name>Update Country - United States</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>POW_AF_No</fullName>
+        <field>POW_Action_Fund__c</field>
+        <literalValue>No</literalValue>
+        <name>POW AF = No</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>POW_No</fullName>
+        <field>POW__c</field>
+        <literalValue>No</literalValue>
+        <name>POW = No</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>State_Update</fullName>
+        <field>MailingStateCode</field>
+        <literalValue>us_co</literalValue>
+        <name>State Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>State_Update_Nevada</fullName>
+        <field>MailingState</field>
+        <formula>&quot;Nevada&quot;</formula>
+        <name>State Update - Nevada</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>State_Update_North_Carolina</fullName>
+        <field>MailingState</field>
+        <formula>&quot;North Carolina&quot;</formula>
+        <name>State Update - North Carolina</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Country</fullName>
+        <field>MailingCountry</field>
+        <formula>&quot;United States of America&quot;</formula>
+        <name>Update Country</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Country_United</fullName>
+        <field>MailingCountry</field>
+        <formula>&quot;United States of America&quot;</formula>
+        <name>Update Country - United States of Americ</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Country_United_States</fullName>
+        <field>MailingCountry</field>
+        <formula>&quot;United States of America&quot;</formula>
+        <name>Update Country - United States of Americ</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Country_United_States_of_Americ</fullName>
+        <field>MailingCountry</field>
+        <formula>&quot;United States of America&quot;</formula>
+        <name>Update Country - United States of Americ</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Member_Donation</fullName>
+        <description>Update the Member Donation criteria  checkbox for POW Membership.</description>
+        <field>Made_Donation__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Member Donation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_State</fullName>
+        <field>MailingState</field>
+        <formula>&quot;Colorado&quot;</formula>
+        <name>Update State</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_State_Maine</fullName>
+        <field>MailingState</field>
+        <formula>&quot;Maine&quot;</formula>
+        <name>Update State - Maine</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_State_Michigan</fullName>
+        <field>MailingState</field>
+        <formula>&quot;Michigan&quot;</formula>
+        <name>Update State - Michigan</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_State_New_Hampshire</fullName>
+        <field>MailingState</field>
+        <formula>&quot;New Hampshire&quot;</formula>
+        <name>Update State- New Hampshire</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Voter_Rating_Blank</fullName>
+        <field>Voter__c</field>
+        <name>Voter Rating = Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Voter_Rating_Great_Voter</fullName>
+        <field>Voter__c</field>
+        <literalValue>Great Voter</literalValue>
+        <name>Voter Rating = Great Voter</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Voter_Rating_Likely_Voter</fullName>
+        <field>Voter__c</field>
+        <literalValue>Likely Voter</literalValue>
+        <name>Voter Rating = Likely Voter</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Voter_Rating_Nonvoter</fullName>
+        <field>Voter__c</field>
+        <literalValue>Non-voter</literalValue>
+        <name>Voter Rating = Non-Voter</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Voter_Rating_Unlikely_Voter</fullName>
+        <field>Voter__c</field>
+        <literalValue>Unlikely Voter</literalValue>
+        <name>Voter Rating = Unlikely Voter</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Member_Former_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Member_Former</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Member Former RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Member_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Member_Record</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Member RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Office_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Officer_Record</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Office RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Officer_Former_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Officer_Former</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Officer Former RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Staffer_Former_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Staffer_Former</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Staffer Former RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kw__Set_KW_Staffer_RType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>kw__KW_Staffer_Record</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set KW Staffer RType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__ContactAlternateEmailUpdate</fullName>
+        <field>npe01__AlternateEmail__c</field>
+        <formula>Email</formula>
+        <name>Contact.AlternateEmail.Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__ContactHomePhoneUpdate</fullName>
+        <field>HomePhone</field>
+        <formula>Phone</formula>
+        <name>Contact.HomePhone.Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__ContactMobilePhoneUpdate</fullName>
+        <field>MobilePhone</field>
+        <formula>Phone</formula>
+        <name>Contact.MobilePhone.Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__ContactOtherEmailUpdate</fullName>
+        <field>OtherPhone</field>
+        <formula>Phone</formula>
+        <name>Contact.OtherEmail.Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__ContactPersonalEmailUpdate</fullName>
+        <field>npe01__HomeEmail__c</field>
+        <formula>Email</formula>
+        <name>Contact.PersonalEmail.Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__ContactPreferredEmail</fullName>
+        <field>Email</field>
+        <formula>CASE( 
+npe01__Preferred_Email__c , 
+
+&quot;Work&quot;, 
+if(len(npe01__WorkEmail__c)&gt;0, npe01__WorkEmail__c, 
+if(len(npe01__HomeEmail__c)&gt;0, npe01__HomeEmail__c, 
+npe01__AlternateEmail__c)), 
+
+&quot;Personal&quot;, 
+if(len(npe01__HomeEmail__c)&gt;0, npe01__HomeEmail__c, 
+if(len(npe01__WorkEmail__c)&gt;0, npe01__WorkEmail__c, 
+npe01__AlternateEmail__c)), 
+
+&quot;Home&quot;, 
+if(len(npe01__HomeEmail__c)&gt;0, npe01__HomeEmail__c, 
+if(len(npe01__WorkEmail__c)&gt;0, npe01__WorkEmail__c, 
+npe01__AlternateEmail__c)), 
+
+&quot;Alternate&quot;, 
+if(len(npe01__AlternateEmail__c)&gt;0, npe01__AlternateEmail__c, 
+if(len(npe01__WorkEmail__c)&gt;0, npe01__WorkEmail__c, 
+npe01__HomeEmail__c)), 
+
+If(LEN(npe01__WorkEmail__c)&gt;0 , npe01__WorkEmail__c , 
+if(LEN( npe01__HomeEmail__c)&gt;0, npe01__HomeEmail__c, 
+npe01__AlternateEmail__c 
+)))</formula>
+        <name>Contact.PreferredEmail</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__ContactPreferredPhone</fullName>
+        <description>Populates the standard Phone field displayed on activities based on the Preferred Phone field value.</description>
+        <field>Phone</field>
+        <formula>CASE(
+  npe01__PreferredPhone__c ,
+&quot;Work&quot;,
+  npe01__WorkPhone__c  ,
+&quot;Home&quot;,
+ HomePhone,
+&quot;Mobile&quot;,
+ MobilePhone,
+&quot;Other&quot;,
+ OtherPhone,
+If(LEN( npe01__WorkPhone__c )&gt;0 , npe01__WorkPhone__c  ,
+if(LEN(  HomePhone)&gt;0,  HomePhone,
+if(LEN( MobilePhone)&gt;0, MobilePhone,
+OtherPhone
+))))</formula>
+        <name>Contact.PreferredPhone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__ContactWorkEmailUpdate</fullName>
+        <field>npe01__WorkEmail__c</field>
+        <formula>Email</formula>
+        <name>Contact.WorkEmail.Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__ContactWorkPhoneUpdate</fullName>
+        <field>npe01__WorkPhone__c</field>
+        <formula>Phone</formula>
+        <name>Contact.WorkPhone.Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__PreferredPhonetoWork</fullName>
+        <field>npe01__PreferredPhone__c</field>
+        <literalValue>Work</literalValue>
+        <name>Preferred Phone to Work</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__SetPrefEmailtoWork</fullName>
+        <field>npe01__Preferred_Email__c</field>
+        <literalValue>Work</literalValue>
+        <name>Set Pref Email to Work</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__SetWorkEmailtoEmail</fullName>
+        <field>npe01__WorkEmail__c</field>
+        <formula>Email</formula>
+        <name>Set Work Email to Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npe01__WorkPhonetoPhone</fullName>
+        <field>npe01__WorkPhone__c</field>
+        <formula>Phone</formula>
+        <name>Work Phone to Phone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>npo02__ContactPreferredPhone_WithHousehold</fullName>
+        <description>FOR USE WITH HOUSEHOLDS. Populates the standard Phone field displayed on activities based on the Preferred Phone field value.</description>
+        <field>Phone</field>
+        <formula>CASE( 
+npe01__PreferredPhone__c , 
+&quot;Work&quot;, 
+npe01__WorkPhone__c , 
+&quot;Household&quot;,
+ npo02__Formula_HouseholdPhone__c ,
+&quot;Home&quot;, 
+HomePhone, 
+&quot;Personal&quot;,
+HomePhone,
+&quot;Mobile&quot;, 
+MobilePhone, 
+&quot;Other&quot;, 
+OtherPhone, 
+If(LEN( npe01__WorkPhone__c )&gt;0 , npe01__WorkPhone__c , 
+if(LEN( HomePhone)&gt;0, HomePhone, 
+if(LEN( MobilePhone)&gt;0, MobilePhone, 
+OtherPhone 
+))))</formula>
+        <name>Contact.PreferredPhone_WithHousehold</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Alliance Member Birthday Card</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Alliance Member</value>
+        </criteriaItems>
+        <description>This workflow will trigger a task to send an Alliance Member a birthday card two weeks prior to their birthday</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Contact.Birthdate</offsetFromField>
+            <timeLength>-14</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Alliance Member One Year Anniversary</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Alliance Member</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Contact.Alliance_Member_Since__c</offsetFromField>
+            <timeLength>365</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Capitalization of Name</fullName>
+        <actions>
+            <name>Contact_First_Name_Capitalization</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Contact_Last_Name_Capitalization</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contact,Alliance Member,StayClassy</value>
+        </criteriaItems>
+        <description>Rule will capitalize first and last name</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact Stage - Current</fullName>
+        <actions>
+            <name>Contact_Stage_Current</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.npo02__OppsClosedLastNDays__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>1</value>
+        </criteriaItems>
+        <description>Once a contact donates, this workflow will change their &quot;Contact Stage&quot; to &quot;Current&quot;</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact Stage - Lapsed 2</fullName>
+        <active>false</active>
+        <description>When a contact hasn&apos;t donated in over 365 days but less than 730, contact stage = current</description>
+        <formula>AND((npo02__LastCloseDate__c &gt; (TODAY() - 365)) &amp;&amp;(npo02__LastCloseDate__c) &lt; (TODAY() - 730))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Contact_Stage_Lapsed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Contact.npo02__LastCloseDate__c</offsetFromField>
+            <timeLength>366</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Contact Stage - Lost</fullName>
+        <active>false</active>
+        <description>When a contact hasn&apos;t donated for 2+ years, this will turn their Stage to Lost</description>
+        <formula>npo02__LastCloseDate__c &gt; (TODAY() - 730)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Contact_Stage_Lost</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Contact.npo02__LastCloseDate__c</offsetFromField>
+            <timeLength>731</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Contact Stage - Prospect</fullName>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Contact.P2A__Advocate_ID__c</field>
+            <operation>greaterThan</operation>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.GW_Volunteers__Volunteer_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <description>If the contact has 1) volunteered and/or 2) taken action, their stage will change to Suspect</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Contact_Stage</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Contact.stayclassy__Data_Refreshed_At__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>GW_Volunteers__Volunteer Signup - Contact</fullName>
+        <actions>
+            <name>GW_Volunteers__Volunteer_Signup_Notification_Email_Alert_Contact</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>GW_Volunteers__Volunteer_Signup_Thank_You_Email_Alert_Contact</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>GW_Volunteers__Volunteer_Signup_Thank_You_Sent_Contact</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <description>When a contact is updated or created from VolunteersSignup(FS) or VolunteersJobListing(FS), thank them and notify the volunteer manager.  Note if you are not using VolunteersSignup(FS), you can de-activate this rule to avoid multiple emails being sent.</description>
+        <formula>GW_Volunteers__Volunteer_Last_Web_Signup_Date__c =  TODAY()</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>KnowWho Contact No email list</fullName>
+        <actions>
+            <name>POW_AF_No</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>POW_No</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.kw__KnowWhoIdNew__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Official Member Conversion - Athlete</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.Alliance_Status__c</field>
+            <operation>equals</operation>
+            <value>Official Member</value>
+        </criteriaItems>
+        <description>When an alliance member gets converted to &quot;Official Member&quot;, this rule will get triggered</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Online Volunteer Training 4</fullName>
+        <actions>
+            <name>Online_Volunteer_Training_4</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.GW_Volunteers__Volunteer_Status__c</field>
+            <operation>equals</operation>
+            <value>Online Training 4</value>
+        </criteriaItems>
+        <description>When the field &quot;Volunteer Status&quot; on the Contact object is changed to &quot;Online Training 4&quot;, Lindsey Halverson will be triggered a task</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ship Alliance Welcome Swag</fullName>
+        <actions>
+            <name>Ship_Alliance_Welcome_Swag</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Alliance Member</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Alliance_Status__c</field>
+            <operation>equals</operation>
+            <value>Official Member,Local Legend</value>
+        </criteriaItems>
+        <description>Assigns task to Maddy to ship Alliance welcome swag</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Member Donation</fullName>
+        <actions>
+            <name>Update_Member_Donation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.npo02__OppAmountLastNDays__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>100</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Voter Rating %3D Blank</fullName>
+        <actions>
+            <name>Voter_Rating_Blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.General_Election_Vote_Propensity_Model__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Voter Rating %3D Great Voter</fullName>
+        <actions>
+            <name>Voter_Rating_Great_Voter</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.General_Election_Vote_Propensity_Model__c</field>
+            <operation>lessOrEqual</operation>
+            <value>100</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.General_Election_Vote_Propensity_Model__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>70</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Voter Rating %3D Likely Voter</fullName>
+        <actions>
+            <name>Voter_Rating_Likely_Voter</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.General_Election_Vote_Propensity_Model__c</field>
+            <operation>lessThan</operation>
+            <value>70</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.General_Election_Vote_Propensity_Model__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>50</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Voter Rating %3D Non-voter</fullName>
+        <actions>
+            <name>Voter_Rating_Nonvoter</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.General_Election_Vote_Propensity_Model__c</field>
+            <operation>lessThan</operation>
+            <value>30</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.General_Election_Vote_Propensity_Model__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>1</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Voter Rating %3D Unlikely Voter</fullName>
+        <actions>
+            <name>Voter_Rating_Unlikely_Voter</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.General_Election_Vote_Propensity_Model__c</field>
+            <operation>lessThan</operation>
+            <value>50</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.General_Election_Vote_Propensity_Model__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>30</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Zip Code to State - Colorado</fullName>
+        <actions>
+            <name>Update_Country</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_State</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>greaterOrEqual</operation>
+            <value>80001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>lessOrEqual</operation>
+            <value>81658</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Zip Code to State - Maine</fullName>
+        <actions>
+            <name>Update_Country_United</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_State_Maine</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>greaterOrEqual</operation>
+            <value>03901</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>lessOrEqual</operation>
+            <value>04992</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Zip Code to State - Michigan</fullName>
+        <actions>
+            <name>Update_Country_United_States_of_Americ</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_State_Michigan</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>greaterOrEqual</operation>
+            <value>48001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>lessOrEqual</operation>
+            <value>49971</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Zip Code to State - Nevada</fullName>
+        <actions>
+            <name>State_Update_Nevada</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Country_United</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>greaterOrEqual</operation>
+            <value>88901</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>lessOrEqual</operation>
+            <value>89883</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Zip Code to State - New Hampshire</fullName>
+        <actions>
+            <name>Update_Country_United_States</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_State_New_Hampshire</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>greaterOrEqual</operation>
+            <value>03031</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>lessOrEqual</operation>
+            <value>03897</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Zip Code to State - North Carolina</fullName>
+        <actions>
+            <name>Country_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>State_Update_North_Carolina</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>greaterOrEqual</operation>
+            <value>27006</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.MailingPostalCode</field>
+            <operation>lessOrEqual</operation>
+            <value>28909</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Member Former RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Member_Former_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>ContactMemberFormer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Member RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Member_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>ContactMember</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Officer Former RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Officer_Former_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>ContactOfficerFormer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Officer RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Office_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>ContactOfficer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Staffer Former RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Staffer_Former_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>ContactStaffFormer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kw__Set KW Staffer RType</fullName>
+        <actions>
+            <name>kw__Set_KW_Staffer_RType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.kw__KW_Template__c</field>
+            <operation>equals</operation>
+            <value>ContactStaff</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Contact%2EEmailChanged_Alternate</fullName>
+        <actions>
+            <name>npe01__ContactAlternateEmailUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the standard Email field is newly entered or changed AND the Preferred Email picklist is set to Alternate THEN Salesforce will fill in the Alternate Email field with the email address entered in the standard Email field.</description>
+        <formula>AND(      ISPICKVAL( npe01__Preferred_Email__c ,&quot;Alternate&quot;),      OR(           AND(                ISNEW(),                LEN(Email)&gt;0           ),           ISCHANGED( Email )      ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Contact%2EEmailChanged_Personal</fullName>
+        <actions>
+            <name>npe01__ContactPersonalEmailUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the standard Email field is newly entered or changed AND the Preferred Email picklist is set to Personal or Home THEN Salesforce will fill in the Personal Email field with the email address entered in the standard Email field.</description>
+        <formula>AND(     OR( ISPICKVAL( npe01__Preferred_Email__c ,&quot;Personal&quot;),ISPICKVAL( npe01__Preferred_Email__c ,&quot;Home&quot;)),      OR(           AND(                ISNEW(),                LEN(Email)&gt;0           ),           ISCHANGED( Email )      ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Contact%2EEmailChanged_Work</fullName>
+        <actions>
+            <name>npe01__ContactWorkEmailUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the standard Email field is newly entered or changed AND the Preferred Email picklist is set to Work THEN Salesforce will fill in the Work Email field with the email address entered in the standard Email field.</description>
+        <formula>AND(      ISPICKVAL( npe01__Preferred_Email__c ,&quot;Work&quot;),      OR(           AND(                ISNEW(),                LEN(Email)&gt;0           ),           ISCHANGED( Email )      ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Contact%2EPhoneChanged_Home</fullName>
+        <actions>
+            <name>npe01__ContactHomePhoneUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the standard Phone field is newly entered or changed AND the Preferred Phone picklist is set to Home THEN Salesforce will fill in the Home Phone field with the phone number entered in the standard Phone field.</description>
+        <formula>AND(      ISPICKVAL( npe01__PreferredPhone__c ,&quot;Home&quot;),      OR(           AND(                ISNEW(),                LEN(Phone)&gt;0           ),           ISCHANGED( Phone )      ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Contact%2EPhoneChanged_Mobile</fullName>
+        <actions>
+            <name>npe01__ContactMobilePhoneUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the standard Phone field is newly entered or changed AND the Preferred Phone picklist is set to Mobile THEN Salesforce will fill in the Mobile Phone field with the phone number entered in the standard Phone field.</description>
+        <formula>AND(      ISPICKVAL( npe01__PreferredPhone__c ,&quot;Mobile&quot;),      OR(           AND(                ISNEW(),                LEN(Phone)&gt;0           ),           ISCHANGED( Phone )      ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Contact%2EPhoneChanged_Other</fullName>
+        <actions>
+            <name>npe01__ContactOtherEmailUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the standard Phone field is newly entered or changed AND the Preferred Phone picklist is set to Other THEN Salesforce will fill in the Other Phone field with the phone number entered in the standard Phone field.</description>
+        <formula>AND(      ISPICKVAL( npe01__PreferredPhone__c ,&quot;Other&quot;),      OR(           AND(                ISNEW(),                LEN(Phone)&gt;0           ),           ISCHANGED( Phone )      ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Contact%2EPhoneChanged_Work</fullName>
+        <actions>
+            <name>npe01__ContactWorkPhoneUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the standard Phone field is newly entered or changed AND the Preferred Phone picklist is set to Work THEN Salesforce will fill in the Work Phone field with the phone number entered in the standard Phone field.</description>
+        <formula>AND(      ISPICKVAL( npe01__PreferredPhone__c ,&quot;Work&quot;),      OR(           AND(                ISNEW(),                LEN(Phone)&gt;0           ),           ISCHANGED( Phone )      ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Contact%2EPreferred_Email%5F%5Fc</fullName>
+        <actions>
+            <name>npe01__ContactPreferredEmail</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow OVERWRITES the existing value in the standard Email field based on the Preferred Email field value.  This rule needs to be turned on manually after an Upgrade to this package.</description>
+        <formula>OR( LEN(Email)=0, ISCHANGED(npe01__Preferred_Email__c) , ISCHANGED(npe01__WorkEmail__c) , ISCHANGED(npe01__HomeEmail__c) , ISCHANGED(npe01__AlternateEmail__c)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Contact%2EPreferred_Phone%5F%5Fc</fullName>
+        <actions>
+            <name>npe01__ContactPreferredPhone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow OVERWRITES the existing value in the standard Phone field based on the Preferred Phone field value.  This rule needs to be turned on manually after an Upgrade to this package.</description>
+        <formula>OR(  LEN(Phone)=0, ISCHANGED(npe01__PreferredPhone__c) ,  ISCHANGED(npe01__WorkPhone__c) ,  ISCHANGED(HomePhone) ,  ISCHANGED(MobilePhone) , ISCHANGED(OtherPhone)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Email only%3A Paste to Work</fullName>
+        <actions>
+            <name>npe01__SetPrefEmailtoWork</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>npe01__SetWorkEmailtoEmail</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Email</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npe01__Preferred_Email__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npe01__HomeEmail__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npe01__AlternateEmail__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npe01__WorkEmail__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>If there is a value in the standard Email field AND no values in any NPSP email fields or Preferred Email, then Salesforce updates two fields: Work Email is updated with the email address in the standard Email field and Preferred Email is set to Work.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>npe01__Phone only%3A Paste to Work</fullName>
+        <actions>
+            <name>npe01__PreferredPhonetoWork</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>npe01__WorkPhonetoPhone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Phone</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npe01__PreferredPhone__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npe01__WorkPhone__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.MobilePhone</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.HomePhone</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.OtherPhone</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>If there is a value in the standard Phone field AND no values in any NPSP phone fields or Preferred Phone, then Salesforce updates two fields: Work Phone is updated with the phone number in the standard Phone field and Preferred Phone is set to Work.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>npo02__Contact%2EPreferred_Phone%5F%5Fc WithHousehold</fullName>
+        <active>true</active>
+        <description>DEPRICATED: This workflow does not do anything yet.</description>
+        <formula>1=2</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <tasks>
+        <fullName>GW_Volunteers__Volunteer_Signup_Thank_You_Sent_Contact</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>An automatic thank you email has been sent to the contact for signing up to be a volunteer.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Volunteer Signup Thank You Sent - Contact</subject>
+    </tasks>
+    <tasks>
+        <fullName>Online_Volunteer_Training_4</fullName>
+        <assignedTo>lindsey@protectourwinters.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Task triggered once the &quot;Volunteer Status&quot; on the Contact object is changed to &quot;Online Training 4&quot;. Usually triggered by the 4th form of the Online Volunteer Training.</description>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>New Volunteer</subject>
+    </tasks>
+    <tasks>
+        <fullName>Review_Candidate</fullName>
+        <assignedTo>lindsey@protectourwinters.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Review Candidate</subject>
+    </tasks>
+    <tasks>
+        <fullName>Ship_Alliance_Welcome_Swag</fullName>
+        <assignedTo>maddy@protectourwinters.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Ship Alliance welcome swag</description>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Ship Alliance Welcome Swag</subject>
+    </tasks>
+    <tasks>
+        <fullName>forrest_Verify_Prospect_joined_Slack</fullName>
+        <assignedTo>graham@protectourwinters.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>3</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Verify Prospect joined Slack</subject>
+    </tasks>
+    <tasks>
+        <fullName>graham_Verify_Prospect_joined_Slack</fullName>
+        <assignedTo>graham@protectourwinters.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>3</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Verify Prospect joined Slack</subject>
+    </tasks>
+</Workflow>

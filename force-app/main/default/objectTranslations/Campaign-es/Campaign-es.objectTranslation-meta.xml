@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Campaign Layout</layout>
+        <sections>
+            <label><!-- Campaign Hierarchy Information --></label>
+            <section>Campaign Hierarchy Information</section>
+        </sections>
+        <sections>
+            <label><!-- Campaign Members --></label>
+            <section>Campaign Members</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Event Layout</layout>
+        <sections>
+            <label><!-- Blackthorn Event Information --></label>
+            <section>Blackthorn Event Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Event Overview --></label>
+            <section>Event Overview</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Parent</layout>
+        <sections>
+            <label><!-- Hierarchy Cost/Revenue Information --></label>
+            <section>Hierarchy Cost/Revenue Information</section>
+        </sections>
+        <sections>
+            <label><!-- Hierarchy Member/Sent Information --></label>
+            <section>Hierarchy Member/Sent Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Default --></label>
+        <name>Default</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Event --></label>
+        <name>Event</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Parent --></label>
+        <name>Parent</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Create_Job_and_Shift --></label>
+        <name>Create_Job_and_Shift</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewAllCampaignMembers --></label>
+        <name>ViewAllCampaignMembers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>ViewCampaignInfluenceReport</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Volunteers_Needed</name>
+        <subject><!-- Volunteers Needed --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

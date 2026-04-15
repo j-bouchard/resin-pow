@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- OKR Alliance Training Type --></label>
+    <name>OKR_Alliance_Training_Type__c</name>
+    <picklistValues>
+        <masterLabel>Semi-Structured Training</masterLabel>
+        <translation><!-- Semi-Structured Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training / Summit</masterLabel>
+        <translation><!-- Training / Summit --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

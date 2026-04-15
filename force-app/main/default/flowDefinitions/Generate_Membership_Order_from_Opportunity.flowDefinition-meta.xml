@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>(Modified OrderStatus formula field). Automatically creates a Membership Order and related line items from an Opportunity, using the Opportunity’s details and the linked Contact’s shipping information. This flow ensures all required information (like mailing address and t-shirt size) is present, and helps automate the process of fulfilling membership kits for new or renewing members.</description>
+    <masterLabel>Generate Membership Order from Opportunity</masterLabel>
+</FlowDefinition>

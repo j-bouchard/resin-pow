@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Method by which the record cast a vote in a 2016 Primary election --></help>
+    <label><!-- 2016 Primary Election Voting Method --></label>
+    <name>X2016_Primary_Election_Voting_Method__c</name>
+</CustomFieldTranslation>

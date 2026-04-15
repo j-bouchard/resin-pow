@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>When a Contact’s donor level changes to certain values, creates a donor outreach Task for the Contact owner, due in 7 days.</description>
+    <masterLabel>First Donor Level Task</masterLabel>
+</FlowDefinition>

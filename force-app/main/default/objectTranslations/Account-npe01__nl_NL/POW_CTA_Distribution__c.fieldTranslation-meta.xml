@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Share POW’s CTAs with your employees and stakeholders, engaging them as advocates. --></help>
+    <label><!-- POW CTA Distribution --></label>
+    <name>POW_CTA_Distribution__c</name>
+</CustomFieldTranslation>

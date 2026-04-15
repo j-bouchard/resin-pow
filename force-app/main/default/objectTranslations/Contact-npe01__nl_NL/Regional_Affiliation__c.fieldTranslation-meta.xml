@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Question from &quot;Protect Our Winters Alliance Registration&quot;: If you are professionally affiliated with, or influential in, another geographical region, such as where you grew up, what is that region? --></help>
+    <label><!-- Regional Affiliation --></label>
+    <name>Regional_Affiliation__c</name>
+</CustomFieldTranslation>

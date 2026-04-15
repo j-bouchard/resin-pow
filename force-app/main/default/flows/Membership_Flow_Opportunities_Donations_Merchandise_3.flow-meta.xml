@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <decisions>
+        <name>Decision_5</name>
+        <label>Decision 5</label>
+        <locationX>831</locationX>
+        <locationY>276</locationY>
+        <defaultConnector>
+            <targetReference>Donor_Level_Account_and_Contact_Owner</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Last_Merchandise_Date_Is_Changed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Last_Merchandise_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.npo02__LastCloseDate__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Donation_vs_Merchandise</targetReference>
+            </connector>
+            <label>Last Merchandise Date Is Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Donation_vs_Merchandise</name>
+        <label>Donation vs Merchandise</label>
+        <locationX>556</locationX>
+        <locationY>384</locationY>
+        <defaultConnector>
+            <targetReference>New_Member</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Merchandise</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Last_Merchandise_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Last_Merchandise_Date_Last_Membership_Date</targetReference>
+            </connector>
+            <label>Merchandise</label>
+        </rules>
+        <rules>
+            <name>Donation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.npo02__LastCloseDate__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Last_Close_Date_Last_Membership_Date</targetReference>
+            </connector>
+            <label>Donation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Donor_Level_Account_and_Contact_Owner</name>
+        <label>Donor Level - Account and Contact Owner</label>
+        <locationX>831</locationX>
+        <locationY>1368</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Donor_Level_Advocate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Donor_Level2__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Advocate</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Contact_Owner</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Donor Level = Advocate</label>
+        </rules>
+        <rules>
+            <name>Donor_Level</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Donor_Level2__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Enthusiast</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Donor_Level2__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Champion</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Contact_Owner</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Donor Level = Enthusiast</label>
+        </rules>
+        <rules>
+            <name>Donor_Level_Titan</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Donor_Level2__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Titan</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Copy_2_of_Contact_Owner</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Donor Level = Titan</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Last_Close_Date_Last_Membership_Date</name>
+        <label>Last Close Date &gt; Last Membership Date</label>
+        <locationX>622</locationX>
+        <locationY>492</locationY>
+        <defaultConnector>
+            <targetReference>Copy_2_of_Last_Membership_Date_Years_Entry_Points_Donation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Last_Membershop</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.npo02__LastCloseDate__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Last_Membership_Date_v2__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Last_Membership_Date_and_Last_Entry_Point</targetReference>
+            </connector>
+            <label>Last Close Date &gt; Last Membership Date</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Last_Merchandise_Date_Last_Membership_Date</name>
+        <label>Last Merchandise Date &gt; Last Membership Date</label>
+        <locationX>182</locationX>
+        <locationY>492</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Last_Membership_Date_Years_Entry_Points_Merch</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Last_Merchandise_Date_Last_Membership_Date2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Last_Merchandise_Date__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Last_Membership_Date_v2__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Last_Membership_Date_and_Last_Entry_Point2</targetReference>
+            </connector>
+            <label>Last Merchandise Date &gt; Last Membership Date</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>New_Member</name>
+        <label>New Member</label>
+        <locationX>556</locationX>
+        <locationY>984</locationY>
+        <defaultConnector>
+            <targetReference>Donor_Level_Account_and_Contact_Owner</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Membership_Join_Date_is_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Membership_Join_Date_v2__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Initial_Entry_Point_and_Membership_Join_Date</targetReference>
+            </connector>
+            <label>Membership Join Date is Null</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>entry_points_donation</name>
+        <dataType>String</dataType>
+        <expression>IF(
+CONTAINS(PRIORVALUE({!$Record.member_entry_points__c}), &apos;Donation&apos;), 
+{!$Record.member_entry_points__c},
+IF(
+ISBLANK({!$Record.member_entry_points__c}), 
+&apos;Donation&apos;,
+{!$Record.member_entry_points__c} + &quot;, Donation&quot;
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>entry_points_merchandise</name>
+        <dataType>String</dataType>
+        <expression>IF(
+CONTAINS(PRIORVALUE({!$Record.member_entry_points__c}), &apos;Merchandise Purchase&apos;), 
+{!$Record.member_entry_points__c},
+IF(
+ISBLANK({!$Record.member_entry_points__c}), 
+&apos;Merchandise Purchase&apos;,
+{!$Record.member_entry_points__c} + &quot;, Merchandise Purchase&quot;
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>membership_years_donations</name>
+        <dataType>String</dataType>
+        <expression>IF(
+CONTAINS(PRIORVALUE({!$Record.Membership_Years__c}), TEXT(YEAR({!$Record.npo02__LastCloseDate__c}))), 
+{!$Record.Membership_Years__c},
+IF(ISBLANK({!$Record.Membership_Years__c}),
+TEXT(YEAR({!$Record.npo02__LastCloseDate__c})),
+PRIORVALUE({!$Record.Membership_Years__c}) + &quot;, &quot; + TEXT(YEAR({!$Record.npo02__LastCloseDate__c}))
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>membership_years_merch</name>
+        <dataType>String</dataType>
+        <expression>IF(
+CONTAINS(PRIORVALUE({!$Record.Membership_Years__c}), TEXT(YEAR({!$Record.Last_Merchandise_Date__c}))), 
+{!$Record.Membership_Years__c},
+IF(ISBLANK({!$Record.Membership_Years__c}),
+TEXT(YEAR({!$Record.Last_Merchandise_Date__c})),
+PRIORVALUE({!$Record.Membership_Years__c}) + &quot;, &quot; + TEXT(YEAR({!$Record.Last_Merchandise_Date__c}))
+)
+)</expression>
+    </formulas>
+    <interviewLabel>Membership Flow - Opportunities (Donations/Merchandise) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Membership Flow - Opportunities (Donations/Merchandise) 3</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Account_Owner</name>
+        <label>Account Owner</label>
+        <locationX>435</locationX>
+        <locationY>1584</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>0054P00000DI6iaQAD</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Account</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Contact_Owner</name>
+        <label>Contact Owner</label>
+        <locationX>435</locationX>
+        <locationY>1476</locationY>
+        <connector>
+            <targetReference>Account_Owner</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>0054P00000DI6iaQAD</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_1_of_Account_Owner</name>
+        <label>Account Owner</label>
+        <locationX>699</locationX>
+        <locationY>1584</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>0054P00000EeB5YQAV</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Account</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_1_of_Copy_2_of_Contact_Owner</name>
+        <label>Contact Owner</label>
+        <locationX>963</locationX>
+        <locationY>1476</locationY>
+        <connector>
+            <targetReference>Copy_2_of_Account_Owner</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>005Rn000006g7mPIAQ</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_1_of_Last_Membership_Date_Years_Entry_Points_Merch</name>
+        <label>Last Membership Date, Years, Entry Points - Merch</label>
+        <locationX>182</locationX>
+        <locationY>792</locationY>
+        <connector>
+            <targetReference>New_Member</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Membership_Years__c</field>
+            <value>
+                <elementReference>membership_years_merch</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>member_entry_points__c</field>
+            <value>
+                <elementReference>entry_points_merchandise</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_2_of_Account_Owner</name>
+        <label>Account Owner</label>
+        <locationX>963</locationX>
+        <locationY>1584</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>005Rn000006g7mPIAQ</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Account</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_2_of_Contact_Owner</name>
+        <label>Contact Owner</label>
+        <locationX>699</locationX>
+        <locationY>1476</locationY>
+        <connector>
+            <targetReference>Copy_1_of_Account_Owner</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>0054P00000EeB5YQAV</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_2_of_Last_Membership_Date_Years_Entry_Points_Donation</name>
+        <label>Last Membership Date, Years, Entry Points - Donation</label>
+        <locationX>622</locationX>
+        <locationY>792</locationY>
+        <connector>
+            <targetReference>New_Member</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Membership_Years__c</field>
+            <value>
+                <elementReference>membership_years_donations</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>member_entry_points__c</field>
+            <value>
+                <elementReference>entry_points_donation</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Initial_Entry_Point_and_Membership_Join_Date</name>
+        <label>Update Initial Entry Point and Membership Join Date</label>
+        <locationX>424</locationX>
+        <locationY>1092</locationY>
+        <connector>
+            <targetReference>Donor_Level_Account_and_Contact_Owner</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Initial_Entry_Point__c</field>
+            <value>
+                <elementReference>$Record.most_recent_entry_point__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Membership_Join_Date_v2__c</field>
+            <value>
+                <elementReference>$Record.Last_Membership_Date_v2__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Last_Membership_Date_and_Last_Entry_Point</name>
+        <label>Update Last Membership Date and Last Entry Point</label>
+        <locationX>490</locationX>
+        <locationY>600</locationY>
+        <connector>
+            <targetReference>Copy_2_of_Last_Membership_Date_Years_Entry_Points_Donation</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Last_Membership_Date_v2__c</field>
+            <value>
+                <elementReference>$Record.npo02__LastCloseDate__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>most_recent_entry_point__c</field>
+            <value>
+                <stringValue>Donation</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Last_Membership_Date_and_Last_Entry_Point2</name>
+        <label>Update Last Membership Date and Last Entry Point</label>
+        <locationX>50</locationX>
+        <locationY>600</locationY>
+        <connector>
+            <targetReference>Copy_1_of_Last_Membership_Date_Years_Entry_Points_Merch</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Last_Membership_Date_v2__c</field>
+            <value>
+                <elementReference>$Record.Last_Merchandise_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>most_recent_entry_point__c</field>
+            <value>
+                <stringValue>Merchandise Purchase</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>182</locationX>
+        <locationY>0</locationY>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Batch</name>
+            <connector>
+                <targetReference>Decision_5</targetReference>
+            </connector>
+            <label>Batch</label>
+            <maxBatchSize>200</maxBatchSize>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+</Flow>

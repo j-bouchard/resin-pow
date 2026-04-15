@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Race --></label>
+    <name>Race__c</name>
+    <picklistValues>
+        <masterLabel>Asian</masterLabel>
+        <translation><!-- Asian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Black</masterLabel>
+        <translation><!-- Black --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caucasian</masterLabel>
+        <translation><!-- Caucasian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hispanic</masterLabel>
+        <translation><!-- Hispanic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Native American</masterLabel>
+        <translation><!-- Native American --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prefer not to say</masterLabel>
+        <translation><!-- Prefer not to say --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

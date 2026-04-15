@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Most Recent Entry Point --></label>
+    <name>most_recent_entry_point__c</name>
+    <picklistValues>
+        <masterLabel>Advocacy Action</masterLabel>
+        <translation><!-- Advocacy Action --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Donation</masterLabel>
+        <translation><!-- Donation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Attendee</masterLabel>
+        <translation><!-- Event Attendee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Merchandise Purchase</masterLabel>
+        <translation><!-- Merchandise Purchase --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POW Opt-In</masterLabel>
+        <translation><!-- POW Opt-In --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner Opt-In</masterLabel>
+        <translation><!-- Partner Opt-In --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

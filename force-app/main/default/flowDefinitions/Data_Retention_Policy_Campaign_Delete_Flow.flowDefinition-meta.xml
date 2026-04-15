@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This flow will delete campaigns according to POW&apos;s Data Retention Policy</description>
+    <masterLabel>Data Retention Policy - Campaign Delete Flow</masterLabel>
+</FlowDefinition>

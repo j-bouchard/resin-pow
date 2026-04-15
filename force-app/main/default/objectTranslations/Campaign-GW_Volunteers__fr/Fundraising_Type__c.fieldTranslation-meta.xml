@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Fundraising Type --></label>
+    <name>Fundraising_Type__c</name>
+    <picklistValues>
+        <masterLabel>General Donation</masterLabel>
+        <translation><!-- General Donation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Giveaway/Sweepstakes</masterLabel>
+        <translation><!-- Giveaway/Sweepstakes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner Fundraiser</masterLabel>
+        <translation><!-- Partner Fundraiser --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Peer-to-Peer</masterLabel>
+        <translation><!-- Peer-to-Peer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

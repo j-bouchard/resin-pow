@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>(Added OrderReferenceNumber)
+This flow listens for special order fulfillment events in Salesforce (called platform events). When such an event occurs, the flow adds an Order Reference Number to help track and manage the order fulfillment process efficiently.</description>
+    <masterLabel>Order Fulfillment Platform Event</masterLabel>
+</FlowDefinition>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Activation Type --></label>
+    <name>Activation_Type__c</name>
+    <picklistValues>
+        <masterLabel>Demio</masterLabel>
+        <translation><!-- Demio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Digital</masterLabel>
+        <translation><!-- Digital --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In person</masterLabel>
+        <translation><!-- In person --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Instagram Live</masterLabel>
+        <translation><!-- Instagram Live --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zoom</masterLabel>
+        <translation><!-- Zoom --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
