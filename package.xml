@@ -301,10 +301,6 @@
         <members>*</members>
         <name>SharingOwnerRule</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>SharingSet</name>
-    </types>
 
     <!-- ============================================================ -->
     <!-- EMAIL & COMMUNICATION                                        -->
@@ -336,10 +332,6 @@
     <types>
         <members>*</members>
         <name>MatchingRules</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CleanDataService</name>
     </types>
     <types>
         <members>*</members>
@@ -388,18 +380,6 @@
         <members>Social</members>
         <members>Territory2</members>
         <name>Settings</name>
-    </types>
-    <types>
-        <members>Account</members>
-        <members>Campaign</members>
-        <members>Case</members>
-        <members>Contact</members>
-        <members>Event</members>
-        <members>Lead</members>
-        <members>Opportunity</members>
-        <members>Task</members>
-        <members>Solution</members>
-        <name>CustomObjectSharingRules</name>
     </types>
     <types>
         <members>*</members>
@@ -479,14 +459,6 @@
     <!-- ============================================================ -->
     <types>
         <members>*</members>
-        <name>Scontrol</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>TopicsForObjects</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>AnimationRule</name>
     </types>
 </Package>
