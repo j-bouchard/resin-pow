@@ -1,0 +1,92 @@
+{
+  "clickup": {
+    "team_id": "9011837345",
+    "space_id": "90113309596",
+    "clients": {
+      "pow": {
+        "name": "Protect Our Winters",
+        "folder_id": "90117553024",
+        "pipeline_list_id": "901113603035",
+        "github_repo": "j-bouchard/resin-pow",
+        "sf_sandbox_alias": "sandbox",
+        "sf_prod_alias": "production"
+      },
+      "evergreen": {
+        "name": "Evergreen",
+        "folder_id": "90117553026"
+      },
+      "pfb": {
+        "name": "People for Bikes",
+        "folder_id": "90117553028"
+      },
+      "resources": {
+        "name": "RE Sources",
+        "folder_id": "90117553030"
+      },
+      "tdlt": {
+        "name": "Truckee Donner Land Trust",
+        "folder_id": "90117553033"
+      },
+      "bears-ears": {
+        "name": "Bears Ears Partnership",
+        "folder_id": "90117553035"
+      },
+      "bylt": {
+        "name": "Bear Yuba Land Trust",
+        "folder_id": "90117615335"
+      }
+    },
+    "pipeline_statuses": {
+      "requirements_review": "requirements review",
+      "needs_clarification": "needs clarification",
+      "in_progress": "in progress",
+      "ready_to_build": "ready to build",
+      "building": "building",
+      "in_review": "in review",
+      "deploying": "deploying",
+      "deploy_failed": "deploy failed",
+      "complete": "complete"
+    },
+    "custom_fields": {
+      "requirement_type": {
+        "id": "3ab45578-50e8-4621-9b74-5f92b718a6b4",
+        "options": {
+          "declarative": "2bec582e-bb01-48b7-beab-ff82a4786646",
+          "flow": "2b9fc01e-0513-4e90-9a8b-725653c7624f",
+          "apex": "8a98456b-32e2-4018-879d-5ed337dddac2",
+          "report": "1808cb05-521e-4bb0-89f9-07e7b3806565",
+          "dashboard": "f0de0d11-326a-49d3-8b2b-87680fc48086",
+          "integration": "11f3238f-fadc-4bde-b681-e9510152a0eb"
+        }
+      },
+      "complexity": {
+        "id": "e54f1dab-921f-4183-b929-37531013d724",
+        "options": {
+          "S": "d3a079dc-a1b0-4118-b342-02625376cd66",
+          "M": "1c062259-f796-4d1c-a4e7-70b68ebe6bf1",
+          "L": "5e4a199a-68af-47d2-ab69-3692620d1d34",
+          "XL": "3313a03e-7838-4e78-8947-053dce31deca"
+        }
+      },
+      "github_pr": {
+        "id": "e1ae53f8-0e86-4fe7-914e-aecc26600cd2"
+      },
+      "deployment_id": {
+        "id": "901cf60b-af76-4244-abea-654a3bd398a9"
+      },
+      "source": {
+        "id": "5f3ab2e9-08c6-4d0c-8ce0-1fc97d44c0b5"
+      }
+    },
+    "users": {
+      "joe": {
+        "id": 120103428,
+        "username": "Joe Bouchard",
+        "email": "joebouchard@resin.team"
+      }
+    }
+  },
+  "slack": {
+    "channel": "#resin-pipeline"
+  }
+}

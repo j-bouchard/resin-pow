@@ -6,6 +6,7 @@ Generated: 2026-04-15 | Org: protectourwinters.org
 | Type | Total | Active | Draft | Obsolete |
 |------|-------|--------|-------|----------|
 | Flows | 49 | 28 | 8 | 13 |
+| Workflow Rules | 71 | varies | - | - |
 | Apex Classes | 21 | 21 | - | - |
 | Apex Triggers | 3 | 3 | - | - |
 | Validation Rules | 1 | 1 | - | - |
@@ -187,6 +188,47 @@ NPSP uses TDTM (Table-Driven Trigger Management). Trigger handlers are stored as
 - **Lead** — Lead conversion handling
 
 **WARNING:** Before adding automation on Contact, Account, Opportunity, or Campaign, be aware that NPSP trigger handlers fire alongside your custom automation. Check for conflicts.
+
+---
+
+## Workflow Rules (71 rules across 8 objects)
+
+> Note: Many of these are legacy. Salesforce recommends migrating workflow rules to Flows.
+
+### Account (16 rules)
+- Account Foundation Stage — Current / Lapsed / Lost (based on donation recency)
+- Account Partner Stage — Current / Lapsed / Lost (based on donation recency)
+- Partner Contract Expiring — Task to account owner when renewal <30 days
+- KnowWho rules (8) — Auto-set KnowWho record types (kw__ namespace, managed)
+
+### Contact (42 rules)
+- **Alliance Prospect workflows (~20 rules)** — Track prospect status across sport categories (Bike, Climb, Creative, Ski, Snowboard, Trail, Science). Stages: Scouting → Facebook → Slack Sign Up → Event Activation → Survey → Training/Summit → Onboarding Complete
+- **Name capitalization** — Auto-capitalize first and last name
+- **Contact Stage** — Current / Lapsed / Lost based on donation recency
+- **Country/State updates (~10 rules)** — Normalize country and state values
+- **Voter Rating** — Assign Great Voter / Likely Voter / Nonvoter / Blank
+- **POW/POW AF email list** — Set POW__c and POW_Action_Fund__c to No for specific criteria
+- **Membership** — Update_Member_Donation
+- **Volunteers** — GW_Volunteers signup notification and thank you emails
+
+### Campaign (4 rules)
+- Campaign-related workflow rules
+
+### CampaignMember (2 rules)
+- Campaign member status workflows with email alerts
+
+### Case (15 actions: 5 alerts + 10 field updates)
+- Case routing by category: Media, Memberships, Partnerships, Events/Fundraising, POW International, Merchandise, Donor Relations, Other
+- Each rule assigns case owner + sends email alert
+
+### Alliance_Reviews__c (1 rule)
+- Alliance review field update
+
+### Lead (1 rule)
+- Lead workflow with alerts and tasks
+
+### Opportunity (5 rules)
+- Opportunity workflows with alerts, field updates, and tasks
 
 ---
 

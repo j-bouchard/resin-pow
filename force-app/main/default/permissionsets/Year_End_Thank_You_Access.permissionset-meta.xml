@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Year End Thank You Access</label>
+    <description>Grants read/write access to the Year End Thank You Sent field on Contact. Assign to development and fundraising staff.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Year_End_Thank_You_Sent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>

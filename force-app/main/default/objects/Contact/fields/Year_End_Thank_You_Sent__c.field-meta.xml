@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year_End_Thank_You_Sent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Tracks whether the development team has sent a year-end thank-you to this donor. Manually checked by staff after outreach is completed. Use the Year-End Thank You Pending report to find donors who still need to be thanked.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box once you have sent a year-end thank-you to this donor. See the Year-End Thank You Pending report to manage your outreach queue.</inlineHelpText>
+    <label>Year End Thank You Sent</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
