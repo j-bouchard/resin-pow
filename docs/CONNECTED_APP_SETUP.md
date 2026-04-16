@@ -68,7 +68,7 @@ matching alias:
 sf org login client-credentials \
   --client-id "<sandbox consumer key>" \
   --client-secret "<sandbox consumer secret>" \
-  --instance-url "https://resourcemedia--pow.sandbox.my.salesforce.com" \
+  --instance-url "https://pow--partial2.sandbox.my.salesforce.com" \
   --alias sandbox
 
 # Production
@@ -104,7 +104,7 @@ Once the smoke test passes, copy the values into the routine env config at
 ```
 SF_CLIENT_ID=<sandbox consumer key>
 SF_CLIENT_SECRET=<sandbox consumer secret>
-SF_INSTANCE_URL=https://resourcemedia--pow.sandbox.my.salesforce.com
+SF_INSTANCE_URL=https://pow--partial2.sandbox.my.salesforce.com
 
 SF_PROD_CLIENT_ID=<prod consumer key>
 SF_PROD_CLIENT_SECRET=<prod consumer secret>
