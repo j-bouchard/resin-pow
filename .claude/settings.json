@@ -9,6 +9,27 @@
       "Edit",
       "Glob",
       "Grep"
+    ],
+    "deny": [
+      "Bash(sf data delete *)",
+      "Bash(sf data update *)",
+      "Bash(sf data upsert *)",
+      "Bash(sf data create *)",
+      "Bash(sf data import *)",
+      "Bash(sf data tree import *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/block-sf-data-changes.sh"
+          }
+        ]
+      }
     ]
   }
 }
