@@ -199,6 +199,10 @@
                 <behavior>Edit</behavior>
                 <field>Major_Donor_Potential__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Year_End_Thank_You_Sent__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

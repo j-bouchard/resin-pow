@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <columns>
+        <field>Contact.Donor_Level__c</field>
+    </columns>
+    <columns>
+        <field>Contact.npo02__LastCloseDate__c</field>
+    </columns>
+    <columns>
+        <field>Contact.npo02__LastOppAmount__c</field>
+    </columns>
+    <description>Contacts pending year-end thank-you (Year_End_Thank_You_Sent__c = FALSE). Sorted by last gift amount. Add a Close Date filter to scope to the year-end window.</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Year_End_Thank_You_Sent__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Year-End Thank You Pending</name>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.npo02__LastOppAmount__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact.npo02__LastCloseDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
