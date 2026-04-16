@@ -49,6 +49,23 @@ current state of the org. If something seems wrong, run /snapshot-org to refresh
 - Production: only through merged PRs via /deploy-prod.
 - Never delete metadata unless issue is tagged "destructive-change."
 
+## Data Safety (CRITICAL — HARD-ENFORCED)
+
+**The pipeline is METADATA-ONLY. It must never modify Salesforce records.**
+
+- NEVER insert, update, or delete records (Contacts, Opportunities, Accounts, Campaigns, Leads, Tasks, Events, NPSP records, or anything else).
+- NEVER use `sf data delete`, `sf data update`, `sf data upsert`, `sf data create`, `sf data import`, or `sf data tree import`.
+- NEVER write anonymous Apex that performs DML (insert/update/delete/upsert/merge/undelete or Database.* methods) on record data.
+- READ-ONLY data access is fine: `sf data query` with SOQL is allowed for inspection.
+
+These rules are enforced by a PreToolUse hook (`.claude/hooks/block-sf-data-changes.sh`)
+that blocks matching Bash commands at the harness level. Even if you try, the
+command will not execute. Don't try.
+
+If a real business need requires data manipulation (data fix, migration, cleanup),
+that is OUT OF SCOPE for this pipeline and requires explicit human handling
+outside Claude Code.
+
 ## Org Aliases
 - `production` — Production org
 - `sandbox` — Development sandbox
