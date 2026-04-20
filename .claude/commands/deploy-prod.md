@@ -7,12 +7,12 @@ WORKFLOW:
 
 2. Run a validate-only deployment first:
    ```bash
-   sf project deploy start --target-org production --dry-run --wait 30
+   sf project deploy start --target-org pow-production --dry-run --wait 30
    ```
 
 3. If validation passes, run the full deployment:
    ```bash
-   sf project deploy start --target-org production --test-level RunLocalTests --wait 30
+   sf project deploy start --target-org pow-production --test-level RunLocalTests --wait 30
    ```
 
 4. Verify deployment:

@@ -68,8 +68,8 @@ that is OUT OF SCOPE for this pipeline and requires explicit human handling
 outside Claude Code.
 
 ## Org Aliases
-- `production` — Production org
-- `sandbox` — Development sandbox
+- `pow-production` — Production org
+- `pow-sandbox` — Development sandbox
 
 ## Useful Commands
 | Command | Description |

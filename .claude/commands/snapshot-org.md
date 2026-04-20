@@ -41,12 +41,12 @@ Query for:
 
 **Cloud / CLI only:** Use `sf data query` commands:
 ```bash
-sf data query --query "SELECT ..." --target-org production --json
+sf data query --query "SELECT ..." --target-org pow-production --json
 ```
 
 For Tooling API queries:
 ```bash
-sf data query --query "SELECT ..." --target-org production --use-tooling-api --json
+sf data query --query "SELECT ..." --target-org pow-production --use-tooling-api --json
 ```
 
 ## SOQL Queries

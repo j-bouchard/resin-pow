@@ -20,16 +20,16 @@ WORKFLOW:
 3. Create a feature branch: claude/task-{clickup-id}-{short-description}
 4. Run the Apex test baseline BEFORE making any changes:
    - Local: use SF DX MCP run_apex_tests tool
-   - Cloud: run `sf apex run test --target-org sandbox --test-level RunLocalTests --wait 10`
+   - Cloud: run `sf apex run test --target-org pow-sandbox --test-level RunLocalTests --wait 10`
    Record which tests pass and their coverage %. This is your baseline —
    you are only responsible for fixing tests you wrote.
 5. Write all metadata to force-app/main/default/ following SFDX structure
 6. Deploy to the client's sandbox:
    - Local: use SF DX MCP deploy_metadata tool
-   - Cloud: run `sf project deploy start --target-org sandbox`
+   - Cloud: run `sf project deploy start --target-org pow-sandbox`
 7. Run Apex tests again post-deploy:
    - Local: use SF DX MCP run_apex_tests tool
-   - Cloud: run `sf apex run test --target-org sandbox --test-level RunLocalTests --wait 10`
+   - Cloud: run `sf apex run test --target-org pow-sandbox --test-level RunLocalTests --wait 10`
 8. If deploy or tests fail, classify the error before retrying (see ERROR
    HANDLING below)
 9. Open a Pull Request with:

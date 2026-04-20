@@ -4,12 +4,12 @@ Validate the current state of the sandbox by:
 
 1. Run a check-only deployment of the current repo state against the sandbox:
    ```bash
-   sf project deploy start --target-org sandbox --dry-run --wait 30
+   sf project deploy start --target-org pow-sandbox --dry-run --wait 30
    ```
 
 2. Run all local Apex tests:
    ```bash
-   sf apex run test --target-org sandbox --test-level RunLocalTests --wait 10
+   sf apex run test --target-org pow-sandbox --test-level RunLocalTests --wait 10
    ```
 
 3. Report:
