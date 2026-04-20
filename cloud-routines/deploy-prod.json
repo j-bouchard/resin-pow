@@ -1,0 +1,16 @@
+{
+  "name": "pow-deploy-prod",
+  "description": "Deploy the latest merged PR to Protect Our Winters production org",
+  "prompt": "/deploy-prod",
+  "cwd": "~/repos/resin-pow",
+  "schedule": null,
+  "setup_script": "cloud-routines/setup.sh",
+  "env": {
+    "SF_PROD_CLIENT_ID": "REPLACE_WITH_PROD_CLIENT_ID",
+    "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
+    "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL",
+    "CLICKUP_LIST_ID": "REPLACE_WITH_CLICKUP_LIST_ID",
+    "SLACK_WEBHOOK_URL": "REPLACE_WITH_SLACK_WEBHOOK_URL"
+  },
+  "notes": "Trigger manually after a PR is merged to main. Runs validate-only first, then full deploy with RunLocalTests."
+}

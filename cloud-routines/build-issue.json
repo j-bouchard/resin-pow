@@ -1,0 +1,18 @@
+{
+  "name": "pow-build-issue",
+  "description": "Build a ClickUp task that is in 'Ready to Build' status for Protect Our Winters",
+  "prompt": "/build-issue",
+  "cwd": "~/repos/resin-pow",
+  "schedule": null,
+  "setup_script": "cloud-routines/setup.sh",
+  "env": {
+    "CLICKUP_LIST_ID": "REPLACE_WITH_CLICKUP_LIST_ID",
+    "SF_CLIENT_ID": "REPLACE_WITH_SANDBOX_CLIENT_ID",
+    "SF_CLIENT_SECRET": "REPLACE_WITH_SANDBOX_CLIENT_SECRET",
+    "SF_INSTANCE_URL": "REPLACE_WITH_SANDBOX_INSTANCE_URL",
+    "SF_PROD_CLIENT_ID": "REPLACE_WITH_PROD_CLIENT_ID",
+    "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
+    "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL"
+  },
+  "notes": "Trigger manually when a ClickUp task is moved to 'Ready to Build'. No cron schedule — event-driven via ClickUp webhook or manual trigger."
+}

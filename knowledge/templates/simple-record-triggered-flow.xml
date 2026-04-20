@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Template: Simple Record-Triggered Flow
+  Use this as a reference when generating Flow metadata XML directly.
+
+  Pattern: fires after a record is saved, evaluates a condition, performs
+  one field update via a Record Update element.
+
+  Key rules for valid Flow XML:
+  - Every element needs a unique 'name' (API name, no spaces)
+  - Connectors reference elements by their 'name' value (targetReference)
+  - The <start> element is the entry point — its connector leads to the
+    first real element
+  - Always add a faultConnector on Record Update/Create/Delete elements
+  - processType must be AutoLaunchedFlow for record-triggered flows
+  - triggerType: RecordAfterSave (after save) or RecordBeforeSave (before save)
+  - recordTriggerType: Create | Update | CreateAndUpdate | Delete
+-->
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <description>Example: stamp a field on Contact when a condition is met.</description>
+    <interviewLabel>Contact_AfterSave_ExampleStamp {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact After Save Example Stamp</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>176</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Check_Condition</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <!-- Only fire when the relevant field changed -->
+            <field>SomeField__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <decisions>
+        <name>Check_Condition</name>
+        <label>Check Condition</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <defaultConnectorLabel>Condition Not Met</defaultConnectorLabel>
+        <rules>
+            <name>Condition_Met</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SomeField__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>TriggerValue</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Contact</targetReference>
+            </connector>
+            <label>Condition Met</label>
+        </rules>
+    </decisions>
+    <recordUpdates>
+        <name>Update_Contact</name>
+        <label>Update Contact</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <faultConnector>
+            <targetReference>Log_Fault</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>StampedField__c</field>
+            <value>
+                <stringValue>StampedValue</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <!-- Fault handler: log error to a custom object or field -->
+        <name>Log_Fault</name>
+        <label>Log Fault</label>
+        <locationX>396</locationX>
+        <locationY>278</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Flow_Error__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <status>Active</status>
+</Flow>

@@ -1,7 +1,7 @@
 # Resin AI Pipeline — Protect Our Winters (POW)
 
 ## About This Repo
-This is the Salesforce DX project for Protect Our Winters' org, managed by Resin LLC.
+This is the Salesforce DX project for Protect Our Winters's org, managed by Resin LLC.
 All Salesforce changes go through this repo: Issue -> PR -> Merge -> Deploy.
 
 ## Before You Build Anything
@@ -25,11 +25,12 @@ current state of the org. If something seems wrong, run /snapshot-org to refresh
 - Fields: always set Description, Help Text, and FLS.
 - Follow naming conventions in org-context.md.
 
-## NPSP Awareness (CRITICAL)
-- This is a nonprofit org running NPSP (Nonprofit Success Pack)
-- Opportunities = Donations (not sales pipeline)
-- Contacts = Donors, volunteers, board members
-- Campaigns = Events, appeals, programs
+## NPSP Awareness (if applicable — check org-context.md)
+- If this org runs NPSP (Nonprofit Success Pack):
+  - Opportunities = Donations (not sales pipeline)
+  - Contacts = Donors, volunteers, board members
+  - Campaigns = Events, appeals, programs
+  - Think fundraising, not sales. Language matters.
 - Before creating ANY automation on Contact, Account, Opportunity, or Campaign,
   check ORG_AUTOMATION.md for NPSP trigger handlers on that object. NPSP uses
   TDTM (Table-Driven Trigger Management) and its handlers fire alongside
@@ -73,6 +74,8 @@ outside Claude Code.
 ## Useful Commands
 | Command | Description |
 |---------|-------------|
+| `/intake` | Extract requirements from a client conversation → ClickUp tasks |
+| `/ingest-docs` | Read existing docs → generate knowledge/org-context.md |
 | `/snapshot-org` | Regenerate org manual (knowledge/*.md files) |
 | `/build-issue` | Build from a ClickUp task |
 | `/validate-sandbox` | Check sandbox state |

@@ -1,0 +1,14 @@
+{
+  "name": "pow-snapshot-weekly",
+  "description": "Weekly org documentation refresh for Protect Our Winters",
+  "prompt": "/snapshot-org",
+  "cwd": "~/repos/resin-pow",
+  "schedule": "0 9 * * 1",
+  "setup_script": "cloud-routines/setup.sh",
+  "env": {
+    "SF_PROD_CLIENT_ID": "REPLACE_WITH_PROD_CLIENT_ID",
+    "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
+    "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL"
+  },
+  "notes": "Runs every Monday at 9am UTC. Queries production org, regenerates knowledge/*.md files, commits to main. SF_CLIENT_ID not set — setup.sh skips sandbox auth."
+}

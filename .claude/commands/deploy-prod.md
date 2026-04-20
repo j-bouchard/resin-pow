@@ -40,3 +40,11 @@ SAFETY:
   "DESTRUCTIVE: [component list]" and the ClickUp task was tagged "destructive-change"
 - ALWAYS run tests as part of deployment
 - If test coverage drops below 75%, halt and notify
+
+ROLLBACK:
+If a deployed change causes issues in production after the fact:
+1. On the main branch, run: `git revert <merge-commit-sha>`
+2. Push the revert commit to main
+3. Re-trigger /deploy-prod to deploy the reverted state
+4. Comment on the original PR and ClickUp task with the revert commit SHA
+   and a brief description of what went wrong

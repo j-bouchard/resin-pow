@@ -12,14 +12,14 @@ Query for:
 - Custom fields per object (API name, label, type, description, help text, required)
 - Picklist values for picklist fields
 - Record types (active only)
-- Always include key NPSP objects: Contact, Account, Opportunity, Campaign, Lead,
-  npe03__Recurring_Donation__c, npsp__General_Accounting_Unit__c,
-  npe01__OppPayment__c, npe5__Affiliation__c
+- Always include key NPSP objects if the org runs NPSP: Contact, Account,
+  Opportunity, Campaign, Lead, npe03__Recurring_Donation__c,
+  npsp__General_Accounting_Unit__c, npe01__OppPayment__c, npe5__Affiliation__c
 
 ### 2. ORG_AUTOMATION.md — Everything that runs automatically
 Query for:
 - Active Flows (name, type, trigger object, description)
-- NPSP Trigger Handlers (object, class, load order, active, async)
+- NPSP Trigger Handlers (if org runs NPSP)
 - Apex Classes (non-managed-package only: name, lines, status)
 - Apex Triggers (non-managed-package only: name, object, status)
 - Active Validation Rules (full name, metadata)
@@ -68,6 +68,20 @@ WHERE EntityDefinition.QualifiedApiName = '{object_name}' AND IsCustom = true
 ORDER BY QualifiedApiName
 ```
 
+**Step 2b: Picklist values** (run for every Picklist or MultiselectPicklist field found in Step 2)
+```sql
+SELECT Value, Label, IsActive
+FROM PicklistValueInfo
+WHERE EntityParticle.EntityDefinition.QualifiedApiName = '{object_name}'
+  AND EntityParticle.QualifiedApiName = '{field_api_name}'
+  AND IsActive = true
+```
+
+Include the active picklist values under each field in ORG_SCHEMA.md, e.g.:
+```
+| Donor_Tier__c | Donor Tier | Picklist | Values: Friend, Supporter, Partner, Champion |
+```
+
 **Step 3: Record types**
 ```sql
 SELECT DeveloperName, Name, Description, IsActive, SobjectType
@@ -80,7 +94,7 @@ SELECT DeveloperName, ActiveVersionId, Description, ProcessType, TriggerType, Tr
 FROM FlowDefinition WHERE ActiveVersionId != null ORDER BY DeveloperName
 ```
 
-**Step 5: NPSP Trigger Handlers**
+**Step 5: NPSP Trigger Handlers (if applicable)**
 ```sql
 SELECT npsp__Object__c, npsp__Class__c, npsp__Load_Order__c, npsp__Active__c, npsp__Asynchronous__c
 FROM npsp__Trigger_Handler__c WHERE npsp__Active__c = true
