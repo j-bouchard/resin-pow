@@ -17,5 +17,5 @@
     "AUDIT_REPO": "j-bouchard/resin-audit",
     "SLACK_WEBHOOK_URL": "REPLACE_WITH_SLACK_WEBHOOK_URL"
   },
-  "notes": "Trigger manually when a ClickUp task is moved to 'Ready to Build'. No cron schedule — event-driven via ClickUp webhook or manual trigger."
+  "notes": "Not directly scheduled — invoked inline by the poll-clickup routine when a task lands in 'Ready to Build'. Can also be fired manually via RemoteTrigger for debugging a specific task."
 }

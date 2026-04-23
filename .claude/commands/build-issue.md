@@ -64,9 +64,19 @@ WORKFLOW:
 
 7. Write metadata to `force-app/main/default/` following SFDX structure.
 
-   FLOWS: do not hand-author Flow XML. Build in sandbox UI, then
-   `sf project retrieve start --target-org sandbox --metadata Flow:MyFlowName`
-   and commit the retrieved file. See CLAUDE.md "Build Standards".
+   FLOWS (two-track by complexity — see CLAUDE.md "Build Standards"):
+   - SIMPLE Flow (record-triggered, 1-3 nodes, straight-line, no loops/
+     screens/subflows): generate the Flow XML directly. Use
+     `knowledge/templates/simple-record-triggered-flow.xml` as a starting
+     point. Add fault paths on DML, use custom labels for constants.
+   - COMPLEX Flow (loops, multi-branch decisions, invocable callouts,
+     anything non-trivial): do NOT generate XML. Build the same logic in
+     Apex instead (with TDTM for NPSP objects — see below).
+   - SCREEN FLOW or other UI-only Flow element: tag the ClickUp task
+     `needs-clarification` and stop — Joe will build in Flow UI, then
+     the pipeline retrieves via `sf project retrieve start --target-org
+     sandbox --metadata Flow:MyFlowName`.
+   - When unsure which track, escalate to Apex.
 
    TRIGGERS ON NPSP OBJECTS: do not create `ApexTrigger` files on Contact,
    Account, Opportunity, Campaign, CampaignMember, Lead, User, or any
@@ -141,10 +151,12 @@ BUILD STANDARDS:
   limitations require it (batch processing, complex integrations, recursive
   logic, performance-critical high-volume triggers). If you choose Apex over
   Flow, document WHY in the PR description.
-- Flows: ALWAYS built in sandbox UI and retrieved. Never hand-authored from
-  scratch. See CLAUDE.md "Build Standards" for the full rule and rationale.
-  - All Flows: add fault paths on every DML element, use subflows for
-    reusable logic, use custom labels for hardcoded values or thresholds.
+- Flows: two-track. Simple record-triggered Flows (1-3 nodes, straight-line)
+  — generate XML directly from `knowledge/templates/simple-record-triggered-flow.xml`.
+  Complex Flows — build in Apex instead. Screen Flows — escalate via
+  `needs-clarification`. See CLAUDE.md "Build Standards" for the full rule.
+  - All Flows that ARE generated: add fault paths on every DML element,
+    use custom labels for hardcoded values or thresholds.
 - NPSP TDTM: on Contact, Account, Opportunity, Campaign, CampaignMember, Lead,
   User, and any NPSP object, register via `npsp__Trigger_Handler__mdt` — do
   NOT author a raw ApexTrigger. See CLAUDE.md "NPSP Awareness" for full rule.
