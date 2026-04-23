@@ -6,8 +6,18 @@ All Salesforce changes go through this repo: Issue -> PR -> Merge -> Deploy.
 
 ## Client Identity
 Every command needs to know which client org this is. Identity lives in
-`.resin/client.json` as `{slug, name, upper, status}`. Pipeline scripts and
-bash commands read it directly — there is no render-time substitution.
+`.resin/client.json` as `{slug, name, upper, status}`.
+
+Pipeline bash/scripts read `.resin/client.json` directly at runtime — there
+is no render-time substitution for prompts or commands. Salesforce org
+aliases are bare `sandbox` / `production`; the cloud-routine setup script
+(or the operator's local `sf org login`) creates those aliases in the
+correct org, so command text never needs a client prefix.
+
+A small set of routine-config files (`cloud-routines/*.json`) DO get
+`{{CLIENT_SLUG}}` / `{{CLIENT_NAME}}` / `{{CLIENT_UPPER}}` substituted at
+sync time — these files embed the client identity in routine names and
+repo references. See `scripts/sync-policy.json` for the authoritative list.
 
 Standard pattern when you need identity in a shell command:
 ```bash
@@ -37,18 +47,26 @@ current state of the org. If something seems wrong, run /snapshot-org to refresh
 
 ## Build Standards
 - Declarative first. Flows over Apex for automation unless Flow limitations require code.
-- **Flows are ALWAYS built in the sandbox UI and retrieved.** Never hand-author
-  Flow XML from scratch — the format is too brittle (connector graph, locationX/Y,
-  processMetadataValues, API version coupling) and LLM-generated Flow XML will
-  deploy-fail or, worse, deploy and misbehave at runtime.
-  - Workflow: build in sandbox UI → `sf project retrieve start --metadata Flow:MyFlow`
-    → commit the retrieved XML → PR.
-  - `knowledge/templates/simple-record-triggered-flow.xml` exists as a READING
-    reference only — do not copy/modify it as a starting point for a build.
-  - Always add fault paths on DML, use subflows for reuse, custom labels for constants.
-- Apex: only when Flows can't handle it (batch, complex integrations, recursion).
+- **Flows — two-track by complexity:**
+  - **Simple Flows** = record-triggered, 1-3 nodes, straight-line execution
+    (no loops, no screens, no subflows, no complex decision trees). Generate
+    the Flow XML directly. Use `knowledge/templates/simple-record-triggered-flow.xml`
+    as a starting point. Always add fault paths on DML, use custom labels for
+    constants/thresholds, and never hand-build connector graphs you can't
+    verify against the template.
+  - **Complex Flows** = anything else (multi-branch, loops, screens, subflows,
+    invocable-Apex callouts). Do NOT generate XML. Escalate: if the task
+    could reasonably be done in Apex (batch logic, integrations, computed
+    rollups), build it in Apex instead. If it requires a Screen Flow or
+    other UI-only Flow element, tag the ClickUp task `needs-clarification`
+    — Joe will build it in Flow UI manually and the pipeline will retrieve it.
+  - **When unsure which track a Flow falls into, escalate to Apex.** We'd
+    rather over-use Apex than ship a broken Flow.
+- Apex: for complex automation (batch, integrations, recursion, computed logic
+  Flows can't express, or any Flow that would exceed the "simple" bar above).
   Trigger handler pattern, bulkified, 85%+ coverage, TestDataFactory class.
-  Document in the PR why Apex was chosen over Flow.
+  Document in the PR why Apex was chosen (and whether a Screen Flow was
+  considered).
 - Fields: always set Description, Help Text, and FLS.
 - Follow naming conventions in org-context.md.
 

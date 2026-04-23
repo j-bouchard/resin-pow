@@ -15,5 +15,5 @@
     "AUDIT_REPO": "j-bouchard/resin-audit",
     "RESIN_ALLOW_PROD_DEPLOY": "1"
   },
-  "notes": "Trigger manually after a PR is merged to main. Runs validate-only first, then full deploy with RunLocalTests."
+  "notes": "Not directly scheduled — invoked inline by the poll-clickup routine when a task lands in 'Ready to Deploy' (Joe's manual gate, set after he's merged the PR). Can also be fired manually via RemoteTrigger for debugging. Runs validate-only first, then quick-deploy with RunLocalTests."
 }

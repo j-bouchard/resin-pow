@@ -1,0 +1,22 @@
+{
+  "name": "pow-poll-clickup",
+  "description": "Polls ClickUp every 15 min for Protect Our Winters tasks in 'Ready to Build' or 'Ready to Deploy' and runs the matching pipeline stage",
+  "prompt": "/poll-clickup",
+  "cwd": "~/repos/resin-pow",
+  "schedule": "*/15 * * * *",
+  "setup_script": "cloud-routines/setup.sh",
+  "env": {
+    "CLICKUP_API_KEY": "REPLACE_WITH_CLICKUP_API_KEY",
+    "CLICKUP_LIST_ID": "REPLACE_WITH_CLICKUP_LIST_ID",
+    "SF_CLIENT_ID": "REPLACE_WITH_SANDBOX_CLIENT_ID",
+    "SF_CLIENT_SECRET": "REPLACE_WITH_SANDBOX_CLIENT_SECRET",
+    "SF_INSTANCE_URL": "REPLACE_WITH_SANDBOX_INSTANCE_URL",
+    "SF_PROD_CLIENT_ID": "REPLACE_WITH_PROD_CLIENT_ID",
+    "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
+    "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL",
+    "AUDIT_REPO": "j-bouchard/resin-audit",
+    "SLACK_WEBHOOK_URL": "REPLACE_WITH_SLACK_WEBHOOK_URL",
+    "RESIN_ALLOW_PROD_DEPLOY": "1"
+  },
+  "notes": "Primary trigger for the pipeline. Processes ONE task per tick (oldest first, Ready-to-Build prioritized over Ready-to-Deploy). Cloud routine schedule minimum is 1 hour per Claude Code docs — */15 may be rounded up to hourly in practice. If so, accept hourly cadence. RESIN_ALLOW_PROD_DEPLOY=1 is required because a poll that picks up a 'Ready to Deploy' task will inline the /deploy-prod workflow, which runs prod-deploy commands gated by block-sf-data-changes.sh."
+}

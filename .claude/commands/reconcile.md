@@ -37,7 +37,7 @@ hourly cloud routine) to catch drift before it compounds.
 1. Fetch ClickUp tasks in non-terminal states:
    ```bash
    curl -s -H "Authorization: $CLICKUP_API_KEY" \
-     "https://api.clickup.com/api/v2/list/$CLICKUP_LIST_ID/task?statuses[]=Building&statuses[]=In+Review&statuses[]=Deploying"
+     "https://api.clickup.com/api/v2/list/$CLICKUP_LIST_ID/task?statuses[]=Building&statuses[]=In+Review&statuses[]=Ready+to+Deploy&statuses[]=Deploying"
    ```
 
 2. For each task, gather evidence:
@@ -60,8 +60,11 @@ hourly cloud routine) to catch drift before it compounds.
    | Building | no | no | — | — | Post alert: build never started. Move to `Ready to Build`. |
    | Building | yes | no | — | — | Build in progress OR crashed. If branch stale > 2h, post alert, leave status. |
    | Building | yes | yes | no | — | PR open — move to `In Review`. Post a ClickUp comment with the PR link. |
-   | In Review | — | no | yes | no | Move to `Deploying`. Post Slack: "deploy-prod needs to be triggered for PR #N". |
-   | In Review | — | no | yes | yes | Move to `Complete`. Post ClickUp comment with deploy ID. |
+   | In Review | — | no | yes | no | PR merged but task not advanced. LEAVE status — Joe must move it to `Ready to Deploy` when he wants to ship. Post Slack reminder once per task. |
+   | In Review | — | no | yes | yes | Prod already deployed (manual/emergency path?). Move to `Complete`. Post ClickUp comment with deploy ID AND an alert — this bypassed the Ready-to-Deploy gate. |
+   | Ready to Deploy | — | — | yes | no (< 30 min in status) | Normal — `poll-clickup` hasn't fired yet. Leave. |
+   | Ready to Deploy | — | — | yes | no (> 30 min in status) | Poll or /deploy-prod stuck. Post Slack: "Ready-to-Deploy task not picked up for PR #N". Leave status. |
+   | Ready to Deploy | — | — | yes | yes | Deploy succeeded but status didn't advance. Move to `Complete`. Post ClickUp comment with deploy ID. |
    | Deploying | — | — | yes | yes | Move to `Complete`. Post ClickUp comment. |
    | Deploying | — | — | yes | no (> 1h since merge) | Leave status. Post Slack: deploy never started or stuck. |
    | Complete | — | — | — | no | DO NOT MOVE. Post alert — audit trail is inconsistent and needs human review. |
