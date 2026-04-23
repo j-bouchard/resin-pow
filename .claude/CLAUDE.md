@@ -1,8 +1,29 @@
-# Resin AI Pipeline — Protect Our Winters (POW)
+# Resin AI Pipeline
 
 ## About This Repo
-This is the Salesforce DX project for Protect Our Winters's org, managed by Resin LLC.
+This is a Salesforce DX project managed by Resin LLC.
 All Salesforce changes go through this repo: Issue -> PR -> Merge -> Deploy.
+
+## Client Identity
+Every command needs to know which client org this is. Identity lives in
+`.resin/client.json` as `{slug, name, upper, status}`. Pipeline scripts and
+bash commands read it directly — there is no render-time substitution.
+
+Standard pattern when you need identity in a shell command:
+```bash
+CLIENT_SLUG=$(jq -r .slug .resin/client.json)
+CLIENT_NAME=$(jq -r .name .resin/client.json)
+CLIENT_UPPER=$(jq -r .upper .resin/client.json)
+```
+
+When posting Slack messages, ClickUp comments, or PR titles, always prefix
+with `[$CLIENT_UPPER]` read from `.resin/client.json`.
+
+## Pipeline Version
+Pinned in `.resin/pipeline-version`. Changes to prompts/hooks/workflows flow
+in via PR from the central `resin-infrastructure` repo — never edit pipeline
+files directly in a client repo. If the pinned version looks wrong, check
+with Joe before taking action.
 
 ## Before You Build Anything
 1. Read `knowledge/org-context.md` — org setup, integrations, constraints
@@ -16,9 +37,15 @@ current state of the org. If something seems wrong, run /snapshot-org to refresh
 
 ## Build Standards
 - Declarative first. Flows over Apex for automation unless Flow limitations require code.
-- Flows: default for all automation. Simple Flows -> generate metadata directly.
-  Complex Flows -> build in sandbox UI, then retrieve metadata.
-  Always add fault paths on DML, use subflows for reuse, custom labels for constants.
+- **Flows are ALWAYS built in the sandbox UI and retrieved.** Never hand-author
+  Flow XML from scratch — the format is too brittle (connector graph, locationX/Y,
+  processMetadataValues, API version coupling) and LLM-generated Flow XML will
+  deploy-fail or, worse, deploy and misbehave at runtime.
+  - Workflow: build in sandbox UI → `sf project retrieve start --metadata Flow:MyFlow`
+    → commit the retrieved XML → PR.
+  - `knowledge/templates/simple-record-triggered-flow.xml` exists as a READING
+    reference only — do not copy/modify it as a starting point for a build.
+  - Always add fault paths on DML, use subflows for reuse, custom labels for constants.
 - Apex: only when Flows can't handle it (batch, complex integrations, recursion).
   Trigger handler pattern, bulkified, 85%+ coverage, TestDataFactory class.
   Document in the PR why Apex was chosen over Flow.
@@ -31,12 +58,21 @@ current state of the org. If something seems wrong, run /snapshot-org to refresh
   - Contacts = Donors, volunteers, board members
   - Campaigns = Events, appeals, programs
   - Think fundraising, not sales. Language matters.
-- Before creating ANY automation on Contact, Account, Opportunity, or Campaign,
-  check ORG_AUTOMATION.md for NPSP trigger handlers on that object. NPSP uses
-  TDTM (Table-Driven Trigger Management) and its handlers fire alongside
-  custom automation.
-- Never update fields that NPSP rollups write to (e.g., npe01__* fields,
-  npsp__* rollup fields). Your automation will conflict with NPSP's recalculations.
+- **NPSP uses TDTM (Table-Driven Trigger Management).** Do NOT create a raw
+  `ApexTrigger` on Contact, Account, Opportunity, Campaign, CampaignMember,
+  Lead, User, or any NPSP object. Instead:
+  1. Write an Apex class that extends `npsp.TDTM_Runnable` and overrides `run(...)`.
+  2. Create a `CustomMetadata` record of type `npsp__Trigger_Handler__mdt`
+     (or insert a `npsp__Trigger_Handler__c` record via an admin step
+     documented in the PR) specifying Object, Class, Load Order, Trigger Action,
+     Active flag, and Asynchronous flag.
+  3. Choose a Load Order that does not collide with existing handlers — query
+     `ORG_AUTOMATION.md` for current load orders on the target object.
+  If an NPSP object truly requires a non-TDTM trigger, STOP and add a
+  `needs-clarification` comment — do not work around this rule.
+- Never write to fields that NPSP rollups or the NPSP installer owns:
+  `npe01__*`, `npo02__*`, `npe03__*`, `npe4__*`, `npe5__*`, `npsp__*`. Reads are
+  fine; writes conflict with NPSP recalculations.
 - Common namespace prefixes: npsp__, npe01__, npo02__, npe03__, npe4__, npe5__
 
 ## Branch Rules
@@ -49,6 +85,43 @@ current state of the org. If something seems wrong, run /snapshot-org to refresh
 - Sandbox: deploy freely for testing.
 - Production: only through merged PRs via /deploy-prod.
 - Never delete metadata unless issue is tagged "destructive-change."
+
+## Audit Log
+
+Every pipeline command must emit at least `<action>.start` and either
+`<action>.complete` or `<action>.failed` via `.claude/scripts/audit.sh`.
+Events stream to the central `$AUDIT_REPO` (default `j-bouchard/resin-audit`)
+as one JSONL file per month per client. Audit failures do NOT block the
+pipeline — if the sink is unreachable, the script warns on stderr and
+exits 0. Do NOT add retry loops or conditional logic around audit calls.
+
+Event keys to use consistently:
+- `clickup_task` — ClickUp task ID
+- `pr` — GitHub PR number
+- `branch` — feature branch name
+- `sha` — commit SHA
+- `validation_id` / `deploy_id` — Salesforce deploy job IDs
+- `components` — count of metadata components deployed
+- `coverage` — percentage, no %
+- `classification` — standardized failure bucket (self_fixable, managed_package,
+  test_failure, drift, scheduled_apex, approval_gate)
+
+## Destructive-Change Approval Gate
+
+PRs with a body line beginning `DESTRUCTIVE:` cannot deploy to production
+without TWO approving reviews from users listed in `.claude/resin-approvers.json`,
+excluding the PR author. `/deploy-prod` enforces this via the GitHub Reviews
+API. Do not attempt to bypass the gate — it exists because a single admin
+mistake on a destructive change can corrupt donor data beyond recovery.
+The approver list changes only via its own reviewed PR.
+
+## MCP Toolsets
+
+The Salesforce MCP server (`.mcp.json`) is configured with toolsets
+`orgs,metadata,users` only. The `data` toolset is intentionally omitted —
+the pipeline is metadata-only. Record inspection uses `sf data query` via
+Bash (read-only), which the block-sf-data-changes.sh hook polices. Do
+NOT add `data` to the toolsets without explicit approval.
 
 ## Data Safety (CRITICAL — HARD-ENFORCED)
 
@@ -68,8 +141,8 @@ that is OUT OF SCOPE for this pipeline and requires explicit human handling
 outside Claude Code.
 
 ## Org Aliases
-- `pow-production` — Production org
-- `pow-sandbox` — Development sandbox
+- `production` — Production org
+- `sandbox` — Development sandbox
 
 ## Useful Commands
 | Command | Description |
@@ -80,5 +153,6 @@ outside Claude Code.
 | `/build-issue` | Build from a ClickUp task |
 | `/validate-sandbox` | Check sandbox state |
 | `/deploy-prod` | Deploy merged PR to production |
+| `/reconcile` | Detect and resolve ClickUp ↔ GitHub ↔ SF state desyncs |
 | `sf project retrieve start --manifest package.xml -o production` | Full metadata retrieve |
 | `sf project deploy start -o sandbox --dry-run` | Validate against sandbox |

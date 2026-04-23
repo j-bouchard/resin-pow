@@ -41,12 +41,12 @@ Query for:
 
 **Cloud / CLI only:** Use `sf data query` commands:
 ```bash
-sf data query --query "SELECT ..." --target-org pow-production --json
+sf data query --query "SELECT ..." --target-org production --json
 ```
 
 For Tooling API queries:
 ```bash
-sf data query --query "SELECT ..." --target-org pow-production --use-tooling-api --json
+sf data query --query "SELECT ..." --target-org production --use-tooling-api --json
 ```
 
 ## SOQL Queries
@@ -141,12 +141,28 @@ FROM Dashboard WHERE IsDeleted = false ORDER BY FolderName, Title
 
 ## Output Format
 
-Each file should start with:
+Each file should start with (substitute `$CLIENT_UPPER` from `jq -r .upper .resin/client.json`):
 ```
-# POW Org {Section}
+# $CLIENT_UPPER Org {Section}
 Generated: {timestamp} | Org: {org ID}
 ```
 
 Use markdown tables for structured data. Include counts (e.g., "## Apex Classes (18 total)").
 
-After generating all files, commit them to the repo.
+After generating all files, commit them to the repo. Then emit an audit event:
+```bash
+.claude/scripts/audit.sh snapshot.complete \
+  "trigger=<manual|weekly|post-deploy>" \
+  "objects=<count>" \
+  "flows=<count>" \
+  "apex_classes=<count>" \
+  "reports=<count>"
+```
+
+If any query failed (permissions error, timeout), emit instead:
+```bash
+.claude/scripts/audit.sh snapshot.partial \
+  "trigger=<manual|weekly|post-deploy>" \
+  "missing=<comma-separated list of queries that failed>" \
+  "error_summary=<one-line>"
+```

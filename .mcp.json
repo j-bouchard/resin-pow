@@ -4,8 +4,8 @@
       "command": "npx",
       "args": [
         "-y", "@salesforce/mcp",
-        "--orgs", "pow-sandbox,pow-production",
-        "--toolsets", "orgs,metadata,data,users",
+        "--orgs", "sandbox,production",
+        "--toolsets", "orgs,metadata,users",
         "--tools", "run_apex_tests",
         "--allow-non-ga-tools"
       ]

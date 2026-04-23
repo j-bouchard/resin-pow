@@ -5,22 +5,26 @@ You have received a client conversation (transcript, email thread, or Slack
 thread). Your job is to extract structured Salesforce requirements and create
 ClickUp tasks for Joe to review.
 
-## Step 1: Identify the client
+## Step 1: Confirm the client
 
-Determine which client org this conversation relates to from context clues
-(names, org names, project references). Resin's clients:
+This command runs inside a specific client repo. Read `.resin/client.json` to
+get the client's slug, name, and upper. Confirm the conversation is about
+THIS client — check for name references, org references, integration names,
+or people mentioned that match `knowledge/org-context.md`.
 
-| Client | Slug | ClickUp List |
-|--------|------|-------------|
-| Protect Our Winters | pow | Use CLICKUP_LIST_ID env var |
-| Bears Ears Partnership | bears-ears | Use CLICKUP_LIST_ID env var |
-| People for Bikes | pfb | Use CLICKUP_LIST_ID env var |
-| Evergreen Collaborative | evergreen | Use CLICKUP_LIST_ID env var |
-| Truckee Donner Land Trust | tdlt | Use CLICKUP_LIST_ID env var |
-| RE Sources | resources | Use CLICKUP_LIST_ID env var |
-| Bear Yuba Land Trust | bylt | Use CLICKUP_LIST_ID env var |
+If the conversation is clearly about a DIFFERENT client, STOP and post a
+Slack message telling Joe to run /intake from the correct client's repo.
 
-If you cannot identify the client from context, ask Joe before proceeding.
+If the conversation mentions multiple clients, handle only the portions
+about THIS client and list the others in the Slack summary so Joe knows to
+run /intake separately in those repos.
+
+Client metadata for runtime use:
+```bash
+CLIENT_SLUG=$(jq -r .slug .resin/client.json)
+CLIENT_NAME=$(jq -r .name .resin/client.json)
+CLIENT_UPPER=$(jq -r .upper .resin/client.json)
+```
 
 ## Step 2: Read the org context
 
@@ -93,7 +97,7 @@ requirement, so Joe can verify the interpretation is correct.}
 After creating all tasks, post a summary to Slack:
 
 ```
-[POW] {N} new tasks created from {source description}
+[$CLIENT_UPPER] {N} new tasks created from {source description}
 - {task title} ({complexity}, {type})
 - {task title} ({complexity}, {type})
 {M} tasks need clarification before building (tagged needs-clarification).
@@ -113,4 +117,4 @@ ClickUp: {link to list}
 - If a single conversation contains requirements for multiple clients (e.g.,
   a weekly roundup call), create tasks in each client's respective list.
 - If the conversation contains NO Salesforce requirements, post a Slack message:
-  "[POW] Intake complete — no Salesforce requirements identified."
+  "[$CLIENT_UPPER] Intake complete — no Salesforce requirements identified."

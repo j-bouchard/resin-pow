@@ -1,0 +1,7 @@
+{
+  "_comment": "Two-person approval rule for destructive production deploys. The /deploy-prod command reads this file and requires 2 approving PR reviews from GitHub users listed in `destructive_approvers` before it will process any PR whose description contains `DESTRUCTIVE:`. One of the approvers MUST be someone other than the PR author. Update this file via PR — not ad-hoc — so approver changes are themselves audited.",
+  "destructive_approvers": [
+    "j-bouchard"
+  ],
+  "notes": "Add the GitHub login of every Resin team member authorized to approve destructive changes. For client staff with GitHub access, add them only if they are accountable for production data on their org."
+}

@@ -46,20 +46,47 @@ stripped = re.sub(r'"(?:[^"\\]|\\.)*"', "", stripped)
 segments = re.split(r'(?:&&|\|\||;|\||\n|\$\(|\))', stripped)
 
 danger_data_re = re.compile(
-    r'^\s*sf\s+data\s+(delete|update|upsert|create|import|tree)(\s|$)',
+    r'^\s*sf\s+data\s+(delete|update|upsert|create|import|tree|bulk)(\s|$)',
     re.IGNORECASE,
 )
 apex_run_re = re.compile(r'^\s*sf\s+apex\s+run', re.IGNORECASE)
 
 dml_re = re.compile(
-    r'\b(insert|update|delete|upsert|merge|undelete)\b|Database\.(insert|update|delete|upsert|merge|undelete|emptyRecycleBin)',
+    r'\b(insert|update|delete|upsert|merge|undelete)\b|Database\.(insert|update|delete|upsert|merge|undelete|emptyRecycleBin|executeBatch|query[Ll]ocator)',
     re.IGNORECASE,
 )
+# Record objects: standard + common NPSP + catch-all for any custom object
+# with __c suffix (over-triggers on read-only queries, but those are allowed
+# via `sf data query` which doesn't hit this branch — apex_run is the gate).
 record_obj_re = re.compile(
-    r'\b(Contact|Account|Opportunity|Campaign|CampaignMember|Lead|Task|Event|User|OpportunityContactRole|AccountContactRelation|npe01__OppPayment__c|npe03__Recurring_Donation__c|npsp__Allocation__c|npsp__General_Accounting_Unit__c)\b'
+    r'\b(Contact|Account|Opportunity|Campaign|CampaignMember|Lead|Task|Event|User|OpportunityContactRole|AccountContactRelation|OpportunityLineItem|Asset|Contract|Quote|Order)\b'
+    r'|\bnpe\d*__\w+__c\b'
+    r'|\bnpsp__\w+__c\b'
+    r'|\bnpo\d+__\w+__c\b'
+    r'|\b\w+__c\b'
 )
 
+# Detect prod-deploy commands from non-deploy-prod contexts. The /deploy-prod
+# command sets RESIN_ALLOW_PROD_DEPLOY=1 before invoking `sf project deploy`;
+# all other commands (build-issue, snapshot-org, validate-sandbox, reconcile)
+# must not touch production.
+prod_deploy_re = re.compile(
+    r'^\s*sf\s+project\s+deploy\s+(start|quick|validate).*(--target-org|--?o)\s+production',
+    re.IGNORECASE,
+)
+
+allow_prod = os.environ.get("RESIN_ALLOW_PROD_DEPLOY") == "1"
+
 for seg in segments:
+    if not allow_prod and prod_deploy_re.search(seg):
+        sys.stderr.write("""BLOCKED: production deploy attempted outside /deploy-prod context.
+
+Only the /deploy-prod command is authorized to run `sf project deploy ... --target-org production`.
+Other commands (build-issue, snapshot-org, validate-sandbox, reconcile) must
+target sandbox only. If /deploy-prod is the caller, it sets RESIN_ALLOW_PROD_DEPLOY=1.
+""")
+        sys.exit(2)
+
     if danger_data_re.search(seg):
         sys.stderr.write("""BLOCKED: 'sf data delete/update/upsert/create/import/tree' is forbidden by repo policy.
 
