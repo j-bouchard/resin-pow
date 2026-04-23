@@ -6,8 +6,8 @@
   "schedule": "0 6 * * *",
   "setup_script": "cloud-routines/setup.sh",
   "env": {
-    "CLICKUP_API_KEY": "REPLACE_WITH_CLICKUP_API_KEY",
     "CLICKUP_LIST_ID": "REPLACE_WITH_CLICKUP_LIST_ID",
+    "SLACK_CHANNEL_ID": "REPLACE_WITH_SLACK_CHANNEL_ID",
     "SF_CLIENT_ID": "REPLACE_WITH_SANDBOX_CLIENT_ID",
     "SF_CLIENT_SECRET": "REPLACE_WITH_SANDBOX_CLIENT_SECRET",
     "SF_INSTANCE_URL": "REPLACE_WITH_SANDBOX_INSTANCE_URL",
@@ -15,8 +15,7 @@
     "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
     "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL",
     "AUDIT_REPO": "j-bouchard/resin-audit",
-    "SLACK_WEBHOOK_URL": "REPLACE_WITH_SLACK_WEBHOOK_URL",
     "RESIN_ALLOW_PROD_DEPLOY": "1"
   },
-  "notes": "Primary trigger for the pipeline. Runs nightly at 6am UTC (≈1am EST / 10pm PST previous day). Drains the FULL queue in one run: all Ready-to-Build tasks first (oldest first), then all Ready-to-Deploy tasks. Partial failures don't abort the batch — a failed build moves on to the next task. RESIN_ALLOW_PROD_DEPLOY=1 required because the deploy phase inlines /deploy-prod, which runs prod-deploy commands gated by block-sf-data-changes.sh. Budget: 1 routine run per day per client (fits within Max-plan 15/day with room for manual debug runs)."
+  "notes": "Primary trigger for the pipeline. Runs nightly at 6am UTC (≈1am EST / 10pm PST previous day). Drains the FULL queue in one run: all Ready-to-Build tasks first (oldest first), then all Ready-to-Deploy tasks. Partial failures don't abort the batch — a failed build moves on to the next task. ClickUp and Slack interactions use MCP connectors (not curl) — Anthropic's security proxy blocks direct api.clickup.com and intermittently hooks.slack.com, so the environment MUST have ClickUp and Slack connectors attached. Auth is handled by the connectors — no CLICKUP_API_KEY or SLACK_WEBHOOK_URL needed. RESIN_ALLOW_PROD_DEPLOY=1 required because the deploy phase inlines /deploy-prod, which runs prod-deploy commands gated by block-sf-data-changes.sh. Budget: 1 routine run per day per client (fits within Max-plan 15/day with room for manual debug runs)."
 }

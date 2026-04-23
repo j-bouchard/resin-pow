@@ -16,7 +16,8 @@ requested Salesforce configuration/code.
 
 WORKFLOW:
 
-1. Read the ClickUp task description for the full requirement spec.
+1. Read the ClickUp task description for the full requirement spec using
+   `clickup_get_task` with the task's `task_id` and `detail_level: "detailed"`.
    Emit an audit event:
    ```bash
    .claude/scripts/audit.sh build.start \
@@ -29,11 +30,14 @@ WORKFLOW:
      `git ls-remote --heads origin "claude/task-{clickup-id}-*"`
    - Check if an open PR already references this ClickUp task ID in its title or body:
      `gh pr list --state open --search "{clickup-id}"`
-   - If either exists, STOP. Add a ClickUp comment explaining a prior build is
-     in flight and do NOT create a duplicate branch/PR. The `reconcile` command
-     can resolve stuck state; do not work around it here.
+   - If either exists, STOP. Add a ClickUp comment using
+     `clickup_create_task_comment` (with `task_id` and `comment_text`)
+     explaining a prior build is in flight and do NOT create a duplicate
+     branch/PR. The `reconcile` command can resolve stuck state; do not
+     work around it here.
 
-3. Move the ClickUp task status to "Building". Record the ClickUp response —
+3. Move the ClickUp task status to "Building" using `clickup_update_task`
+   with `task_id` and `status: "Building"`. Record the response —
    if the status update fails, STOP (do not proceed with a half-updated state).
 
 4. Create a feature branch: `claude/task-{clickup-id}-{short-description}`
@@ -50,9 +54,10 @@ WORKFLOW:
          tmp/drift-check/objects/Contact/fields/Preferred_Communication__c.field-meta.xml || true
    ```
    If production differs from the repo for any component you're touching,
-   STOP. Post the diff to the ClickUp task and move status to "Needs
-   Clarification". Admin drift must be resolved (reconciled into repo or
-   reverted in prod) before the build proceeds.
+   STOP. Post the diff to the ClickUp task using `clickup_create_task_comment`
+   and move status to "Needs Clarification" using `clickup_update_task` with
+   `status: "Needs Clarification"`. Admin drift must be resolved (reconciled
+   into repo or reverted in prod) before the build proceeds.
 
 6. Run the Apex test baseline BEFORE making any changes:
    - Local: use SF DX MCP run_apex_tests tool
@@ -100,7 +105,8 @@ WORKFLOW:
    ```
    Parse post-tests.json and compare to baseline:
    - If coverage dropped below 75% org-wide OR below 85% on any class you
-     touched: STOP and add a ClickUp comment. Do not open the PR.
+     touched: STOP and add a ClickUp comment via `clickup_create_task_comment`.
+     Do not open the PR.
    - If new test failures appeared that were not in the baseline: fix your
      code (not the test). Up to 3 attempts, then STOP.
 
@@ -121,12 +127,16 @@ WORKFLOW:
       - Any potential NPSP / TDTM interactions and chosen load order
       - Link to the ClickUp task
 
-12. Post the PR link as a comment on the ClickUp task.
+12. Post the PR link as a comment on the ClickUp task using
+    `clickup_create_task_comment` with `task_id` and `comment_text` set
+    to the PR URL (plus a short note).
 
-13. Move the ClickUp task status to "In Review". If the ClickUp status
+13. Move the ClickUp task status to "In Review" using `clickup_update_task`
+    with `task_id` and `status: "In Review"`. If the ClickUp status
     update fails, retry up to 3 times with backoff, then post the failure
-    to Slack and leave the task as-is — do NOT leave the PR in a state
-    where ClickUp thinks the task is still "Building".
+    to Slack using `slack_send_message` with `channel_id: "$SLACK_CHANNEL_ID"`
+    and leave the task as-is — do NOT leave the PR in a state where ClickUp
+    thinks the task is still "Building".
 
 14. Emit the terminal audit event:
     ```bash
