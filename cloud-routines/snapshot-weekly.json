@@ -8,7 +8,8 @@
   "env": {
     "SF_PROD_CLIENT_ID": "REPLACE_WITH_PROD_CLIENT_ID",
     "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
-    "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL"
+    "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL",
+    "AUDIT_REPO": "j-bouchard/resin-audit"
   },
   "notes": "Runs every Monday at 9am UTC. Queries production org, regenerates knowledge/*.md files, commits to main. SF_CLIENT_ID not set — setup.sh skips sandbox auth."
 }

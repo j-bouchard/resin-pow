@@ -1,14 +1,36 @@
-name: Post-Merge Org Snapshot
+name: Post-Merge Deploy Notification
+
 on:
   pull_request:
     types: [closed]
     branches: [main]
+
+# This workflow fires the "ready to deploy" signal after a PR merges to main.
+# The actual deploy runs in the deploy-prod cloud routine (Claude Code, not
+# GitHub Actions) because it needs the SF CLI with client-credentials auth
+# and the /deploy-prod command context.
+#
+# This workflow's job is to (1) broadcast the merge event to Slack so a
+# human can trigger the cloud routine, and (2) leave an auditable GitHub
+# record. If/when the cloud routine is wired to a webhook, this file
+# becomes the webhook source.
+
 jobs:
-  snapshot:
+  notify-merge:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger org snapshot
+      - uses: actions/checkout@v4
+      - name: Read client identity
+        id: client
         run: |
-          echo "TODO: Trigger /snapshot-org via Claude Code routine API"
-          echo "This will be configured once cloud routines are set up."
+          echo "upper=$(jq -r .upper .resin/client.json)" >> "$GITHUB_OUTPUT"
+      - name: Post merge notification to Slack
+        uses: slackapi/slack-github-action@v2
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "[${{ steps.client.outputs.upper }}] PR #${{ github.event.pull_request.number }} merged — *${{ github.event.pull_request.title }}*\nMerge SHA: `${{ github.event.pull_request.merge_commit_sha }}`\nTrigger `/deploy-prod` cloud routine to deploy to production.\n${{ github.event.pull_request.html_url }}"
+            }

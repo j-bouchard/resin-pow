@@ -265,10 +265,15 @@
     <!-- ============================================================ -->
     <!-- SECURITY, PROFILES & PERMISSIONS                            -->
     <!-- ============================================================ -->
-    <types>
-        <members>*</members>
-        <name>Profile</name>
-    </types>
+    <!--
+      Profile is intentionally NOT wildcarded.
+      A `*` on Profile pulls every standard profile with full permission
+      payloads; any admin-driven change in prod then collides with deploys
+      from this repo. All permission management goes through PermissionSet
+      and PermissionSetGroup. If a specific profile MUST be tracked, add
+      it explicitly by name here and remove the matching line from
+      `.forceignore`.
+    -->
     <types>
         <members>*</members>
         <name>PermissionSet</name>
@@ -341,10 +346,13 @@
     <!-- ============================================================ -->
     <!-- INSTALLED PACKAGES (NPSP & Related)                         -->
     <!-- ============================================================ -->
-    <types>
-        <members>*</members>
-        <name>InstalledPackage</name>
-    </types>
+    <!--
+      InstalledPackage is NOT retrieved or deployed. Managed packages
+      (NPSP, Classy, FundraiseUp, etc.) are installed and upgraded via
+      the setup UI or subscriber packaging API — never through this
+      pipeline. A wildcard here attempts to "deploy NPSP" on every
+      deploy, which fails. NPSP version pinning lives in `sfdx-project.json`.
+    -->
 
     <!-- ============================================================ -->
     <!-- SETTINGS & CONFIGURATION                                     -->

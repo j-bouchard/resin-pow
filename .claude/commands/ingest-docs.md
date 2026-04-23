@@ -61,7 +61,7 @@ From the documents, identify and structure:
 Write `knowledge/org-context.md` using this structure:
 
 ```markdown
-# Protect Our Winters — Org Context
+# $CLIENT_NAME — Org Context  (substitute real name from .resin/client.json)
 Last updated: {date}
 
 ## Org Details
