@@ -8,4 +8,9 @@
         <field>Contact.Preferred_Communication_Method__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Preferred_Communication__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
 </PermissionSet>
