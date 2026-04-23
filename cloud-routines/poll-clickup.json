@@ -3,7 +3,7 @@
   "description": "Polls ClickUp every 15 min for Protect Our Winters tasks in 'Ready to Build' or 'Ready to Deploy' and runs the matching pipeline stage",
   "prompt": "/poll-clickup",
   "cwd": "~/repos/resin-pow",
-  "schedule": "*/15 * * * *",
+  "schedule": "0 6 * * *",
   "setup_script": "cloud-routines/setup.sh",
   "env": {
     "CLICKUP_API_KEY": "REPLACE_WITH_CLICKUP_API_KEY",
@@ -18,5 +18,5 @@
     "SLACK_WEBHOOK_URL": "REPLACE_WITH_SLACK_WEBHOOK_URL",
     "RESIN_ALLOW_PROD_DEPLOY": "1"
   },
-  "notes": "Primary trigger for the pipeline. Processes ONE task per tick (oldest first, Ready-to-Build prioritized over Ready-to-Deploy). Cloud routine schedule minimum is 1 hour per Claude Code docs — */15 may be rounded up to hourly in practice. If so, accept hourly cadence. RESIN_ALLOW_PROD_DEPLOY=1 is required because a poll that picks up a 'Ready to Deploy' task will inline the /deploy-prod workflow, which runs prod-deploy commands gated by block-sf-data-changes.sh."
+  "notes": "Primary trigger for the pipeline. Runs nightly at 6am UTC (≈1am EST / 10pm PST previous day). Drains the FULL queue in one run: all Ready-to-Build tasks first (oldest first), then all Ready-to-Deploy tasks. Partial failures don't abort the batch — a failed build moves on to the next task. RESIN_ALLOW_PROD_DEPLOY=1 required because the deploy phase inlines /deploy-prod, which runs prod-deploy commands gated by block-sf-data-changes.sh. Budget: 1 routine run per day per client (fits within Max-plan 15/day with room for manual debug runs)."
 }
