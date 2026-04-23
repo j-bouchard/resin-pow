@@ -9,11 +9,10 @@
     "SF_PROD_CLIENT_ID": "REPLACE_WITH_PROD_CLIENT_ID",
     "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
     "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL",
-    "CLICKUP_API_KEY": "REPLACE_WITH_CLICKUP_API_KEY",
     "CLICKUP_LIST_ID": "REPLACE_WITH_CLICKUP_LIST_ID",
-    "SLACK_WEBHOOK_URL": "REPLACE_WITH_SLACK_WEBHOOK_URL",
+    "SLACK_CHANNEL_ID": "REPLACE_WITH_SLACK_CHANNEL_ID",
     "AUDIT_REPO": "j-bouchard/resin-audit",
     "RESIN_ALLOW_PROD_DEPLOY": "1"
   },
-  "notes": "Not directly scheduled — invoked inline by the poll-clickup routine when a task lands in 'Ready to Deploy' (Joe's manual gate, set after he's merged the PR). Can also be fired manually via RemoteTrigger for debugging. Runs validate-only first, then quick-deploy with RunLocalTests."
+  "notes": "Not directly scheduled — invoked inline by the poll-clickup routine when a task lands in 'Ready to Deploy' (Joe's manual gate, set after he's merged the PR). Can also be fired manually via RemoteTrigger for debugging. Runs validate-only first, then quick-deploy with RunLocalTests. ClickUp and Slack interactions use MCP connectors (not curl) — the environment MUST have ClickUp and Slack connectors attached. Auth is handled by the connectors, so no CLICKUP_API_KEY or SLACK_WEBHOOK_URL is needed."
 }

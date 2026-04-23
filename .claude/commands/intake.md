@@ -12,8 +12,12 @@ get the client's slug, name, and upper. Confirm the conversation is about
 THIS client — check for name references, org references, integration names,
 or people mentioned that match `knowledge/org-context.md`.
 
+ClickUp and Slack in this command are accessed via MCP connectors — no
+curl, no API keys. Required env vars: `CLICKUP_LIST_ID` and `SLACK_CHANNEL_ID`.
+
 If the conversation is clearly about a DIFFERENT client, STOP and post a
-Slack message telling Joe to run /intake from the correct client's repo.
+Slack message (via `slack_send_message` with `channel_id: "$SLACK_CHANNEL_ID"`)
+telling Joe to run /intake from the correct client's repo.
 
 If the conversation mentions multiple clients, handle only the portions
 about THIS client and list the others in the Slack summary so Joe knows to
@@ -46,8 +50,13 @@ unless it has a Salesforce implementation component.
 
 ## Step 4: Create ClickUp tasks
 
-For each extracted requirement, create a ClickUp task using the API with this
-structure:
+For each extracted requirement, create a ClickUp task using
+`clickup_create_task` with `list_id: "$CLICKUP_LIST_ID"`, `name`,
+`markdown_description`, `tags` (include `needs-clarification` when
+appropriate), and `custom_fields` for Requirement Type, Complexity,
+Priority, and Source. Set status to `Requirements Review` via
+`clickup_update_task` (or via the create call if the connector accepts
+status on creation). Use this structure:
 
 **Title:** Action-oriented, specific (e.g., "Add Preferred_Communication__c
 picklist field to Contact" not "Communication preferences")
@@ -61,7 +70,9 @@ picklist field to Contact" not "Communication preferences")
 - `Source`: URL or description of where this requirement came from
 
 **Tags:** Add `needs-clarification` if there are open questions that must be
-resolved before building.
+resolved before building. Tags can be added at create time via the `tags`
+arg on `clickup_create_task`, or after the fact with `clickup_add_tag_to_task`
+(`task_id`, `tag_name`).
 
 **Description body:**
 ```
@@ -94,7 +105,8 @@ requirement, so Joe can verify the interpretation is correct.}
 
 ## Step 5: Post Slack summary
 
-After creating all tasks, post a summary to Slack:
+After creating all tasks, post a summary to Slack using `slack_send_message`
+with `channel_id: "$SLACK_CHANNEL_ID"` and message:
 
 ```
 [$CLIENT_UPPER] {N} new tasks created from {source description}
@@ -116,5 +128,6 @@ ClickUp: {link to list}
   Open Questions rather than assuming a custom solution is needed.
 - If a single conversation contains requirements for multiple clients (e.g.,
   a weekly roundup call), create tasks in each client's respective list.
-- If the conversation contains NO Salesforce requirements, post a Slack message:
+- If the conversation contains NO Salesforce requirements, post a Slack message
+  via `slack_send_message` with `channel_id: "$SLACK_CHANNEL_ID"`:
   "[$CLIENT_UPPER] Intake complete — no Salesforce requirements identified."

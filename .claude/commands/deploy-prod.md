@@ -9,9 +9,14 @@ in as input. It can also be fired manually for debugging.
 
 WORKFLOW:
 
-0. Move the ClickUp task status from "Ready to Deploy" to "Deploying" BEFORE
+0. Move the ClickUp task status from "Ready to Deploy" to "Deploying" using
+   `clickup_update_task` with `task_id` and `status: "Deploying"` BEFORE
    doing any real work. Emit `deploy.start` audit event. This prevents the
    next poll tick from picking up the same task while you're mid-deploy.
+
+   ClickUp and Slack in this command are accessed via MCP connectors (no
+   curl, no API keys). Env vars required here: `CLICKUP_LIST_ID` and
+   `SLACK_CHANNEL_ID`.
 
 1. Read the merged PR linked to the task to understand what's being deployed.
    Capture the PR number, merge commit SHA, and the list of changed metadata
@@ -56,9 +61,12 @@ WORKFLOW:
 
    Gate:
    - If `COUNT < 2`: STOP. Do NOT proceed with validate or deploy. Post a
-     ClickUp comment and Slack message listing (a) who HAS approved, (b)
-     who is still needed, (c) the approver list from `resin-approvers.json`.
-     Move the ClickUp task to "Deploy Failed". Example Slack message:
+     ClickUp comment (`clickup_create_task_comment`) and a Slack message
+     (`slack_send_message` with `channel_id: "$SLACK_CHANNEL_ID"`) listing
+     (a) who HAS approved, (b) who is still needed, (c) the approver list
+     from `resin-approvers.json`. Move the ClickUp task to "Deploy Failed"
+     using `clickup_update_task` with `status: "Deploy Failed"`.
+     Example Slack message:
      ```
      [$CLIENT_UPPER] Destructive deploy BLOCKED on PR #<N>: {title}
      Destructive changes require 2 approvals from resin-approvers.json,
@@ -127,14 +135,19 @@ WORKFLOW:
    - Run /snapshot-org to refresh the org manual with new state.
    - Commit updated `knowledge/*.md` files to main with message
      `docs: post-deploy snapshot for PR #<N>`.
-   - Move the linked ClickUp task status to "Complete". Retry up to 3x on
-     failure; if still failing, post to Slack and stop — do NOT leave ClickUp
-     showing "Deploying" when the deploy succeeded.
-   - Add a ClickUp comment with:
+   - Move the linked ClickUp task status to "Complete" using
+     `clickup_update_task` with `task_id` and `status: "Complete"`. Retry
+     up to 3x on failure; if still failing, post to Slack via
+     `slack_send_message` with `channel_id: "$SLACK_CHANNEL_ID"` and stop —
+     do NOT leave ClickUp showing "Deploying" when the deploy succeeded.
+   - Add a ClickUp comment using `clickup_create_task_comment` with:
      - Validation ID (Step 3), deployment ID (Step 5), merge commit SHA
      - Timestamp, test coverage before/after
      - Full component list deployed
-   - Post to Slack: `[$CLIENT_UPPER] Deployed PR #<N>: {title} — {N} components, coverage {X}%` (shell-expand `CLIENT_UPPER=$(jq -r .upper .resin/client.json)`)
+   - Post to Slack using `slack_send_message` with
+     `channel_id: "$SLACK_CHANNEL_ID"` and message
+     `[$CLIENT_UPPER] Deployed PR #<N>: {title} — {N} components, coverage {X}%`
+     (shell-expand `CLIENT_UPPER=$(jq -r .upper .resin/client.json)`)
    - Emit audit event:
      ```bash
      .claude/scripts/audit.sh deploy.complete \
@@ -148,7 +161,8 @@ WORKFLOW:
 8. FAILURE path (validate or deploy fails):
    - Do NOT retry automatically. Salesforce prod deploys are expensive
      (time + test run) and retrying a flaky deploy masks real issues.
-   - Move the ClickUp task to "Deploy Failed".
+   - Move the ClickUp task to "Deploy Failed" using `clickup_update_task`
+     with `task_id` and `status: "Deploy Failed"`.
    - Classify the failure:
      - **Test failure on pre-existing tests**: likely managed-package update
        or admin drift. Do not attempt to fix — flag for Joe.
@@ -156,8 +170,10 @@ WORKFLOW:
        is appropriate (see REVERT below).
      - **Metadata deploy error** (missing dependency, invalid reference):
        bug in the PR — revert is appropriate.
-   - Post error details to Slack AND as a PR comment AND as a ClickUp
-     comment. Include the full error, the deployment ID, and the classification.
+   - Post error details to Slack (via `slack_send_message` with
+     `channel_id: "$SLACK_CHANNEL_ID"`) AND as a PR comment (via `gh pr comment`)
+     AND as a ClickUp comment (via `clickup_create_task_comment`). Include
+     the full error, the deployment ID, and the classification.
    - Emit audit event:
      ```bash
      .claude/scripts/audit.sh deploy.failed \
@@ -204,6 +220,8 @@ If all answers are "no", the revert is tractable:
   4. Comment on the original PR and ClickUp task with the revert SHA and
      a one-line reason.
 
-Otherwise: post the blocking conditions to Slack, move ClickUp to
-"Deploy Failed", and wait for Joe. Forward-fix is almost always safer than
-a mechanical revert for non-trivial Salesforce metadata.
+Otherwise: post the blocking conditions to Slack (via `slack_send_message`
+with `channel_id: "$SLACK_CHANNEL_ID"`), move ClickUp to "Deploy Failed"
+(`clickup_update_task` with `status: "Deploy Failed"`), and wait for Joe.
+Forward-fix is almost always safer than a mechanical revert for non-trivial
+Salesforce metadata.

@@ -103,9 +103,12 @@ Set the following GitHub repository secrets (Settings → Secrets → Actions):
 | `SF_CLIENT_ID` | Consumer Key from sandbox org |
 | `SF_CLIENT_SECRET` | Consumer Secret from sandbox org |
 | `SF_INSTANCE_URL` | `https://<sandbox-domain>.sandbox.my.salesforce.com` |
-| `SLACK_WEBHOOK_URL` | Slack incoming webhook URL for this client |
-| `CLICKUP_API_KEY` | ClickUp API key (Resin shared key) |
-| `CLICKUP_LIST_ID` | ClickUp list ID for this client's tasks |
+| `SLACK_WEBHOOK_URL` | Slack incoming webhook URL — used ONLY by `.github/workflows/notify-pr.yml` + `post-merge-snapshot.yml` (GitHub Actions, not the cloud routines). |
+| `SLACK_CHANNEL_ID` | Slack channel ID — used by cloud routines via the Slack MCP connector. See CLIENT_ONBOARDING.md §5. |
+| `CLICKUP_LIST_ID` | ClickUp list ID for this client's tasks. |
+
+ClickUp auth is handled by the ClickUp MCP connector attached to the cloud-routine
+environment — there is no `CLICKUP_API_KEY` GitHub secret.
 
 ## Repeat for Each Org
 

@@ -8,8 +8,12 @@ This is the primary trigger for builds and deploys. Joe moves tasks into
 deploys to review.
 
 ## Inputs (from env)
-- `CLICKUP_API_KEY`, `CLICKUP_LIST_ID`
+- `CLICKUP_LIST_ID` — the ClickUp list to drain
+- `SLACK_CHANNEL_ID` — target Slack channel for poll summaries
 - `CLIENT_SLUG` resolved from `.resin/client.json` as usual
+
+ClickUp and Slack are accessed via MCP connectors (ClickUp + Slack). Auth
+is handled by the connector — there are no API keys or webhook URLs in env.
 
 ## Safety
 - Builds first, deploys second. Never interleave — a deploy could touch
@@ -25,20 +29,17 @@ deploys to review.
   Catch errors at the per-task boundary; never abort the whole run.
 - Never pick up a task twice in the same run. Each build/deploy workflow
   moves the task status off `Ready to Build` / `Ready to Deploy` at its
-  first step — re-querying the ClickUp API mid-run must not re-surface
-  the same task.
-- If the ClickUp API fails on the initial queue fetch, log `poll.failed`,
+  first step — re-querying ClickUp mid-run must not re-surface the same task.
+- If the ClickUp connector fails on the initial queue fetch, log `poll.failed`,
   post Slack once, exit 0. Do NOT retry — tomorrow's tick will try again.
 
 ## Workflow
 
 1. Emit `poll.start` audit event with the current UTC timestamp.
 
-2. Fetch ALL `Ready to Build` tasks, oldest first:
-   ```bash
-   curl -s -H "Authorization: $CLICKUP_API_KEY" \
-     "https://api.clickup.com/api/v2/list/$CLICKUP_LIST_ID/task?statuses[]=Ready+to+Build&order_by=created&reverse=false&subtasks=false&include_closed=false"
-   ```
+2. Fetch ALL `Ready to Build` tasks, oldest first, using `clickup_filter_tasks`
+   with `list_ids: ["$CLICKUP_LIST_ID"]`, `statuses: ["Ready to Build"]`,
+   `order_by: "created"`, `reverse: false`.
 
    For EACH task returned (oldest first):
    - Capture the task ID and title upfront — you'll need them for error
@@ -52,11 +53,9 @@ deploys to review.
      own status transition and audit event. Log `poll.build_failed` with
      the task ID + error summary and CONTINUE to the next task.
 
-3. Fetch ALL `Ready to Deploy` tasks, oldest first:
-   ```bash
-   curl -s -H "Authorization: $CLICKUP_API_KEY" \
-     "https://api.clickup.com/api/v2/list/$CLICKUP_LIST_ID/task?statuses[]=Ready+to+Deploy&order_by=created&reverse=false&subtasks=false&include_closed=false"
-   ```
+3. Fetch ALL `Ready to Deploy` tasks, oldest first, using `clickup_filter_tasks`
+   with `list_ids: ["$CLICKUP_LIST_ID"]`, `statuses: ["Ready to Deploy"]`,
+   `order_by: "created"`, `reverse: false`.
 
    For EACH task returned (oldest first):
    - Execute the full `/deploy-prod` workflow against that task: pre-flight
@@ -74,7 +73,8 @@ deploys to review.
    - `deploys_attempted=<N>` / `deploys_succeeded=<M>`
    - `duration_seconds=<wall clock>`
 
-   Post a Slack summary to `#resin-pipeline`:
+   Post a Slack summary using `slack_send_message` with
+   `channel_id: "$SLACK_CHANNEL_ID"` and a `message` like:
    ```
    [$CLIENT_UPPER] Nightly poll — B builds (S succeeded, F failed),
    D deploys (S succeeded, F failed). Duration Xm.

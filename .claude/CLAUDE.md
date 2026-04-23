@@ -141,6 +141,17 @@ the pipeline is metadata-only. Record inspection uses `sf data query` via
 Bash (read-only), which the block-sf-data-changes.sh hook polices. Do
 NOT add `data` to the toolsets without explicit approval.
 
+The pipeline also relies on the **ClickUp and Slack MCP connectors** for
+all ClickUp task updates and Slack notifications (instead of curl against
+`api.clickup.com` or `hooks.slack.com`, which are blocked by Anthropic's
+cloud-routine sandbox proxy). Commands call tools like
+`clickup_filter_tasks`, `clickup_get_task`, `clickup_update_task`,
+`clickup_create_task`, `clickup_create_task_comment`,
+`clickup_add_tag_to_task`, and `slack_send_message`. Env vars required:
+`CLICKUP_LIST_ID` (which list to operate against) and `SLACK_CHANNEL_ID`
+(where to post summaries). There is no `CLICKUP_API_KEY` or
+`SLACK_WEBHOOK_URL` — connector auth is handled outside the routine env.
+
 ## Data Safety (CRITICAL — HARD-ENFORCED)
 
 **The pipeline is METADATA-ONLY. It must never modify Salesforce records.**

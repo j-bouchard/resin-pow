@@ -34,11 +34,13 @@ hourly cloud routine) to catch drift before it compounds.
 
 ## Workflow
 
-1. Fetch ClickUp tasks in non-terminal states:
-   ```bash
-   curl -s -H "Authorization: $CLICKUP_API_KEY" \
-     "https://api.clickup.com/api/v2/list/$CLICKUP_LIST_ID/task?statuses[]=Building&statuses[]=In+Review&statuses[]=Ready+to+Deploy&statuses[]=Deploying"
-   ```
+1. Fetch ClickUp tasks in non-terminal states using `clickup_filter_tasks`
+   with `list_ids: ["$CLICKUP_LIST_ID"]`,
+   `statuses: ["Building", "In Review", "Ready to Deploy", "Deploying"]`,
+   `order_by: "created"`, `reverse: false`.
+
+   ClickUp and Slack are accessed via MCP connectors (no curl). Env vars
+   required: `CLICKUP_LIST_ID` and `SLACK_CHANNEL_ID`.
 
 2. For each task, gather evidence:
    - Does a `claude/task-<id>-*` branch exist? (`gh api repos/{owner}/{repo}/branches`)
@@ -69,11 +71,17 @@ hourly cloud routine) to catch drift before it compounds.
    | Deploying | — | — | yes | no (> 1h since merge) | Leave status. Post Slack: deploy never started or stuck. |
    | Complete | — | — | — | no | DO NOT MOVE. Post alert — audit trail is inconsistent and needs human review. |
 
-4. After reconciling, post a Slack summary:
+4. After reconciling, post a Slack summary using `slack_send_message` with
+   `channel_id: "$SLACK_CHANNEL_ID"` and a message like:
    ```
    [$CLIENT_UPPER] Reconcile run — N tasks inspected, M moved forward,
    K flagged for review.
    ```
+
+   All ClickUp status transitions in this command use `clickup_update_task`
+   with `task_id` and `status: "<target status>"`. All explanatory
+   comments on tasks use `clickup_create_task_comment` with `task_id`
+   and `comment_text`.
 
    Emit an audit event:
    ```bash
@@ -95,5 +103,5 @@ hourly cloud routine) to catch drift before it compounds.
 - Each ClickUp status transition must include a comment explaining WHY
   it was moved, citing the evidence (branch name, PR number, deploy ID,
   timestamps). No silent moves.
-- If the ClickUp API fails, retry 3x with backoff and then STOP. Do not
-  partially reconcile.
+- If the ClickUp connector fails, retry 3x with backoff and then STOP. Do
+  not partially reconcile.

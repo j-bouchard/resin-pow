@@ -6,16 +6,15 @@
   "schedule": null,
   "setup_script": "cloud-routines/setup.sh",
   "env": {
-    "CLICKUP_API_KEY": "REPLACE_WITH_CLICKUP_API_KEY",
     "CLICKUP_LIST_ID": "REPLACE_WITH_CLICKUP_LIST_ID",
+    "SLACK_CHANNEL_ID": "REPLACE_WITH_SLACK_CHANNEL_ID",
     "SF_CLIENT_ID": "REPLACE_WITH_SANDBOX_CLIENT_ID",
     "SF_CLIENT_SECRET": "REPLACE_WITH_SANDBOX_CLIENT_SECRET",
     "SF_INSTANCE_URL": "REPLACE_WITH_SANDBOX_INSTANCE_URL",
     "SF_PROD_CLIENT_ID": "REPLACE_WITH_PROD_CLIENT_ID",
     "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
     "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL",
-    "AUDIT_REPO": "j-bouchard/resin-audit",
-    "SLACK_WEBHOOK_URL": "REPLACE_WITH_SLACK_WEBHOOK_URL"
+    "AUDIT_REPO": "j-bouchard/resin-audit"
   },
-  "notes": "Not directly scheduled — invoked inline by the poll-clickup routine when a task lands in 'Ready to Build'. Can also be fired manually via RemoteTrigger for debugging a specific task."
+  "notes": "Not directly scheduled — invoked inline by the poll-clickup routine when a task lands in 'Ready to Build'. Can also be fired manually via RemoteTrigger for debugging a specific task. ClickUp and Slack interactions use MCP connectors (not curl) — the environment MUST have ClickUp and Slack connectors attached. Auth is handled by the connectors, so no CLICKUP_API_KEY or SLACK_WEBHOOK_URL is needed."
 }
