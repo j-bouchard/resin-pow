@@ -9,8 +9,11 @@
     "SF_PROD_CLIENT_ID": "REPLACE_WITH_PROD_CLIENT_ID",
     "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
     "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL",
+    "CLICKUP_API_KEY": "REPLACE_WITH_CLICKUP_API_KEY",
     "CLICKUP_LIST_ID": "REPLACE_WITH_CLICKUP_LIST_ID",
-    "SLACK_WEBHOOK_URL": "REPLACE_WITH_SLACK_WEBHOOK_URL"
+    "SLACK_WEBHOOK_URL": "REPLACE_WITH_SLACK_WEBHOOK_URL",
+    "AUDIT_REPO": "j-bouchard/resin-audit",
+    "RESIN_ALLOW_PROD_DEPLOY": "1"
   },
   "notes": "Trigger manually after a PR is merged to main. Runs validate-only first, then full deploy with RunLocalTests."
 }

@@ -1,9 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Bash(sf *)",
+      "Bash(sf org *)",
+      "Bash(sf project *)",
+      "Bash(sf apex run test*)",
+      "Bash(sf apex get*)",
+      "Bash(sf data query *)",
+      "Bash(sf data get *)",
       "Bash(git *)",
+      "Bash(gh *)",
       "Bash(npm *)",
+      "Bash(jq *)",
+      "Bash(diff *)",
+      "Bash(.claude/scripts/audit.sh *)",
       "Read",
       "Write",
       "Edit",
@@ -16,7 +25,17 @@
       "Bash(sf data upsert *)",
       "Bash(sf data create *)",
       "Bash(sf data import *)",
-      "Bash(sf data tree import *)"
+      "Bash(sf data tree *)",
+      "Bash(sf data bulk *)",
+      "Bash(sf apex run script*)",
+      "Bash(sf apex run --file*)",
+      "Bash(sf apex run -f *)",
+      "Bash(git push *--force*)",
+      "Bash(git push *-f *)",
+      "Bash(git push*origin main*)",
+      "Bash(git reset --hard*)",
+      "Bash(git branch -D*)",
+      "Bash(rm -rf *)"
     ]
   },
   "hooks": {

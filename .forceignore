@@ -12,3 +12,33 @@ package.xml
 **/__tests__/**
 
 node_modules/
+
+# ---------------------------------------------------------------------------
+# Admin-managed metadata — do NOT retrieve or deploy via the pipeline.
+# These types drift in production through admin activity in Setup, and a
+# pipeline deploy that clobbers that drift will cause real outages.
+# Permission management goes through PermissionSet / PermissionSetGroup
+# (which ARE tracked).
+# ---------------------------------------------------------------------------
+**/profiles/**
+**/installedPackages/**
+
+# NPSP-managed / package-installed settings that should never be touched
+**/settings/Opportunity.settings-meta.xml
+**/settings/Account.settings-meta.xml
+**/settings/Campaign.settings-meta.xml
+
+# Territory2 is rarely used by these nonprofits and drags in lots of noise
+**/territory2Models/**
+**/territory2Types/**
+
+# Sites / Experience Cloud bundles need explicit feature activation before
+# they can be deployed. If you need one of these, remove its ignore entry
+# and add an ADR explaining the rollout plan.
+**/sites/**
+**/siteDotComSites/**
+**/experiences/**
+
+# Scratch / temporary retrieves
+tmp/
+retrieved/
