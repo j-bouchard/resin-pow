@@ -46,29 +46,38 @@ auth_org() {
     return 0
   fi
 
-  # Use Salesforce's central login servers for the token fetch, not the
-  # per-org $SF_INSTANCE_URL. The central servers (login.salesforce.com,
-  # test.salesforce.com) are explicitly in the cloud-routine proxy
-  # allowlist and consistently reachable; some per-org *.my.salesforce.com
-  # hostnames hit proxy-side "DNS cache overflow" 503s intermittently.
-  local login_host
-  case "$alias" in
-    sandbox)    login_host="test.salesforce.com" ;;
-    production) login_host="login.salesforce.com" ;;
-    *)          login_host="login.salesforce.com" ;;
-  esac
+  # Salesforce's client_credentials flow REQUIRES the per-org My Domain URL
+  # (i.e. $SF_INSTANCE_URL). Hitting login.salesforce.com / test.salesforce.com
+  # returns "request not supported on this domain". Retry with backoff to
+  # work around the cloud-routine proxy's occasional 503 "DNS cache overflow".
+  local token_url="${instance_url}/services/oauth2/token"
+  log "$alias: fetching client-credentials token from ${token_url}"
 
-  log "$alias: fetching client-credentials token from https://${login_host}/services/oauth2/token"
-  local token_response http_code body access_token
-  token_response=$(curl -s -w "\n%{http_code}" -X POST \
-    "https://${login_host}/services/oauth2/token" \
-    -H "Content-Type: application/x-www-form-urlencoded" \
-    --data-urlencode "grant_type=client_credentials" \
-    --data-urlencode "client_id=${client_id}" \
-    --data-urlencode "client_secret=${client_secret}")
+  local token_response http_code body access_token attempt
+  for attempt in 1 2 3; do
+    token_response=$(curl -s -w "\n%{http_code}" -X POST \
+      "${token_url}" \
+      -H "Content-Type: application/x-www-form-urlencoded" \
+      --data-urlencode "grant_type=client_credentials" \
+      --data-urlencode "client_id=${client_id}" \
+      --data-urlencode "client_secret=${client_secret}")
+    http_code=$(echo "$token_response" | tail -n1)
+    body=$(echo "$token_response" | sed '$d')
 
-  http_code=$(echo "$token_response" | tail -n1)
-  body=$(echo "$token_response" | sed '$d')
+    # Retry only on proxy-flavored transient failures (503 Service Unavailable,
+    # 502 Bad Gateway, 000 no connection). 400/401 are real auth errors —
+    # don't waste time retrying those.
+    case "$http_code" in
+      503|502|000)
+        log "$alias: attempt $attempt hit HTTP $http_code — retrying in ${attempt}0s"
+        sleep $((attempt * 10))
+        continue
+        ;;
+      *)
+        break
+        ;;
+    esac
+  done
 
   if [[ "$http_code" != "200" ]]; then
     log "$alias: token endpoint HTTP $http_code"
