@@ -46,10 +46,22 @@ auth_org() {
     return 0
   fi
 
-  log "$alias: fetching client-credentials token from ${instance_url}/services/oauth2/token"
+  # Use Salesforce's central login servers for the token fetch, not the
+  # per-org $SF_INSTANCE_URL. The central servers (login.salesforce.com,
+  # test.salesforce.com) are explicitly in the cloud-routine proxy
+  # allowlist and consistently reachable; some per-org *.my.salesforce.com
+  # hostnames hit proxy-side "DNS cache overflow" 503s intermittently.
+  local login_host
+  case "$alias" in
+    sandbox)    login_host="test.salesforce.com" ;;
+    production) login_host="login.salesforce.com" ;;
+    *)          login_host="login.salesforce.com" ;;
+  esac
+
+  log "$alias: fetching client-credentials token from https://${login_host}/services/oauth2/token"
   local token_response http_code body access_token
   token_response=$(curl -s -w "\n%{http_code}" -X POST \
-    "${instance_url}/services/oauth2/token" \
+    "https://${login_host}/services/oauth2/token" \
     -H "Content-Type: application/x-www-form-urlencoded" \
     --data-urlencode "grant_type=client_credentials" \
     --data-urlencode "client_id=${client_id}" \
