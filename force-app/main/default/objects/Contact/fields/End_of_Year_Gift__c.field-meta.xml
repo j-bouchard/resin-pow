@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_of_Year_Gift__c</fullName>
+    <label>End of Year Gift</label>
+    <description>Indicates the contact gave an end-of-year gift. Set by staff (or downstream automation, if added later) to flag donors for year-end stewardship and reporting.</description>
+    <inlineHelpText>Check if this contact gave an end-of-year gift.</inlineHelpText>
+    <type>Checkbox</type>
+    <defaultValue>false</defaultValue>
+    <trackFeedHistory>false</trackFeedHistory>
+</CustomField>
