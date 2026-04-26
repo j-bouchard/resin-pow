@@ -7,9 +7,11 @@
 #
 # Authentication strategy:
 #   Use OAuth 2.0 client_credentials grant directly against the org's
-#   /services/oauth2/token endpoint (curl), then feed the resulting
-#   access token to `sf org login access-token`. This works across all
-#   @salesforce/cli versions — older versions lack the higher-level
+#   /services/oauth2/token endpoint (curl), parse the orgId out of the
+#   response's `id` field, then feed `<orgId>!<token>` (session-id format)
+#   to `sf org login access-token`. The CLI requires that format — piping
+#   the bare access_token causes the login to fail. Works across all
+#   @salesforce/cli versions, including those without the higher-level
 #   `sf org login client-credentials` subcommand.
 #
 # Locally, users authenticate via `sf org login web` once — this hook
@@ -53,7 +55,7 @@ auth_org() {
   local token_url="${instance_url}/services/oauth2/token"
   log "$alias: fetching client-credentials token from ${token_url}"
 
-  local token_response http_code body access_token attempt
+  local token_response http_code body access_token identity_url org_id sid attempt
   for attempt in 1 2 3; do
     token_response=$(curl -s -w "\n%{http_code}" -X POST \
       "${token_url}" \
@@ -86,15 +88,31 @@ auth_org() {
   fi
 
   access_token=$(echo "$body" | jq -r '.access_token // empty')
+  identity_url=$(echo "$body" | jq -r '.id // empty')
   if [[ -z "$access_token" ]]; then
     log "$alias: no access_token in response body"
     log "  response: $body"
     return 0
   fi
 
-  log "$alias: received access token (len ${#access_token}); running sf org login access-token"
-  # sf org login access-token reads the token from stdin when piped.
-  if echo "$access_token" | sf org login access-token \
+  # `sf org login access-token` expects session-id format `<orgId>!<token>`,
+  # not the bare access_token returned by client_credentials. The OAuth
+  # response's `id` field is `https://login.salesforce.com/id/<orgId>/<userId>` —
+  # parse the orgId out of it.
+  org_id=""
+  if [[ -n "$identity_url" ]]; then
+    org_id=$(awk -F'/' '{print $(NF-1)}' <<<"$identity_url")
+  fi
+  if [[ -z "$org_id" ]]; then
+    log "$alias: could not parse orgId from id URL: '$identity_url'"
+    log "  response: $body"
+    return 0
+  fi
+
+  sid="${org_id}!${access_token}"
+  log "$alias: received token (orgId ${org_id}, token len ${#access_token}); running sf org login access-token"
+  # sf org login access-token reads the session id from stdin when piped.
+  if echo "$sid" | sf org login access-token \
     --instance-url "$instance_url" \
     --alias        "$alias" \
     --no-prompt 2>&1 | sed "s|^|[sf-auth-hook] $alias:   |" >&2; then
