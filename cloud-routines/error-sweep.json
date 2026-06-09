@@ -1,0 +1,20 @@
+{
+  "name": "pow-error-sweep",
+  "description": "Reads the Protect Our Winters error inbox (flow errors, Apex exceptions) and dispatches /triage per distinct error signature",
+  "prompt": "Read unread messages in the error inbox via the Gmail connector (search: in:inbox is:unread to:errors+pow@resin.team). Group them by error signature — flow API name + element + fault type. One signature = one /triage run, regardless of how many emails carry it (a flow failing 500 times overnight is ONE incident). For each distinct signature, execute the full /triage workflow inline with the email content as input. Mark processed messages read. If the inbox is empty, emit triage.idle via .claude/scripts/audit.sh and exit quietly.",
+  "cwd": "~/repos/resin-pow",
+  "schedule": "0 12 * * 1-5",
+  "setup_script": "cloud-routines/setup.sh",
+  "env": {
+    "CLICKUP_LIST_ID": "REPLACE_WITH_CLICKUP_LIST_ID",
+    "SLACK_CHANNEL_ID": "REPLACE_WITH_SLACK_CHANNEL_ID",
+    "SF_CLIENT_ID": "REPLACE_WITH_SANDBOX_CLIENT_ID",
+    "SF_CLIENT_SECRET": "REPLACE_WITH_SANDBOX_CLIENT_SECRET",
+    "SF_INSTANCE_URL": "REPLACE_WITH_SANDBOX_INSTANCE_URL",
+    "SF_PROD_CLIENT_ID": "REPLACE_WITH_PROD_CLIENT_ID",
+    "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
+    "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL",
+    "AUDIT_REPO": "j-bouchard/resin-audit"
+  },
+  "notes": "PRD v5 §5.2. Requires: (1) the Gmail MCP connector attached to the routine environment, (2) Salesforce flow-error and Apex-exception emails routed to errors+pow@resin.team (Setup → Process Automation Settings → error email recipients, plus Apex exception email settings), (3) ClickUp + Slack connectors as usual. Runs weekday middays UTC so overnight batch errors are triaged before Joe's morning review. /triage is READ-ONLY on Salesforce — prod creds here are for diagnosis queries only. Budget: 1 run/weekday/client; signature de-dup keeps a noisy flow from consuming the run."
+}

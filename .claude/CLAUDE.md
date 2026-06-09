@@ -93,6 +93,26 @@ current state of the org. If something seems wrong, run /snapshot-org to refresh
   fine; writes conflict with NPSP recalculations.
 - Common namespace prefixes: npsp__, npe01__, npo02__, npe03__, npe4__, npe5__
 
+## Autonomy Policy (Trust Ladder)
+
+Per-client autonomy lives in `.resin/autonomy-policy.json`: a tier
+(T0-T3) per change class (CC1-CC5). Build classifies every change
+(highest class wins); deploy independently re-derives the class and
+halts on mismatch. T2+ classes auto-merge after green checks; T1+
+auto-advance to deploy after Joe merges; CC5 (destructive) is never
+promotable. Missing file = everything T0 (fully gated). Promotions
+happen ONLY via a Joe-merged PR against the policy file; demotion on
+any incident is automatic. Auto-merged work is reported in a daily
+digest — never silently.
+
+ClickUp status flow:
+```
+Requirements Review → Ready to Build → Building → In Review →
+Ready to Deploy → Deploying → Verify → Complete
+        ↘ Awaiting Client (clarification with client)
+        ↘ Needs Clarification (Joe)         ↘ Deploy Failed
+```
+
 ## Branch Rules
 - Feature branches: `claude/task-{clickup-id}-{description}`
 - PRs target `main`. Main always reflects production state.
@@ -122,7 +142,9 @@ Event keys to use consistently:
 - `components` — count of metadata components deployed
 - `coverage` — percentage, no %
 - `classification` — standardized failure bucket (self_fixable, managed_package,
-  test_failure, drift, scheduled_apex, approval_gate)
+  test_failure, drift, scheduled_apex, approval_gate, class_mismatch)
+- `change_class` — CC1..CC5 (trust ladder)
+- `tier` — T0..T3 (effective autonomy tier at build time)
 
 ## Destructive-Change Approval Gate
 
@@ -183,5 +205,9 @@ outside Claude Code.
 | `/validate-sandbox` | Check sandbox state |
 | `/deploy-prod` | Deploy merged PR to production |
 | `/reconcile` | Detect and resolve ClickUp ↔ GitHub ↔ SF state desyncs |
+| `/generate-manual` | Regenerate the client-facing manual (docs/manual/) from the knowledge base |
+| `/triage` | Diagnose a reported issue or flow error (read-only) → ClickUp diagnosis + fix spec |
+| `/advisor` | Diff latest snapshot, report drift, propose improvement tasks |
+| `/client-report` | Generate the monthly client-facing report draft |
 | `sf project retrieve start --manifest package.xml -o production` | Full metadata retrieve |
 | `sf project deploy start -o sandbox --dry-run` | Validate against sandbox |

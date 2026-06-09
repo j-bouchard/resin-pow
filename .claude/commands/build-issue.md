@@ -25,6 +25,31 @@ WORKFLOW:
      "task_title=<title>"
    ```
 
+1a. CLARIFICATION GATE. If the spec is too ambiguous to build — empty
+    description, undetermined field type, unstated object, conflicting
+    acceptance criteria — do NOT guess and do NOT just punt to Joe.
+    Run the clarification loop:
+    - Draft ONE batched message containing ALL open questions (max 5),
+      multiple-choice wherever possible, in client language (no API
+      names, no jargon). Example: "For the End of Year Gift field —
+      should this be (a) a simple checkbox, (b) a dollar amount, or
+      (c) a date?"
+    - Post the draft as a ClickUp comment via
+      `clickup_create_task_comment`, and Slack Joe via
+      `slack_send_message`: `[$CLIENT_UPPER] Clarification drafted for
+      "{task title}" — review & send: {task link}`. Joe forwards it to
+      the client; when the answer comes back he pastes it as a task
+      comment and moves the task back to `Ready to Build`.
+    - Move the task to `Awaiting Client` via `clickup_update_task`. If
+      the list doesn't have that status yet (connector error), fall
+      back to `Needs Clarification`.
+    - Emit `audit.sh clarify.drafted "clickup_task=<id>" "questions=<n>"`
+      and STOP this task (continue the batch if running under
+      /poll-clickup).
+    When you DO build a task whose description contains a clarification
+    answer, quote the answer in a `## Clarified Spec` note in the PR
+    body and emit `audit.sh clarify.resolved "clickup_task=<id>"`.
+
 2. IDEMPOTENCY CHECK (do this BEFORE any write operation):
    - Check if a branch `claude/task-{clickup-id}-*` already exists:
      `git ls-remote --heads origin "claude/task-{clickup-id}-*"`
@@ -113,38 +138,119 @@ WORKFLOW:
 10. If deploy or tests fail, classify the error (see ERROR HANDLING below)
     before retrying.
 
-11. Open a Pull Request with:
+11. ARCHITECTURE DECISION RECORD (before opening the PR):
+    Decide whether this build made a DECISION-BEARING change — any of:
+    - Apex chosen over Flow (or vice versa, where the choice wasn't obvious)
+    - A TDTM load order selected
+    - An assumption ratified by Joe or the client that future builds
+      must honor
+    - A new convention established (naming, structure, pattern)
+    - Any deviation from the conventions in org-context.md
+
+    If YES: write `knowledge/decisions/ADR-{NNN}-{slug}.md` on this same
+    branch ({NNN} = next number in the directory, zero-padded to 3).
+    Keep it ~15 lines: **Context** (the situation), **Decision** (what
+    was chosen), **Alternatives** (what was rejected and why),
+    **Consequences** (what future builds must now do or avoid). Write
+    the Decision and Consequences in plain language — client-safe ADR
+    summaries feed the client manual via /generate-manual.
+
+    If NO: state "No ADR — no durable decision made" in the PR body
+    (next step) so the omission is visibly deliberate, not forgotten.
+
+11a. CLASSIFY THE CHANGE (PRD v5 trust ladder). Assign exactly ONE
+    change class from the diff you are about to ship:
+    - `CC1-cosmetic` — Description/Help Text, report/dashboard tweaks,
+      layout reorder, picklist LABEL changes (not API values)
+    - `CC2-additive-schema` — new custom field + FLS, new report/report
+      type/list view, new permission set
+    - `CC3-simple-automation` — simple Flows (per the two-track rule),
+      validation rules, email alerts
+    - `CC4-code` — Apex (incl. TDTM), complex metadata,
+      integration-adjacent config
+    - `CC5-destructive` — anything deleting/renaming metadata, profile
+      changes, sharing model changes
+    If components span classes, the HIGHEST class wins. Then read the
+    effective tier:
+    ```bash
+    CHANGE_CLASS=CC2   # example
+    TIER=$(jq -r --arg c "${CHANGE_CLASS%%-*}" '.tiers[$c] // "T0"' .resin/autonomy-policy.json 2>/dev/null || echo T0)
+    ```
+    Missing policy file = everything T0. CC5 is ALWAYS T0 regardless of
+    the file's contents.
+
+12. Open a Pull Request with:
     - Title: `[$CLIENT_UPPER] {ClickUp task title}` — where `CLIENT_UPPER=$(jq -r .upper .resin/client.json)` (include the ClickUp ID)
     - Body containing:
       - Summary of what was built and why
+      - **Change class** (Step 11a) — e.g. `Change class: CC2-additive-schema (tier T0)`
       - List of all metadata components created/modified
       - Drift-check result (Step 5) — "clean" or diff summary
       - Baseline test results (from Step 6) vs post-deploy results (from Step 9),
         including coverage delta and any pre-existing failures from baseline
         that are explicitly NOT caused by this change
+      - **UAT script** — numbered steps a human can follow to verify the
+        change works, with expected results ("1. Open any Contact →
+        2. … → expected: …"). Written so the CLIENT can run it — this
+        gets posted to the ClickUp task at deploy time for the Verify
+        step.
       - Any manual steps needed post-deploy (activation, scheduled job abort, etc.)
       - Any assumptions made
       - Any potential NPSP / TDTM interactions and chosen load order
+      - ADR reference (Step 11) — link the ADR file, or state
+        "No ADR — no durable decision made"
       - Link to the ClickUp task
 
-12. Post the PR link as a comment on the ClickUp task using
+13. Post the PR link as a comment on the ClickUp task using
     `clickup_create_task_comment` with `task_id` and `comment_text` set
     to the PR URL (plus a short note).
 
-13. Move the ClickUp task status to "In Review" using `clickup_update_task`
-    with `task_id` and `status: "In Review"`. If the ClickUp status
-    update fails, retry up to 3 times with backoff, then post the failure
-    to Slack using `slack_send_message` with `channel_id: "$SLACK_CHANNEL_ID"`
-    and leave the task as-is — do NOT leave the PR in a state where ClickUp
-    thinks the task is still "Building".
+14. STATUS TRANSITION — by tier (Step 11a):
 
-14. Emit the terminal audit event:
+    **Tier T0 or T1 (default):** move the task to "In Review" using
+    `clickup_update_task` with `task_id` and `status: "In Review"`.
+    Joe reviews and merges the PR himself.
+
+    **Tier T2 or T3 — AUTO-MERGE path.** Only if ALL of these are true:
+    - Sandbox deploy succeeded (Step 8) and post-deploy tests are clean
+      vs baseline (Step 9) — a build that SKIPPED sandbox validation
+      (e.g. no org auth) is NEVER auto-merge eligible
+    - Drift check was clean (Step 5)
+    - Change class is CC1/CC2/CC3 within its tier ceiling and NOT CC5
+    - PR body contains no `DESTRUCTIVE:` line
+    Then: merge the PR (`gh pr merge <N> --squash`), add the ClickUp tag
+    `auto-pipeline` via `clickup_add_tag_to_task`, move the task to
+    "Ready to Deploy", emit
+    `audit.sh build.auto_merged "clickup_task=<id>" "pr=<N>" "change_class=<CC>" "tier=<T>"`,
+    and post Slack: `[$CLIENT_UPPER] Auto-merged PR #<N> ({class}, {tier}):
+    {title} — deploys next window. Digest: review the diff post-hoc.`
+    If ANY condition fails, fall back to "In Review" silently — auto-merge
+    is a privilege, not a goal.
+
+    If the ClickUp status update fails, retry up to 3 times with backoff,
+    then post the failure to Slack using `slack_send_message` with
+    `channel_id: "$SLACK_CHANNEL_ID"` and leave the task as-is — do NOT
+    leave the PR in a state where ClickUp thinks the task is still
+    "Building".
+
+14a. KNOWLEDGE WRITEBACK. If this build surfaced durable knowledge —
+    a clarification answer that reveals a standing client preference, an
+    assumption Joe ratified on a previous similar PR, a convention you
+    had to infer — append it to the relevant section of
+    `knowledge/org-context.md` in THIS SAME branch/PR (one or two
+    sentences, consultant-voice). Emit
+    `audit.sh knowledge.updated "clickup_task=<id>" "section=<name>"`.
+    If nothing durable was learned, skip silently — do not pad the file.
+
+15. Emit the terminal audit event:
     ```bash
     # On success:
     .claude/scripts/audit.sh build.complete \
       "clickup_task=<task-id>" \
       "pr=<pr-number>" \
       "branch=<branch-name>" \
+      "change_class=<CC1..CC5>" \
+      "tier=<T0..T3>" \
       "components_changed=<count>" \
       "coverage=<pct>"
 

@@ -91,6 +91,34 @@ WORKFLOW:
      "approvers=$(echo $VALID_APPROVALS | tr '\n' ',')"
    ```
 
+2c. AUTONOMY CHECKS (PRD v5 — applies only to auto-pipeline tasks).
+   Determine whether this task reached Ready to Deploy automatically:
+   the ClickUp task carries the `auto-pipeline` tag. If the tag is
+   absent, Joe moved it here deliberately — skip this step entirely.
+
+   For auto-pipeline tasks:
+
+   a. **Independent re-classification.** Derive the change class
+      (CC1-CC5, same definitions as build-issue Step 11a) from the
+      actual merged diff (`gh pr diff $PR_NUMBER --name-only` + file
+      inspection) — do NOT trust the class claimed in the PR body.
+      If your derived class differs from the PR body's claim, HALT:
+      move the task to "Deploy Failed", emit
+      `audit.sh deploy.failed "pr=$PR_NUMBER" "classification=class_mismatch"`,
+      and alert Joe in Slack with both classifications. A mismatch
+      means the build stage misjudged its own blast radius — Joe
+      decides, and the class's clean-streak counter resets.
+
+   b. **Deploy window.** Read the window from `.resin/autonomy-policy.json`
+      (`jq -r .deploy_window`). If the current UTC time is OUTSIDE the
+      window: move the task back to "Ready to Deploy" (it already is —
+      just leave it), post one Slack note
+      `[$CLIENT_UPPER] PR #<N> auto-deploy deferred to next window`,
+      emit `audit.sh deploy.deferred "pr=$PR_NUMBER"`, and EXIT cleanly.
+      The next poll tick inside the window will pick it up. Never
+      deploy an auto-pipeline task outside the window; Joe-initiated
+      tasks (no tag) deploy whenever Joe says.
+
 3. Validate (dry-run) against production and CAPTURE THE VALIDATION ID.
    The cloud routine sets `RESIN_ALLOW_PROD_DEPLOY=1` in its env so the
    block-sf-data-changes.sh hook allows prod-deploy commands from this
@@ -135,9 +163,24 @@ WORKFLOW:
    - Run /snapshot-org to refresh the org manual with new state.
    - Commit updated `knowledge/*.md` files to main with message
      `docs: post-deploy snapshot for PR #<N>`.
-   - Move the linked ClickUp task status to "Complete" using
-     `clickup_update_task` with `task_id` and `status: "Complete"`. Retry
-     up to 3x on failure; if still failing, post to Slack via
+   - Run /generate-manual to regenerate the client-facing manual
+     (`docs/manual/`) from the refreshed knowledge base, and commit it to
+     main with message `docs: regenerate client manual after PR #<N>`.
+     SKIP (with a note in the Slack summary) if `knowledge/org-context.md`
+     is still a TODO placeholder — the manual command will refuse anyway.
+   - STATUS: "Verify" or "Complete" (PRD v5 §5.3).
+     - **Verify path (default):** move the task to "Verify" using
+       `clickup_update_task`, and post the UAT script from the PR body
+       as a ClickUp comment addressed to the verifier: "Deployed — please
+       confirm with these steps: …". The task lands on "Complete" when
+       Joe or the client confirms (or /reconcile times it out).
+     - **Skip straight to "Complete"** only when the change class is
+       CC1 or CC2 AND its policy tier is T2+ (cosmetic/additive changes
+       with an earned track record — the daily digest covers them).
+     - If the list has no "Verify" status yet (connector error), fall
+       back to "Complete" and include the UAT script in the comment
+       anyway.
+     Retry up to 3x on failure; if still failing, post to Slack via
      `slack_send_message` with `channel_id: "$SLACK_CHANNEL_ID"` and stop —
      do NOT leave ClickUp showing "Deploying" when the deploy succeeded.
    - Add a ClickUp comment using `clickup_create_task_comment` with:

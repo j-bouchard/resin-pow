@@ -1,15 +1,17 @@
 {
   "name": "pow-snapshot-weekly",
-  "description": "Weekly org documentation refresh for Protect Our Winters",
-  "prompt": "/snapshot-org",
+  "description": "Weekly org documentation refresh + proactive advisor for Protect Our Winters",
+  "prompt": "Run /snapshot-org to completion, then run /advisor against the refreshed snapshot.",
   "cwd": "~/repos/resin-pow",
   "schedule": "0 9 * * 1",
   "setup_script": "cloud-routines/setup.sh",
   "env": {
+    "CLICKUP_LIST_ID": "REPLACE_WITH_CLICKUP_LIST_ID",
+    "SLACK_CHANNEL_ID": "REPLACE_WITH_SLACK_CHANNEL_ID",
     "SF_PROD_CLIENT_ID": "REPLACE_WITH_PROD_CLIENT_ID",
     "SF_PROD_CLIENT_SECRET": "REPLACE_WITH_PROD_CLIENT_SECRET",
     "SF_PROD_INSTANCE_URL": "REPLACE_WITH_PROD_INSTANCE_URL",
     "AUDIT_REPO": "j-bouchard/resin-audit"
   },
-  "notes": "Runs every Monday at 9am UTC. Queries production org, regenerates knowledge/*.md files, commits to main. SF_CLIENT_ID not set — setup.sh skips sandbox auth."
+  "notes": "Runs every Monday at 9am UTC. /snapshot-org queries production, regenerates knowledge/*.md, commits to main. /advisor then diffs the new snapshot against the previous one: drift (out-of-pipeline changes) is reported to Slack, and up to 3 improvement proposals land in ClickUp tagged advisor-proposed (PRD v5 §5.2). ClickUp + Slack MCP connectors required for the advisor half. SF_CLIENT_ID not set — setup skips sandbox auth."
 }

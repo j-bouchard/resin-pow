@@ -1,0 +1,19 @@
+{
+  "_comment": "Per-client autonomy policy (PRD v5 §4.1). Tiers per change class: T0 = Joe gates requirement + PR review + deploy. T1 = auto-deploy after Joe merges. T2 = auto-merge after checks + auto-deploy in window. T3 = intake-created tasks proceed without requirement approval (CC1/CC2 ceiling only). CC5 is never promotable. Promotion: 10 consecutive clean tasks in a class makes it ELIGIBLE — the pipeline proposes a PR against this file; only Joe merges it. Demotion on any incident is automatic and immediate: the pipeline edits this file directly on main, drops the class one tier, resets its counter, and records it in history.",
+  "deploy_window": "Mon-Thu 06:00-14:00 UTC",
+  "tiers": {
+    "CC1": "T0",
+    "CC2": "T0",
+    "CC3": "T0",
+    "CC4": "T0",
+    "CC5": "T0"
+  },
+  "clean_streak": {
+    "CC1": 0,
+    "CC2": 0,
+    "CC3": 0,
+    "CC4": 0
+  },
+  "pinned": [],
+  "history": []
+}
