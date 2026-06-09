@@ -53,6 +53,19 @@ is handled by the connector — there are no API keys or webhook URLs in env.
      own status transition and audit event. Log `poll.build_failed` with
      the task ID + error summary and CONTINUE to the next task.
 
+2a. T1+ AUTO-ADVANCE (PRD v5 trust ladder). Before draining deploys,
+   fetch `In Review` tasks via `clickup_filter_tasks`. For each whose
+   linked PR is MERGED (`gh pr view <N> --json mergedAt`):
+   - Read the change class from the merged PR body (`Change class: CCn`)
+     and the tier from `.resin/autonomy-policy.json`.
+   - If tier is T1 or higher (and class is not CC5): move the task to
+     `Ready to Deploy`, add the `auto-pipeline` tag, post a ClickUp
+     comment ("auto-advanced: merged PR + {class} at {tier}"), and emit
+     `poll.auto_advanced` with the task ID. It will deploy in Step 3.
+   - If tier is T0, or the PR body has no change class, leave it — Joe
+     advances it manually (today's default behavior).
+   Missing policy file = everything T0 = this step is a no-op.
+
 3. Fetch ALL `Ready to Deploy` tasks, oldest first, using `clickup_filter_tasks`
    with `list_ids: ["$CLICKUP_LIST_ID"]`, `statuses: ["Ready to Deploy"]`,
    `order_by: "created"`, `reverse: false`.

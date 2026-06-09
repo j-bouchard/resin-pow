@@ -36,8 +36,10 @@ hourly cloud routine) to catch drift before it compounds.
 
 1. Fetch ClickUp tasks in non-terminal states using `clickup_filter_tasks`
    with `list_ids: ["$CLICKUP_LIST_ID"]`,
-   `statuses: ["Building", "In Review", "Ready to Deploy", "Deploying"]`,
-   `order_by: "created"`, `reverse: false`.
+   `statuses: ["Building", "In Review", "Ready to Deploy", "Deploying", "Verify", "Awaiting Client"]`,
+   `order_by: "created"`, `reverse: false`. (If the list doesn't have
+   "Verify" / "Awaiting Client" yet, the filter simply returns nothing
+   for them — fine.)
 
    ClickUp and Slack are accessed via MCP connectors (no curl). Env vars
    required: `CLICKUP_LIST_ID` and `SLACK_CHANNEL_ID`.
@@ -70,6 +72,9 @@ hourly cloud routine) to catch drift before it compounds.
    | Deploying | — | — | yes | yes | Move to `Complete`. Post ClickUp comment. |
    | Deploying | — | — | yes | no (> 1h since merge) | Leave status. Post Slack: deploy never started or stuck. |
    | Complete | — | — | — | no | DO NOT MOVE. Post alert — audit trail is inconsistent and needs human review. |
+   | Verify | — | — | yes | yes (in status > 7 days) | Post ClickUp + Slack reminder with the UAT script: "awaiting verification for a week". |
+   | Verify | — | — | yes | yes (in status > 14 days) | Move to `Complete` with comment "auto-verified by timeout — no issues reported in 14 days". |
+   | Awaiting Client | — | — | — | — (in status > 5 business days) | Post Slack escalation to Joe: clarification has gone unanswered — time for a call. Include the drafted questions. Leave status. |
 
 4. After reconciling, post a Slack summary using `slack_send_message` with
    `channel_id: "$SLACK_CHANNEL_ID"` and a message like:

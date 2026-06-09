@@ -103,6 +103,31 @@ If none, write "None".}
 requirement, so Joe can verify the interpretation is correct.}
 ```
 
+## Step 4a: Quote estimate (if a rate card exists)
+
+Read the rate card: `jq -r '.rate_card // empty' .resin/client.json`. If
+present (e.g. `{"S": 250, "M": 750, "L": 2000, "XL": "scoped"}`), append a
+quote line to each task description:
+
+```
+### Estimate
+{Complexity} — ${rate_card[complexity]} ({"fixed" | "requires scoping call" for XL})
+```
+
+and include per-task quote amounts in the Slack summary so Joe can read
+prices off his phone during the client call. If there's no rate card,
+skip silently — never invent prices.
+
+## Step 4b: Tier T3 fast path (trust ladder — rarely active)
+
+For each created task with NO open questions: predict its change class
+(CC1-CC5 per build-issue Step 11a definitions, judged from the spec). If
+the predicted class's tier in `.resin/autonomy-policy.json` is `T3`, set
+the task status to `Ready to Build` instead of `Requirements Review` and
+note "auto-queued (T3: {class})" in the task. Anything with open
+questions, an unpredictable class, or a tier below T3 follows the normal
+path — Joe approves requirements. Missing policy file = normal path.
+
 ## Step 5: Post Slack summary
 
 After creating all tasks, post a summary to Slack using `slack_send_message`
