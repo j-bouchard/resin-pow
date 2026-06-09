@@ -231,6 +231,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>End_of_Year_Gift__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Previous_Donor_Level__c</field>
             </layoutItems>
         </layoutColumns>

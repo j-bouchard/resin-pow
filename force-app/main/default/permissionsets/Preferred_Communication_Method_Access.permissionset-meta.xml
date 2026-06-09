@@ -5,6 +5,11 @@
     <hasActivationRequired>false</hasActivationRequired>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.End_of_Year_Gift__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.Preferred_Communication_Method__c</field>
         <readable>true</readable>
     </fieldPermissions>
