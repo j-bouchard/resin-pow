@@ -15,9 +15,10 @@ and 4.**
 ## 1. KnowWho decision — REPLY NEEDED (one word)
 
 CiviClick has been live since January and replaced Quorum. The KnowWho legislator
-dataset (~26,000 contact records) has been sitting in Salesforce awaiting a decision
-since January. These records are already excluded from email lists and dedupe merges;
-they cost storage and clutter and are not connected to the new advocacy stack.
+dataset (30,904 contact records — **still growing**, the sync is still active) has been
+sitting in Salesforce awaiting a decision since January. These records are already
+excluded from email lists and dedupe merges; they cost storage and clutter and are not
+connected to the new advocacy stack.
 
 **Reply with one of:**
 
@@ -34,15 +35,17 @@ recreate, and the removal will be run as a documented, committee-visible operati
 
 The policy requires annual review; the last version is January 2025, so we're overdue.
 The attached redline is **mostly confirmation** — every enforcement mechanism has been
-verified as running, and it's working (storage went from 142% of allocation in Nov 2024
-to 87% in Jan 2026). Five substantive edits are proposed:
+verified as running, and the data it covers has stayed clean. Six substantive edits are
+proposed:
 
 1. An explicit **donor-protection statement** (never archive/delete donors — formalizes
    what the criteria already do)
 2. Campaign deletion exclusions updated for **CiviClick** (Quorum's replacement)
 3. A new **L2 Voter Data** section (formalizes the January 2025 export decision)
 4. A new **integration-owned data** section (CiviClick, Higher Logic)
-5. Oversight cadence updated to **quarterly written snapshots** (async OK) instead of
+5. A new **activity records** section flagging Tasks as a policy gap (they're now the
+   largest storage consumer — options come at the next review, nothing decided today)
+6. Oversight cadence updated to **quarterly written snapshots** (async OK) instead of
    quarterly meetings
 
 **Reply "Approved as redlined" or comment on the specific numbered items.**
@@ -51,10 +54,13 @@ to 87% in Jan 2026). Five substantive edits are proposed:
 ## 3. Data health snapshot — READ-ONLY, no reply needed
 
 One page: storage, record counts, email opt-out trend, address completeness.
-Two items flagged "to watch" in January — email opt-outs and incomplete addresses —
-are both still climbing with no owner. The snapshot shows the numbers; the ownership
-question is part of the OKR working session (data ownership agenda item), not this
-packet.
+Three things to know: **storage is over allocation again** (116.5% — driven by activity
+records the retention policy doesn't cover; Resin brings a remediation proposal in
+September, no action needed from you now). The two items flagged "to watch" in January —
+email opt-outs and incomplete addresses — are both still climbing with no owner, though
+the opt-out number looks worse than it is (half of it is archived contacts; the
+active-contact rate is 23%). The ownership question is part of the OKR working session
+(data ownership agenda item), not this packet.
 *(Attachment: Data Health Snapshot — August 2026)*
 
 ## 4. Membership structure changes — REPLY NEEDED (one word)

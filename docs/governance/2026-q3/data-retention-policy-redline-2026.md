@@ -6,8 +6,11 @@ Prepared by Resin LLC for Data Governance Committee async review. **Responses du
 > **How to read this redline:** ~~struck text~~ is proposed for removal, **[ADD]** marks
 > proposed additions, ✅ **CONFIRM** marks language that is unchanged and verified as
 > actually running in production. This review is mostly confirmation — the policy has
-> been enforced continuously since January 2025 and it is working (storage went from
-> 142% of allocation in November 2024 to 87% in January 2026).
+> been enforced continuously since January 2025 and it is working: storage went from
+> 142% of allocation (November 2024) to 87% (January 2026). Note that as of August 2026
+> storage is back over allocation (116.5%), driven by **activity records the policy does
+> not cover** (Tasks and system relation records) — see the new section 7. That is a
+> gap to close next, not a failure of what's here.
 
 ---
 
@@ -74,13 +77,11 @@ is deleted.
 
 ### **[ADD] 5. L2 Voter Data**
 
-**Proposed new section** (formalizes the committee's January 2025 action item):
-"L2 voter data (~438,000 records, 2022 election vintage) is static, imported data.
-The master dataset is retained in Google Drive external storage. L2 Data records in
-Salesforce that are not linked to an active contact are eligible for deletion once the
-Drive export is verified. No automation writes to L2 data."
-*(Status of the export/deletion will be confirmed in the data health snapshot; if the
-export has not completed, this section states the target state.)*
+**Proposed new section** (formalizes the committee's January 2025 action item, which
+has been **completed**): "L2 voter data (2022 election vintage) is static, imported
+data. The master dataset is retained in Google Drive external storage; records not
+linked to active contacts were removed from Salesforce (438,645 → 9,599 remaining
+linked records as of August 2026). No automation writes to L2 data."
 
 ### **[ADD] 6. Integration-Owned Data (CiviClick, Higher Logic)**
 
@@ -90,6 +91,16 @@ members, contacts, activities). Any integration-specific retention needs will be
 to the committee before new deletion rules are created."
 *(New integrations went live after the January 2025 policy; this closes the gap without
 changing behavior.)*
+
+### **[ADD] 7. Activity Records (Tasks) — flagged for next review, no change proposed now**
+
+**Proposed new informational section:** "Activity records (Tasks and their
+system-generated relation records) are not currently covered by this policy and are
+retained indefinitely. As of August 2026 they are the largest data storage consumer
+(3.4M Tasks / 9.1M relation records) and the primary driver of storage returning to
+116% of allocation. Resin will present retention options for activity records at the
+next policy review; any change will require committee approval."
+*(This makes the gap visible in the policy itself without deciding anything today.)*
 
 ## Retention of Other Data
 
@@ -134,6 +145,7 @@ Reply within one week with either **"Approved as redlined"** or specific comment
 2. The CiviClick campaign exclusion update (2)
 3. The new L2 Data section (5)
 4. The new integration-owned data section (6)
-5. The oversight cadence language change
+5. The new activity-records informational section (7)
+6. The oversight cadence language change
 
 Everything marked ✅ CONFIRM requires no action unless you object.
