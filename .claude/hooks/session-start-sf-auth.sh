@@ -25,6 +25,14 @@ log() { echo "[sf-auth-hook] $*" >&2; }
 # /root/.npm-global/bin, or ~/.npm-global/bin depending on the sandbox image.
 export PATH="/usr/local/bin:$HOME/.npm-global/bin:/root/.npm-global/bin:$PATH"
 
+# Prefer a real Node 22 runtime when the sandbox provides one. The default
+# `sf` shim can resolve to a Node 20 whose bundled undici crashes with
+# "webidl.util.markAsUncloneable is not a function" on any network call.
+if [[ -d /opt/node22/bin ]]; then
+  export PATH="/opt/node22/bin:$PATH"
+  log "using Node runtime: $(command -v node) ($(node --version 2>/dev/null))"
+fi
+
 if ! command -v sf >/dev/null 2>&1; then
   log "sf CLI not found in PATH ($PATH). Skipping auth."
   exit 0
@@ -101,8 +109,9 @@ auth_org() {
   # the identity service rejects with Bad_OAuth_Token /
   # AuthCodeUsernameRetrievalError. Pipe the raw access_token unchanged.
   log "$alias: received token (len ${#access_token}); running sf org login access-token"
-  # sf org login access-token reads the token from stdin when piped.
-  if echo "$access_token" | sf org login access-token \
+  # Pass the token via SF_ACCESS_TOKEN — piping it on stdin fails on some
+  # @salesforce/cli builds (the login command ignores the pipe and errors).
+  if SF_ACCESS_TOKEN="$access_token" sf org login access-token \
     --instance-url "$instance_url" \
     --alias        "$alias" \
     --no-prompt 2>&1 | sed "s|^|[sf-auth-hook] $alias:   |" >&2; then
