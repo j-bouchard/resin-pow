@@ -78,7 +78,7 @@ The 2026 plan scoped membership structure changes (paid model / intake form /
 
 System documentation was a March deliverable; the Salesforce User Manual still has nine
 chapters that exist as headers only. The attached proposal finishes it in three phases —
-Aug 29 / Sep 19 / Oct 9 — with only ~1 hour of POW time required (User Training chapter
+Sep 5 / Sep 26 / Oct 16 — with only ~1 hour of POW time required (User Training chapter
 input, late September).
 
 **No response within a week = approved as proposed and we start Phase 1.** If you want

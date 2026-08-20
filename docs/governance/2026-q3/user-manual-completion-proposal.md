@@ -44,9 +44,9 @@ audience. Only User Training and Adoption genuinely requires POW input.
 
 | Phase | Content | Source | Done by |
 |-------|---------|--------|---------|
-| **1. Org-derived chapters** | Reports & Dashboards; Security & Access Control; Data Management (Import/Export, Validation Rules) | Generated from org snapshot, edited by Resin | **Aug 29** |
-| **2. Narrative chapters + cleanup** | Engagement & Communication; System Maintenance & Governance; Technical Debt; Future Enhancements; Appendix; de-dupe Higher Logic; fix placeholders and blank automation descriptions | Resin drafts from knowledge base + 2026 roadmap | **Sep 19** |
-| **3. POW-input chapter + publish** | User Training and Adoption (needs ~1 hour with Hannah or dept leads on roles/training reality); final review pass; publish as **v2** | Joint | **Oct 9** |
+| **1. Org-derived chapters** | Reports & Dashboards; Security & Access Control; Data Management (Import/Export, Validation Rules) | Generated from org snapshot, edited by Resin | **Sep 5** |
+| **2. Narrative chapters + cleanup** | Engagement & Communication; System Maintenance & Governance; Technical Debt; Future Enhancements; Appendix; de-dupe Higher Logic; fix placeholders and blank automation descriptions | Resin drafts from knowledge base + 2026 roadmap | **Sep 26** |
+| **3. POW-input chapter + publish** | User Training and Adoption (needs ~1 hour with Hannah or dept leads on roles/training reality); final review pass; publish as **v2** | Joint | **Oct 16** |
 
 Total Resin effort is drafting + editing; the only POW time required is one ~1-hour
 conversation (Phase 3) and a review pass per phase (async comments in the Google Doc,

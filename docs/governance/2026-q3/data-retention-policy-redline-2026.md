@@ -35,7 +35,7 @@ a gift, attended an event, or taken an advocacy action is ever eligible for arch
 *(This is already how the criteria behave — this line just makes the guarantee explicit
 in the policy document.)*
 
-**[ADD] KnowWho records:** "KnowWho legislator contact records (~26,000) are governed by
+**[ADD] KnowWho records:** "KnowWho legislator contact records (30,904 as of August 2026, still syncing) are governed by
 the committee's KnowWho decision (Q3 2026 async packet, item 1). If the decision is
 'drop,' KnowWho records will be deleted in a one-time, documented operation and this
 policy will not apply to them. If 'keep' or 'archive,' KnowWho records remain excluded
