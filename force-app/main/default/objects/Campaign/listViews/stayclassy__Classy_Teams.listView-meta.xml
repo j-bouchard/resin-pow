@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__Classy_Teams</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>stayclassy__sf_contact_id__c</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>CAMPAIGN.EXP_REVENUE</columns>
+    <columns>AMOUNT_ALL</columns>
+    <columns>stayclassy__sc_event_id__c</columns>
+    <columns>CAMPAIGN.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>Classy Teams</label>
+    <sharedTo></sharedTo>
+</ListView>

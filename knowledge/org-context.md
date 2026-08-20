@@ -31,8 +31,10 @@
 | Gmail Extension | Email logging | Gmail messages never deleted (retention policy) |
 | KnowWho | Legislator contact data | KnowWho contacts are excluded from email lists (workflow forces POW=No, POW AF=No) and from Cloudingo merges |
 | Mailchimp via Cazoomi SyncApps | Email marketing sync | Audience membership driven by Contact picklists `POW` (default Yes) and `POW Action Fund`; activity data >30 days deleted |
-| Phone2Action / Quorum | Advocacy actions | P2A campaigns count as membership actions |
-| WooCommerce | Merchandise store | Merchandise opportunity record type; `Order ID` field links to Woo order; Stripe payments |
+| CiviClick (formerly Quorum/Phone2Action) | Advocacy actions | Switched from Quorum to CiviClick Jan 2026; advocacy campaigns count as membership actions; `CiviClickWebhookHandler` Apex webhook; legacy P2A package still installed |
+| Shopify | Merchandise store (replaced WooCommerce Sept 2025) | Merchandise opportunity record type; `Shopify_Order_Id__c` links to Shopify order; `ShopifyOrderWebhook` Apex + `Order_Fulfillment__e` platform event; webhook secret in `Shopify_Config__c` |
+| Higher Logic (POW Connected) | Member community platform | `HigherLogicActivityWebhook`/`HigherLogicActivityProcessor` Apex ingest community activity; `HL_Integration_Fields` permission set; `HigherLogicConfig` for settings |
+| Google Ads | Lead capture | `GoogleAdsLeadApi` Apex REST endpoint creates Leads from Google Ads form submissions |
 
 ## The Membership Program (MOST IMPORTANT CUSTOMIZATION)
 
@@ -102,7 +104,7 @@ delete, and never assume campaign or activity history is complete.
 
 ## Payments & Reconciliation (Resin-owned process)
 
-- Classy → Classy Pay / PayPal; Blackthorn + WooCommerce → Stripe.
+- Classy → Classy Pay / PayPal; Blackthorn → Stripe; Shopify → Shopify Payments (replaced WooCommerce/Stripe Sept 2025).
 - Payment date = payout date convention for Classy/Stripe reconciliation.
 - **Stripe payouts are reconciled monthly in Salesforce by Resin.** Tasks
   mentioning reconciliation are operational, not build, work.
@@ -139,9 +141,10 @@ districts, ballot tracking, propensity scores) loaded from L2 voter data
 - Duplicate rules: 4 contact + 1 account rule active in Salesforce, plus
   Cloudingo filters that mirror them — changing matching fields requires
   updating both layers (Cloudingo is manual/admin-side, flag in PR).
-- `woocommerce` integration is marked "????!" in the client manual — treat
-  merchandise sync details as unverified; confirm with Joe before building
-  against Order ID or merchandise fields.
+- Merchandise sync moved from WooCommerce to Shopify (Sept 2025) — the old
+  `Order_ID__c`/Woo fields remain on Opportunity but new orders populate
+  `Shopify_Order_Id__c`; confirm with Joe before building against
+  merchandise order fields.
 - The client manual's sections on report inventory, profiles/roles, email
   templates, and engagement plans were unfinished — ORG_REPORTS.md and
   ORG_SECURITY.md (auto-generated) are the only reliable sources for those.

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alliance_Training_Category__c</fullName>
+    <label>Alliance Training Category</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Summit</fullName>
+                <default>false</default>
+                <label>Summit</label>
+            </value>
+            <value>
+                <fullName>Customized Coaching</fullName>
+                <default>false</default>
+                <label>Customized Coaching</label>
+            </value>
+            <value>
+                <fullName>Semi-Structured Training</fullName>
+                <default>false</default>
+                <label>Semi-Structured Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

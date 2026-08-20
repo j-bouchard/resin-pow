@@ -615,6 +615,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -761,6 +765,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -1135,6 +1143,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -1173,6 +1193,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -1360,6 +1384,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -1397,6 +1422,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -1490,6 +1516,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -1500,6 +1529,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -2047,6 +2077,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -2193,6 +2227,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -2567,6 +2605,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -2605,6 +2655,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -2793,6 +2847,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -2830,6 +2885,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -2923,6 +2979,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -2933,6 +2992,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -3476,6 +3536,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -3622,6 +3686,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -3996,6 +4064,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -4034,6 +4114,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -4221,6 +4305,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -4258,6 +4343,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -4351,6 +4437,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -4361,6 +4450,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -4904,6 +4994,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -5050,6 +5144,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -5424,6 +5522,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -5462,6 +5572,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -5649,6 +5763,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -5686,6 +5801,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -5779,6 +5895,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -5789,6 +5908,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -6336,6 +6456,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -6482,6 +6606,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -6856,6 +6984,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -6894,6 +7034,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -7082,6 +7226,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -7119,6 +7264,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -7212,6 +7358,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -7222,6 +7371,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -7765,6 +7915,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -7911,6 +8065,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -8285,6 +8443,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -8323,6 +8493,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -8510,6 +8684,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -8547,6 +8722,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -8640,6 +8816,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -8650,6 +8829,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -9197,6 +9377,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -9343,6 +9527,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -9717,6 +9905,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -9755,6 +9955,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -9943,6 +10147,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -9980,6 +10185,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -10073,6 +10279,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -10083,6 +10292,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -10626,6 +10836,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -10772,6 +10986,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -11146,6 +11364,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -11184,6 +11414,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -11371,6 +11605,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -11408,6 +11643,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -11501,6 +11737,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -11511,6 +11750,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -12058,6 +12298,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -12204,6 +12448,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -12578,6 +12826,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -12616,6 +12876,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -12804,6 +13068,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -12841,6 +13106,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -12934,6 +13200,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -12944,6 +13213,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -13487,6 +13757,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -13633,6 +13907,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -14007,6 +14285,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -14045,6 +14335,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -14232,6 +14526,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -14269,6 +14564,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -14362,6 +14658,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -14372,6 +14671,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -14919,6 +15219,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -15065,6 +15369,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -15439,6 +15747,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -15477,6 +15797,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -15665,6 +15989,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -15702,6 +16027,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -15795,6 +16121,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -15805,6 +16134,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>
@@ -16348,6 +16678,10 @@
             <label>Event</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000006ExhV</field>
+            <label>Expected Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NRn000002h6M4</field>
             <label>External Vendor (GFM Pro)</label>
         </opportunityListFieldsLabelMappings>
@@ -16494,6 +16828,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000HTUg7</field>
             <label>Is Reprocess</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2j</field>
+            <label>Last Sync Attempt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000FT8ki</field>
@@ -16868,6 +17206,18 @@
             <label>Retained Transfers</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2k</field>
+            <label>Reversal Payout Created Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2l</field>
+            <label>Reversal Payout Deposit Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2m</field>
+            <label>Reversal Payout ID</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4P00000HSxp5</field>
             <label>Reversed Transfer Count</label>
         </opportunityListFieldsLabelMappings>
@@ -16906,6 +17256,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000Gln88</field>
             <label>Sync as Offline Donation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NRn000005zn2n</field>
+            <label>Sync Pending</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4P00000GVddx</field>
@@ -17093,6 +17447,7 @@
             <field>00N4P00000G84b2</field>
             <field>00N4P00000Gm1yj</field>
             <field>00N4P00000Gm2Lh</field>
+            <field>00NRn000006ExhV</field>
             <field>00NRn000002h6M4</field>
             <field>00N4P00000FT8kD</field>
             <field>00N4P00000HToWX</field>
@@ -17130,6 +17485,7 @@
             <field>00N4P00000FT8k8</field>
             <field>00N4P00000FT8ag</field>
             <field>00N4P00000HTUg7</field>
+            <field>00NRn000005zn2j</field>
             <field>00N4P00000FT8ki</field>
             <field>00N4P00000FT8kf</field>
             <field>00N4P00000FT8kg</field>
@@ -17223,6 +17579,9 @@
             <field>00N4P00000HSxop</field>
             <field>00N4P00000HSxoz</field>
             <field>00N4P00000HSxp1</field>
+            <field>00NRn000005zn2k</field>
+            <field>00NRn000005zn2l</field>
+            <field>00NRn000005zn2m</field>
             <field>00N4P00000HSxp5</field>
             <field>00N4P00000HSxp3</field>
             <field>00N4P00000HT4Ch</field>
@@ -17233,6 +17592,7 @@
             <field>00N4P00000Gm1yq</field>
             <field>00N4P00000Gln87</field>
             <field>00N4P00000Gln88</field>
+            <field>00NRn000005zn2n</field>
             <field>00N4P00000GVddx</field>
             <field>00N4P00000GVde3</field>
             <field>00N4P00000GVddz</field>

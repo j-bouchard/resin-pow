@@ -51,7 +51,7 @@
     <navType>Standard</navType>
     <profileActionOverrides>
         <actionName>Tab</actionName>
-        <content>desktop_comms</content>
+        <content>Executive</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>standard-home</pageOrSobjectType>
         <type>Flexipage</type>
@@ -391,6 +391,58 @@
         <pageOrSobjectType>standard-home</pageOrSobjectType>
         <type>Flexipage</type>
         <profile>Partnerships</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Event_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>conference360__Event__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Program Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Event_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>conference360__Event__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Program Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Event_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>conference360__Event__c</pageOrSobjectType>
+        <recordType>conference360__Event__c.In_Person</recordType>
+        <type>Flexipage</type>
+        <profile>Program Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Event_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>conference360__Event__c</pageOrSobjectType>
+        <recordType>conference360__Event__c.In_Person</recordType>
+        <type>Flexipage</type>
+        <profile>Program Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Event_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>conference360__Event__c</pageOrSobjectType>
+        <recordType>conference360__Event__c.Virtual</recordType>
+        <type>Flexipage</type>
+        <profile>Program Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Event_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>conference360__Event__c</pageOrSobjectType>
+        <recordType>conference360__Event__c.Virtual</recordType>
+        <type>Flexipage</type>
+        <profile>Program Staff</profile>
     </profileActionOverrides>
     <setupExperience>all</setupExperience>
     <tabs>standard-home</tabs>

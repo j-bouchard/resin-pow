@@ -1,32 +1,62 @@
 # POW Reports & Dashboards
-Generated: 2026-04-15 | Org: protectourwinters.org (00D4P000001dRZ9)
+Generated: 2026-08-20 | Org: protectourwinters.org (00D4P000001dRZ9)
 
 ## Overview
 
-| Type | Count | In Metadata? |
-|------|-------|-------------|
-| Custom Report Types | 38 | Yes |
-| Reports | Unknown | No — need folder-specific retrieval |
-| Dashboards | Unknown | No — need folder-specific retrieval |
+| Type | Count | Source |
+|------|-------|--------|
+| Custom Report Types | 41 (+3 since Apr 2026) | Metadata retrieve |
+| Reports | 2,113 | SOQL (Report), all folders |
+| Dashboards | 93 | SOQL (Dashboard), all folders |
 
-Reports and dashboard definitions require folder names in the package.xml
-and were not included in the initial metadata retrieval. Custom report types
-WERE retrieved and are documented below.
+Report/dashboard definitions still require folder-scoped package.xml
+members to retrieve as metadata; counts above come from read-only SOQL.
 
-## Known Dashboards (from Salesforce Manual)
-- **POW Development Forecasting** — Forward-looking expected revenue, progress toward fundraising goals
-- **POW Development Analysis** — Historical performance, donor retention, campaign effectiveness
-- **Membership Dashboard** — Membership growth trends, renewal rates, churn rates
+## Report Folders (top by report count, of ~150 folders)
+
+| Folder | Reports | | Folder | Reports |
+|--------|---------|-|--------|---------|
+| Development Department | 134 | | NPSP 3.0 Donor Mgmt Reports | 39 |
+| Battleground Analytics 2020 | 122 | | NPSP Fundraising Reports | 35 |
+| Programs Department | 117 | | Admin Greener Pastures FY23 | 34 |
+| Private Reports | 110 | | Volunteer Reports | 33 |
+| Waverley's Reports | 69 | | Donors | 31 |
+| Resin | 67 | | DonorSearch Folder | 30 |
+| Public Reports | 56 | | Stages | 29 |
+| Mel's Reports | 49 | | Colorado CD3 | 27 |
+| z_Archived | 48 | | Data Quality Audit | 26 |
+| MAPTV 2022 | 43 | | Voter File Reports 2022 | 25 |
+| Pledge 2022 | 40 | | Alliance User Journey / Captains | 22 each |
+
+A large tail of 2020-2022 election/analytics folders suggests an archive
+cleanup opportunity.
+
+## Dashboard Folders (93 dashboards)
+
+Development (23), Programs (8), Private (8), Membership (8), Events (8),
+Objectives and Key Results (5), NPSP Dashboards (4), Volunteer (3),
+Organizational Health (3), Campaigns (3), plus ~15 single-dashboard
+folders (Blackthorn, Grants, Merchandise, POW Action Fund, Training, etc.).
+
+Key dashboards (per Salesforce Manual): **POW Development Forecasting**,
+**POW Development Analysis**, **Membership Dashboard**; the **Objectives
+and Key Results** folder (5 dashboards) backs the Alliance OKRs Leadership
+View that `Campaign.Alliance_Training__c` (deployed 2026-08-20) feeds.
 
 ---
 
-## Custom Report Types (38 total)
+## Custom Report Types (41 total)
+
+New since Apr 2026: `Accounts_Contact_with_or_without_Opportunities`,
+`Analytic_Notifications`, `Contacts_with_Affiliations`.
 
 ### Contacts & Accounts
 | Report Type | Description |
 |-------------|-------------|
+| Accounts_Contact_with_or_without_Opportunities | Accounts + contacts with/without opps _(new since Apr 2026)_ |
 | Contact_Fields | Contact field reporting |
 | Contacts_and_Accounts | Contacts with account data |
+| Contacts_with_Affiliations | Contact affiliation reporting _(new since Apr 2026)_ |
 | Contacts_with_Opportunities | Contact-opportunity relationships |
 | Contacts_with_Tasks_and_Events | Contact activities |
 | Contacts_with_Topics | Contact topic associations |

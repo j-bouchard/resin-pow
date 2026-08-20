@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>P2A__External_Campaign_ID__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The Campaign ID in Capitol Canary</description>
+    <externalId>true</externalId>
+    <label>External Campaign ID</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Event__c</fullName>
+    <label>Type of Event</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Virtual</fullName>
+                <default>false</default>
+                <label>Virtual</label>
+            </value>
+            <value>
+                <fullName>In Person</fullName>
+                <default>false</default>
+                <label>In Person</label>
+            </value>
+            <value>
+                <fullName>Drop</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Drop</label>
+            </value>
+            <value>
+                <fullName>Festival/Film</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Festival/Film</label>
+            </value>
+            <value>
+                <fullName>Fundraiser</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fundraiser</label>
+            </value>
+            <value>
+                <fullName>Happy Hour</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Happy Hour</label>
+            </value>
+            <value>
+                <fullName>Imperfect Advocate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Imperfect Advocate</label>
+            </value>
+            <value>
+                <fullName>Movie Night</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Movie Night</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>POW &amp; Chow Party (Dinner or Brunch)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>POW &amp; Chow Party (Dinner or Brunch)</label>
+            </value>
+            <value>
+                <fullName>Purple Mountains</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Purple Mountains</label>
+            </value>
+            <value>
+                <fullName>Speaker/Panel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Speaker/Panel</label>
+            </value>
+            <value>
+                <fullName>Table/Booth Set-Up</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Table/Booth Set-Up</label>
+            </value>
+            <value>
+                <fullName>Trivia Night</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trivia Night</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__dcf_enabled__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>If true, Donors have the option to cover transaction fees on the GoFundMe Pro Donation form</description>
+    <inlineHelpText>If true, Donors have the option to cover transaction fees on the Classy Donation form</inlineHelpText>
+    <label>Donor Covered Fees Active</label>
+    <type>Checkbox</type>
+</CustomField>

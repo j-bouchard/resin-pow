@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alliance_Training_Type__c</fullName>
+    <label>Alliance Training Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Media</fullName>
+                <default>false</default>
+                <label>Media</label>
+            </value>
+            <value>
+                <fullName>POW 101/Climate Science</fullName>
+                <default>false</default>
+                <label>POW 101/Climate Science</label>
+            </value>
+            <value>
+                <fullName>Fundraising</fullName>
+                <default>false</default>
+                <label>Fundraising</label>
+            </value>
+            <value>
+                <fullName>Advocacy/Policy</fullName>
+                <default>false</default>
+                <label>Advocacy/Policy</label>
+            </value>
+            <value>
+                <fullName>Story Development/Storytelling</fullName>
+                <default>false</default>
+                <label>Story Development/Storytelling</label>
+            </value>
+            <value>
+                <fullName>Opportunistic</fullName>
+                <default>false</default>
+                <label>Opportunistic</label>
+            </value>
+            <value>
+                <fullName>Creative RFP</fullName>
+                <default>false</default>
+                <label>Creative RFP</label>
+            </value>
+            <value>
+                <fullName>POW 101</fullName>
+                <default>false</default>
+                <label>POW 101</label>
+            </value>
+            <value>
+                <fullName>Climate Science</fullName>
+                <default>false</default>
+                <label>Climate Science</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

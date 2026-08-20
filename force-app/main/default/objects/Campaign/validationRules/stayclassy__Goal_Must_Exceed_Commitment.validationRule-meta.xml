@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__Goal_Must_Exceed_Commitment</fullName>
+    <active>true</active>
+    <description>The goal for a fundraising page or team must be greater than or equal to the commitment</description>
+    <errorConditionFormula>stayclassy__Commitment__c &gt; 0 &amp;&amp; ExpectedRevenue &lt; stayclassy__Commitment__c</errorConditionFormula>
+    <errorMessage>Expected Revenue (Fundraising Goal) can not be less than Commitment</errorMessage>
+</ValidationRule>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__StayClassy_Campaigns</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>stayclassy__sc_event_id__c</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>CAMPAIGN.EXP_REVENUE</columns>
+    <columns>AMOUNT_WON</columns>
+    <columns>stayclassy__percent_goal_reached__c</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>CAMPAIGN.RECORDTYPE</columns>
+    <columns>stayclassy__campaign_url__c</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CAMPAIGN.NUM_CONTACTS</columns>
+    <columns>CAMPAIGN.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>stayclassy__sc_event_id__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <label>All Classy Campaigns</label>
+    <sharedTo></sharedTo>
+</ListView>

@@ -355,7 +355,8 @@
         <runAsUser>emily@protectourwinters.org</runAsUser>
     </emailServicesAddresses>
     <emailServicesAddresses>
-        <authorizedSenders>social@protectourwinters.org</authorizedSenders>
+        <authorizedSenders>social@protectourwinters.org, meg@protectourwinters.org, erica@protectourwinters.org, ollie@protectourwinters.org, stacie@protectourwinters.org, clara@protectourwinters.org, 
+jay@protectourwinters.org</authorizedSenders>
         <developerName>emailtosalesforce54</developerName>
         <isActive>true</isActive>
         <localPart>emailtosalesforce</localPart>
@@ -381,6 +382,20 @@
         <isActive>true</isActive>
         <localPart>emailtosalesforce</localPart>
         <runAsUser>partnerships@protectourwinters.org</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>mimi@protectourwinters.org</authorizedSenders>
+        <developerName>emailtosalesforce58</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>mimi@protectourwinters.org</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>sierra@protectourwinters.org</authorizedSenders>
+        <developerName>emailtosalesforce59</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>sierra@protectourwinters.org</runAsUser>
     </emailServicesAddresses>
     <emailServicesAddresses>
         <authorizedSenders>anja@protectourwinters.org</authorizedSenders>

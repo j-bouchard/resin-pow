@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__Allocated_Fund__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Allocated Funds</label>
+    <summarizedField>stayclassy__Classy_Allocations__c.stayclassy__Amount__c</summarizedField>
+    <summaryForeignKey>stayclassy__Classy_Allocations__c.stayclassy__Campaign__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <type>Summary</type>
+</CustomField>

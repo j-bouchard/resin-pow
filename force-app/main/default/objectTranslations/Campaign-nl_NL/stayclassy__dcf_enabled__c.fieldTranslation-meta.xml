@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If true, Donors have the option to cover transaction fees on the Classy Donation form --></help>
+    <label><!-- Donor Covered Fees Active --></label>
+    <name>stayclassy__dcf_enabled__c</name>
+</CustomFieldTranslation>

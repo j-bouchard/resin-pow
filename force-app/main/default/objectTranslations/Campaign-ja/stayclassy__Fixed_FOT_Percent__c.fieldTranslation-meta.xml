@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentage campaign elects to be added to fee_on_top transactions to cover fees. --></help>
+    <label><!-- Fixed FOT Percent --></label>
+    <name>stayclassy__Fixed_FOT_Percent__c</name>
+</CustomFieldTranslation>

@@ -1,87 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>62.0</apiVersion>
-    <description>When a Blackthorn event is tagged with an OKR Alliance Training Type, check the Alliance Training checkbox on its related Campaign so the Alliance OKRs — Leadership View training tiles count it. Confirmed with Graham (SF Tracking thread); ClickUp 868kq2mah.</description>
-    <interviewLabel>Event - Alliance Training Campaign Sync {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Event - Alliance Training Campaign Sync</label>
-    <processMetadataValues>
-        <name>BuilderType</name>
-        <value>
-            <stringValue>LightningFlowBuilder</stringValue>
-        </value>
-    </processMetadataValues>
-    <processType>AutoLaunchedFlow</processType>
-    <start>
-        <locationX>176</locationX>
-        <locationY>48</locationY>
-        <connector>
-            <targetReference>Campaign_Needs_Flag</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>OKR_Alliance_Training_Type__c</field>
-            <operator>IsNull</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>conference360__Campaign__c</field>
-            <operator>IsNull</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
-        <object>conference360__Event__c</object>
-        <recordTriggerType>CreateAndUpdate</recordTriggerType>
-        <triggerType>RecordAfterSave</triggerType>
-    </start>
-    <decisions>
-        <name>Campaign_Needs_Flag</name>
-        <label>Campaign Needs Flag</label>
-        <locationX>176</locationX>
-        <locationY>158</locationY>
-        <defaultConnectorLabel>Already Flagged</defaultConnectorLabel>
-        <rules>
-            <name>Alliance_Training_Unchecked</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.conference360__Campaign__r.Alliance_Training__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Update_Campaign_Alliance_Training</targetReference>
-            </connector>
-            <label>Alliance Training Unchecked</label>
-        </rules>
-    </decisions>
-    <recordUpdates>
-        <name>Update_Campaign_Alliance_Training</name>
-        <label>Update Campaign Alliance Training</label>
-        <locationX>66</locationX>
-        <locationY>278</locationY>
-        <faultConnector>
-            <targetReference>Send_Fault_Email</targetReference>
-        </faultConnector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.conference360__Campaign__c</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Alliance_Training__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <object>Campaign</object>
-    </recordUpdates>
     <actionCalls>
         <name>Send_Fault_Email</name>
         <label>Send Fault Email</label>
@@ -109,7 +27,88 @@
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
-        <versionSegment>1</versionSegment>
     </actionCalls>
-    <status>Active</status>
+    <apiVersion>62.0</apiVersion>
+    <decisions>
+        <name>Campaign_Needs_Flag</name>
+        <label>Campaign Needs Flag</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <defaultConnectorLabel>Already Flagged</defaultConnectorLabel>
+        <rules>
+            <name>Alliance_Training_Unchecked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.conference360__Campaign__r.Alliance_Training__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Campaign_Alliance_Training</targetReference>
+            </connector>
+            <label>Alliance Training Unchecked</label>
+        </rules>
+    </decisions>
+    <description>When a Blackthorn event is tagged with an OKR Alliance Training Type, check the Alliance Training checkbox on its related Campaign so the Alliance OKRs — Leadership View training tiles count it. Confirmed with Graham (SF Tracking thread); ClickUp 868kq2mah.</description>
+    <interviewLabel>Event - Alliance Training Campaign Sync {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Event - Alliance Training Campaign Sync</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Campaign_Alliance_Training</name>
+        <label>Update Campaign Alliance Training</label>
+        <locationX>66</locationX>
+        <locationY>278</locationY>
+        <faultConnector>
+            <targetReference>Send_Fault_Email</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.conference360__Campaign__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Alliance_Training__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <start>
+        <locationX>176</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Campaign_Needs_Flag</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OKR_Alliance_Training_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>conference360__Campaign__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>conference360__Event__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
 </Flow>

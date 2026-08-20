@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Internal Campaign Name --></help>
+    <label><!-- Campaign Internal Name (GFM Pro) --></label>
+    <name>stayclassy__Classy_Campaign_Internal_Name__c</name>
+</CustomFieldTranslation>

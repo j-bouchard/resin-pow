@@ -1,20 +1,23 @@
 # POW Org Security
-Generated: 2026-04-15 | Org: protectourwinters.org
+Generated: 2026-08-20 | Org: protectourwinters.org (00D4P000001dRZ9)
 
 ## Overview
 
 | Type | Count |
 |------|-------|
-| Custom Permission Sets | 11 |
-| Managed Package Permission Sets | 2 |
-| Profiles | 37 (6 standard, 31 custom) |
+| Custom Permission Sets (unmanaged) | 13 |
+| Profiles | 38 |
 | Roles | 32 |
 | Public Groups | 1 |
 | Queues | 1 |
 
+> Changes vs 2026-04-15: +1 permission set (`HL_Integration_Fields`,
+> Higher Logic integration field access), +1 profile, `No_MFA` permission
+> set modified in-org. Everything else unchanged.
+
 ---
 
-## Permission Sets (11 custom)
+## Permission Sets (13 custom)
 
 ### Donation Access (3 tiers)
 
@@ -35,6 +38,7 @@ Generated: 2026-04-15 | Org: protectourwinters.org
 
 | Name | Label | Description | Key Permissions |
 |------|-------|-------------|-----------------|
+| HL_Integration_Fields | HL Integration Fields | Higher Logic (POW Connected) integration field access _(new since Apr 2026)_ | FLS on HL_* fields (Contact.HL_Contact_ID__c, Account.HL_Community_ID__c, Campaign.HL_Event_ID__c/HL_Event_Type__c) |
 | Integration_User_Standard_Objects | Integration User - Standard Objects | Full access for integration user | Account/Campaign/Contact/Lead/Opportunity: Edit/Delete/Read/ModifyAll/ViewAll, Order: Full CRUD, Ballot_Ready__c: Full Access, Order_Fulfillment__e: Create/Read |
 | Case_Full_Access | Case Full Access | Full case management access | Case: Create/Edit/Delete/Read/ModifyAll/ViewAll |
 | Batch_Gift_Entry | Batch Gift Entry | NPSP Batch Gift Entry access | Account/Contact/Opportunity: Create/Edit/Read, npsp__DataImportBatch__c: Create/Edit/Read, npsp__DataImport__c: Create/Edit/Delete |
@@ -50,7 +54,7 @@ Generated: 2026-04-15 | Org: protectourwinters.org
 
 ---
 
-## Profiles (37 total)
+## Profiles (38 total)
 
 ### Standard Profiles (6)
 - Admin (System Administrator)

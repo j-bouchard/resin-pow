@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtype__c</fullName>
+    <label>Subtype</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>HPCA</fullName>
+                <default>false</default>
+                <label>HPCA</label>
+            </value>
+            <value>
+                <fullName>College</fullName>
+                <default>false</default>
+                <label>College</label>
+            </value>
+            <value>
+                <fullName>Large Audience</fullName>
+                <default>false</default>
+                <label>Large Audience</label>
+            </value>
+            <value>
+                <fullName>Corporate Talks</fullName>
+                <default>false</default>
+                <label>Corporate Talks</label>
+            </value>
+            <value>
+                <fullName>Organic Posts</fullName>
+                <default>false</default>
+                <label>Organic Posts</label>
+            </value>
+            <value>
+                <fullName>POW Campaigns</fullName>
+                <default>false</default>
+                <label>POW Campaigns</label>
+            </value>
+            <value>
+                <fullName>Competency</fullName>
+                <default>false</default>
+                <label>Competency</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital</label>
+            </value>
+            <value>
+                <fullName>In Person</fullName>
+                <default>false</default>
+                <label>In Person</label>
+            </value>
+            <value>
+                <fullName>State</fullName>
+                <default>false</default>
+                <label>State</label>
+            </value>
+            <value>
+                <fullName>Federal</fullName>
+                <default>false</default>
+                <label>Federal</label>
+            </value>
+            <value>
+                <fullName>Testify</fullName>
+                <default>false</default>
+                <label>Testify</label>
+            </value>
+            <value>
+                <fullName>Professionalism</fullName>
+                <default>false</default>
+                <label>Professionalism</label>
+            </value>
+            <value>
+                <fullName>Video</fullName>
+                <default>false</default>
+                <label>Video</label>
+            </value>
+            <value>
+                <fullName>Photo</fullName>
+                <default>false</default>
+                <label>Photo</label>
+            </value>
+            <value>
+                <fullName>Interview</fullName>
+                <default>false</default>
+                <label>Interview</label>
+            </value>
+            <value>
+                <fullName>Science</fullName>
+                <default>false</default>
+                <label>Science</label>
+            </value>
+            <value>
+                <fullName>Economics</fullName>
+                <default>false</default>
+                <label>Economics</label>
+            </value>
+            <value>
+                <fullName>POW Knowledge</fullName>
+                <default>false</default>
+                <label>POW Knowledge</label>
+            </value>
+            <value>
+                <fullName>Storytelling</fullName>
+                <default>false</default>
+                <label>Storytelling</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Text</fullName>
+                <default>false</default>
+                <label>Text</label>
+            </value>
+            <value>
+                <fullName>Call</fullName>
+                <default>false</default>
+                <label>Call</label>
+            </value>
+            <value>
+                <fullName>Passion</fullName>
+                <default>false</default>
+                <label>Passion</label>
+            </value>
+            <value>
+                <fullName>Availability</fullName>
+                <default>false</default>
+                <label>Availability</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Social Media</controllingFieldValue>
+            <valueName>Organic Posts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Media</controllingFieldValue>
+            <valueName>POW Campaigns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Media</controllingFieldValue>
+            <valueName>Competency</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

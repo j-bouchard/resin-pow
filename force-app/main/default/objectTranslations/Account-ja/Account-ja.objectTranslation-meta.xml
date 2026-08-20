@@ -125,6 +125,11 @@
         <name>HH_Account</name>
     </recordTypes>
     <recordTypes>
+        <description><!-- Accounts representing Higher Logic communities synced via the activity webhook. --></description>
+        <label><!-- Higher Logic Community --></label>
+        <name>Higher_Logic_Community</name>
+    </recordTypes>
+    <recordTypes>
         <description><!-- An Account representing a Local Alliance --></description>
         <label><!-- Local Alliance --></label>
         <name>Local_Alliance</name>

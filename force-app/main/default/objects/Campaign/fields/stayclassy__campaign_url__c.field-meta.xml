@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__campaign_url__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF( stayclassy__Canonical_URL__c = null,
+        IF(stayclassy__sc_event_id__c &gt; 0 &amp;&amp; ISPICKVAL(stayclassy__Classy_Campaign_Type__c, &quot;Fundraiser&quot;), &quot;https://classy.org/fundraiser/&quot; &amp; text(stayclassy__sc_event_id__c), 
+        IF(stayclassy__sc_event_id__c &gt; 0 &amp;&amp; ISPICKVAL(stayclassy__Classy_Campaign_Type__c, &quot;Team&quot;), &quot;https://classy.org/team/&quot; &amp; text(stayclassy__sc_event_id__c), 
+        IF(stayclassy__sc_event_id__c &gt; 0 &amp;&amp; ISPICKVAL(stayclassy__Classy_Campaign_Type__c, &quot;Campaign&quot;) &amp;&amp; ISPICKVAL(Type, &quot;Studio&quot;), &quot;https://giving.classy.org/campaign/&quot; &amp; text(stayclassy__sc_event_id__c) &amp; &quot;/donate&quot;, 
+		IF(stayclassy__sc_event_id__c &gt; 0 &amp;&amp; ISPICKVAL(stayclassy__Classy_Campaign_Type__c, &quot;Campaign&quot;) &amp;&amp; ISPICKVAL(Type, &quot;Ticketed&quot;) || ISPICKVAL(Type, &quot;Registration with Fundraising&quot;), &quot;https://classy.org/event/e&quot; &amp; text(stayclassy__sc_event_id__c), 
+		IF(stayclassy__sc_event_id__c &gt; 0 &amp;&amp; ISPICKVAL(stayclassy__Classy_Campaign_Type__c, &quot;Campaign&quot;) &amp;&amp; ISPICKVAL(Type, &quot;Donation&quot;), &quot;https://classy.org/give/&quot; &amp; text(stayclassy__sc_event_id__c) &amp; &quot;/#!/donation/checkout&quot;, 
+        IF(stayclassy__sc_event_id__c &gt; 0 &amp;&amp; ISPICKVAL(stayclassy__Classy_Campaign_Type__c, &quot;Campaign&quot;), &quot;https://classy.org/campaign/c&quot; &amp; text(stayclassy__sc_event_id__c), 
+        &quot;&quot;
+        )))))), stayclassy__Canonical_URL__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Campaign URL</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

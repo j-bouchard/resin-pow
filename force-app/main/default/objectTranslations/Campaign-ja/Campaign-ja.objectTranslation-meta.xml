@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- VolunteersWizardFS --></label>
+        <name>GW_Volunteers__VolunteersWizardFS</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- List Wizard New Campaign Fields --></label>
+        <name>kw__List_Wizard_New_Campaign_Fields</name>
+    </fieldSets>
     <layouts>
         <layout>Campaign Layout</layout>
         <sections>
@@ -46,12 +54,54 @@
         <name>Event</name>
     </recordTypes>
     <recordTypes>
+        <description><!-- A campaign specifically used to track Volunteers --></description>
+        <label><!-- Volunteer Campaign --></label>
+        <name>GW_Volunteers__Volunteers_Campaign</name>
+    </recordTypes>
+    <recordTypes>
         <label><!-- Parent --></label>
         <name>Parent</name>
     </recordTypes>
+    <recordTypes>
+        <description><!-- Default Record Type for Campaigns created via GoFundMe Pro --></description>
+        <label><!-- GoFundMe Pro --></label>
+        <name>stayclassy__Classy</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Expected Revenue (Fundraising Goal) can not be less than Commitment --></errorMessage>
+        <name>stayclassy__Goal_Must_Exceed_Commitment</name>
+    </validationRules>
     <webLinks>
         <label><!-- Create_Job_and_Shift --></label>
         <name>Create_Job_and_Shift</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Generate_DS_Profiles --></label>
+        <name>DS360oi__Generate_DS_Profiles</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>DS360oi__ViewCampaignInfluenceReport</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CampaignRoster --></label>
+        <name>GW_Volunteers__CampaignRoster</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Campaign_Shift_Calendar --></label>
+        <name>GW_Volunteers__Campaign_Shift_Calendar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Find_Volunteers --></label>
+        <name>GW_Volunteers__Find_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Email_Volunteers --></label>
+        <name>GW_Volunteers__Mass_Email_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Volunteer_Campaign --></label>
+        <name>GW_Volunteers__New_Volunteer_Campaign</name>
     </webLinks>
     <webLinks>
         <label><!-- ViewAllCampaignMembers --></label>
@@ -60,6 +110,18 @@
     <webLinks>
         <label><!-- ViewCampaignInfluenceReport --></label>
         <name>ViewCampaignInfluenceReport</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Attendees --></label>
+        <name>conference360__Add_Attendees</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Household_Mailing_List --></label>
+        <name>npo02__Household_Mailing_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>stayclassy__ViewCampaignInfluenceReport</name>
     </webLinks>
     <workflowTasks>
         <name>Volunteers_Needed</name>

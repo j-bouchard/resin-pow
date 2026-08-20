@@ -7,39 +7,82 @@ global without sharing class CiviClickWebhookHandler {
         RestResponse res = RestContext.response;
         
         WebhookResponse response = new WebhookResponse();
-        
+
+        // Capture the raw payload outside the try so it is available for failure alerts.
+        String requestBody = (req != null && req.requestBody != null)
+            ? req.requestBody.toString()
+            : null;
+
+        // Roll back to here on any failure so we never leave a Contact created/updated
+        // without its matching CampaignMember — the partial-write that produced the
+        // May 2026 sync gap (Contact persisted, membership silently dropped).
+        Savepoint sp = Database.setSavepoint();
+
         try {
-            String requestBody = req.requestBody.toString();
-            
             System.debug(LoggingLevel.DEBUG, 'CiviClick Raw Payload: ' + requestBody);
-            
+
             CiviClickPayload payload = (CiviClickPayload) JSON.deserialize(
-                requestBody, 
+                requestBody,
                 CiviClickPayload.class
             );
-            
+
             System.debug(LoggingLevel.DEBUG, 'Parsed advocate: ' + payload.advocate);
             System.debug(LoggingLevel.DEBUG, 'Parsed submission: ' + payload.submission);
-            
+
             Contact advocate = upsertAdvocate(payload.advocate);
             processSubmission(payload.submission, advocate.Id);
-            
+
             response.success = true;
             response.message = 'Webhook processed successfully';
             response.contactId = advocate.Id;
             res.statusCode = 200;
-            
+
         } catch (Exception e) {
+            // Undo any partial DML from this request so the record set stays consistent.
+            Database.rollback(sp);
+
             response.success = false;
             response.message = e.getMessage();
             response.stackTrace = e.getStackTraceString();
             res.statusCode = 500;
-            
+
             System.debug(LoggingLevel.ERROR, 'CiviClick Webhook Error: ' + e.getMessage());
             System.debug(LoggingLevel.ERROR, 'Stack: ' + e.getStackTraceString());
+
+            // Surface the failure immediately. Without this, failed syncs are invisible —
+            // which is why the Alliance Member failures went unnoticed until a manual audit.
+            notifyAdminOfFailure(e, requestBody);
         }
-        
+
         return response;
+    }
+
+    // Comma-separated recipients alerted when a webhook fails to sync.
+    private static final String ALERT_RECIPIENTS = 'joebouchard@resin.team';
+
+    // Email an admin when a webhook fails, including the error and raw payload, so a
+    // failed sync is caught in real time instead of only via manual reconciliation.
+    // Wrapped so an alerting error can never mask or replace the original failure.
+    private static void notifyAdminOfFailure(Exception e, String requestBody) {
+        try {
+            if (String.isBlank(ALERT_RECIPIENTS)) {
+                return;
+            }
+            Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+            mail.setToAddresses(ALERT_RECIPIENTS.split(','));
+            mail.setSubject('CiviClick → Salesforce sync failure');
+            mail.setPlainTextBody(
+                'A CiviClick webhook failed and the advocate was NOT synced.\n\n' +
+                'Error: ' + e.getMessage() + '\n\n' +
+                'Stack trace:\n' + e.getStackTraceString() + '\n\n' +
+                'Raw payload:\n' + (String.isNotBlank(requestBody) ? requestBody : '(unavailable)')
+            );
+            mail.setSaveAsActivity(false);
+            Messaging.sendEmail(new List<Messaging.SingleEmailMessage>{ mail });
+        } catch (Exception notifyError) {
+            // Alerting must never throw — log and move on.
+            System.debug(LoggingLevel.ERROR, 'Failed to send CiviClick sync-failure alert: ' + notifyError.getMessage());
+        }
     }
     
     private static Contact upsertAdvocate(AdvocateData advocate) {

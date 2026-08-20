@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alliance_Mobilization_Type__c</fullName>
+    <label>Alliance Mobilization Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Grants</fullName>
+                <default>false</default>
+                <label>Grants</label>
+            </value>
+            <value>
+                <fullName>Public Speaking/Events</fullName>
+                <default>false</default>
+                <label>Public Speaking/Events</label>
+            </value>
+            <value>
+                <fullName>Interview</fullName>
+                <default>false</default>
+                <label>Interview</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <label>Social Media</label>
+            </value>
+            <value>
+                <fullName>Fundraiser</fullName>
+                <default>false</default>
+                <label>Fundraiser</label>
+            </value>
+            <value>
+                <fullName>Opportunistic</fullName>
+                <default>false</default>
+                <label>Opportunistic</label>
+            </value>
+            <value>
+                <fullName>Educating the Alliance</fullName>
+                <default>false</default>
+                <label>Educating the Alliance</label>
+            </value>
+            <value>
+                <fullName>Educating the Outdoor State</fullName>
+                <default>false</default>
+                <label>Educating the Outdoor State</label>
+            </value>
+            <value>
+                <fullName>Advocacy/Policy</fullName>
+                <default>false</default>
+                <label>Advocacy/Policy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

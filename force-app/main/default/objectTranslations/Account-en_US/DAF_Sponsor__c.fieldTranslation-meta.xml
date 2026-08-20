@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Check if this account is a Donor Advised Fund (DAF) sponsor — e.g., Fidelity Charitable, Schwab Charitable, or a community foundation that grants donor-advised funds to POW. --></help>
+    <label><!-- DAF Sponsor --></label>
+    <name>DAF_Sponsor__c</name>
+</CustomFieldTranslation>

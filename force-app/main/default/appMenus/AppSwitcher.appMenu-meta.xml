@@ -9,10 +9,6 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>Power_of_Us_Hub</name>
-        <type>ConnectedApp</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>standard__Platform</name>
         <type>CustomApplication</type>
     </appMenuItems>
@@ -374,6 +370,18 @@
     </appMenuItems>
     <appMenuItems>
         <name>Resin_Fundraising_Intelligence</name>
+        <type>ExternalClientApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Resin_AI_Pipeline</name>
+        <type>ExternalClientApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>dataloader_io</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>VisualAntidote__Forms_For_Salesforce</name>
         <type>ExternalClientApplication</type>
     </appMenuItems>
 </AppMenu>
