@@ -7,7 +7,7 @@
 Per the July 13 check-in with Hannah, we're handling the outstanding governance items
 in two tracks: this async packet (five items below), and a separate 45-minute OKR
 working session (scheduled separately — not covered here). Three items need a reply;
-two are read-only or default-approve. **If you only have two minutes: answer items 1
+two are informational. **If you only have two minutes: answer items 1
 and 4.**
 
 ---
@@ -74,16 +74,12 @@ The 2026 plan scoped membership structure changes (paid model / intake form /
 - **SHELVED** — not happening in 2026; Resin stops holding design scope for it
   (it can be revived any time, this just clears the books)
 
-## 5. System documentation (user manual) — default-approve
+## 5. System documentation (user manual) — DONE, no action needed
 
-System documentation was a March deliverable; the Salesforce User Manual still has nine
-chapters that exist as headers only. The attached proposal finishes it in three phases —
-Sep 5 / Sep 26 / Oct 16 — with only ~1 hour of POW time required (User Training chapter
-input, late September).
-
-**No response within a week = approved as proposed and we start Phase 1.** If you want
-a chapter dropped, reprioritized, or a different reviewer, say so now.
-*(Attachment: User Manual Completion Proposal)*
+The Salesforce User Manual is complete. The nine chapters outstanding since March are
+written, and v1's duplicated/placeholder content is cleaned up. Comments welcome any
+time — it's a living document.
+*(Attachment: Salesforce User Manual v2, August 2026)*
 
 ---
 
@@ -95,6 +91,6 @@ a chapter dropped, reprioritized, or a different reviewer, say so now.
 | 2. Retention policy | "Approved as redlined" or comments | All committee members |
 | 3. Health snapshot | Read (no reply) | All |
 | 4. Membership changes | Reply ACTIVE / SHELVED | Hannah / Erin |
-| 5. User manual | Silence = approve; comments welcome | Hannah |
+| 5. User manual v2 | None — done; comments welcome | All |
 
 Thanks — one week, no meeting, and the governance backlog from January is clear.
