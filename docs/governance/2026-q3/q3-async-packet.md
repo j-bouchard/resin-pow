@@ -1,96 +1,62 @@
-# [POW] Data Governance — Q3 2026 Async Packet
+# [POW] Salesforce Update + Two Decisions — Q3 2026 (sent as email)
 
-**To:** Data Governance Committee (Lindsey, Jake, Maddy, Graham, Waverley, Patrick, Stacie; Hannah as executive sponsor)
+**To:** Data Governance Committee (Lindsey, Maddy, Graham, Waverley, Patrick, Stacie; Hannah cc'd as executive sponsor)
 **From:** Joe Bouchard (Resin LLC)
-**Responses due: one week from the date of this email.** No meeting required for any of this.
+**Responses due Thursday, August 27.** No meeting required.
 
-Per the July 13 check-in with Hannah, we're handling the outstanding governance items
-in two tracks: this async packet (five items below), and a separate 45-minute OKR
-working session (scheduled separately — not covered here). Three items need a reply;
-two are informational. **If you only have two minutes: answer items 1
-and 4.**
+Reframed 8/20 per Joe: this is an *update* on recent Salesforce changes (all reflected
+in the completed User Manual v2) plus the two decisions that still need the committee —
+Quorum-stack retirement and the retention policy annual review. Membership structure
+item removed (committee already aware); manual approval item removed (manual completed
+directly). This file mirrors the Gmail draft.
 
----
+## What's new in Salesforce (FYI section)
 
-## 1. KnowWho decision — REPLY NEEDED (one word)
+- **User Manual v2 complete** — all chapters written ([Drive doc](https://docs.google.com/document/d/1geY_FfQHJQWnoRG68U37zWQKAl_ps7R5-PjlImn10WQ/edit))
+- **CiviClick advocacy integration live** — 12 campaigns, ~3,900 unique advocates in 2026
+- **Higher Logic community sync live**
+- **Shopify order sync live**
+- **Alliance training tracking automated** — event tag → campaign checkbox → dashboard (71 members trained across 15 events in 2026)
+- **OKR tracking reference** published ([Drive doc](https://docs.google.com/document/d/1FbmQHcQ0cF3gV9eZS7-vXR8Nj1Vad__2jmH20Ika784/edit))
+- **Data health snapshot** (read-only) ([Drive doc](https://docs.google.com/document/d/15xm8G6BiGnfuBuf4YRzBncIIj-u4k20hKhqBVFvimwQ/edit))
 
-CiviClick has been live since January and replaced Quorum. The KnowWho legislator
-dataset (30,904 contact records — **still growing**, the sync is still active) has been
-sitting in Salesforce awaiting a decision since January. These records are already
-excluded from email lists and dedupe merges; they cost storage and clutter and are not
-connected to the new advocacy stack.
+## Decision 1 — Retire the Quorum stack (KnowWho + Phone2Action packages)
 
-**Reply with one of:**
+CiviClick fully replaced Quorum in January; the retired stack is still installed and the
+KnowWho sync is still growing (30,904 records). **Resin recommendation: REMOVE**, per
+Salesforce best practice on retired managed packages (storage, security surface, upgrade
+risk, schema clutter). Staged plan: dependency audit → deactivate syncs → full data
+archive to Google Drive → uninstall. Historical advocacy campaign history is preserved
+(standard objects). Ask: **REMOVE (recommended) or KEEP** (with who uses it).
 
-- **KEEP** — someone actively uses KnowWho legislator data in Salesforce (tell us who/how)
-- **ARCHIVE** — export to Google Drive for reference, then remove from Salesforce
-  (same pattern we used for L2 voter data)
-- **DROP** — remove from Salesforce, no export
+*(Supersedes the narrower KnowWho keep/archive/drop question — expanded to the whole
+retired stack per Joe, 8/20. The dependency audit already has one known item: the active
+`Contact_Address` matching rule keys on `kw__Zip_Code__c` and will be re-pointed to
+`MailingPostalCode` as part of removal.)*
 
-*Resin's recommendation: ARCHIVE. It frees the storage and clutter with zero data loss.
-If we archive or drop, we will also deactivate the KnowWho sync so records don't
-recreate, and the removal will be run as a documented, committee-visible operation.*
+## Decision 2 — Data Retention Policy annual review
 
-## 2. Data Retention Policy — annual review redline — REPLY NEEDED (approve or comment)
+Short review doc: confirms everything running (4 enforcement mechanisms verified active)
+plus three small additions — donor-protection statement, CiviClick in the advocacy
+campaign exclusions, L2 voter data section (completed action, now recorded in policy).
+Ask: **"Approved"** or comments in the doc.
+([Drive doc](https://docs.google.com/document/d/1TuLw4DmYBu9fofut8T7mDHIPpXKdNmtHOA92Qq4vYak/edit))
 
-The policy requires annual review; the last version is January 2025, so we're overdue.
-The attached redline is **mostly confirmation** — every enforcement mechanism has been
-verified as running, and the data it covers has stayed clean. Six substantive edits are
-proposed:
+*(Simplified 8/20 per Joe: implementation/oversight section removed; activity-records
+section removed — storage remediation is a Resin operational item for September, not a
+committee policy question.)*
 
-1. An explicit **donor-protection statement** (never archive/delete donors — formalizes
-   what the criteria already do)
-2. Campaign deletion exclusions updated for **CiviClick** (Quorum's replacement)
-3. A new **L2 Voter Data** section (formalizes the January 2025 export decision)
-4. A new **integration-owned data** section (CiviClick, Higher Logic)
-5. A new **activity records** section flagging Tasks as a policy gap (they're now the
-   largest storage consumer — options come at the next review, nothing decided today)
-6. Oversight cadence updated to **quarterly written snapshots** (async OK) instead of
-   quarterly meetings
+## Housekeeping — code access
 
-**Reply "Approved as redlined" or comment on the specific numbered items.**
-*(Attachment: Data Retention Policy — 2026 Annual Review Redline)*
+POW's Salesforce configuration + custom integrations are version-controlled in GitHub
+(Resin-maintained). Offer: POW names a technical point of contact for **read access** —
+continuity and transparency best practice.
 
-## 3. Data health snapshot — READ-ONLY, no reply needed
-
-One page: storage, record counts, email opt-out trend, address completeness.
-Three things to know: **storage is over allocation again** (116.5% — driven by activity
-records the retention policy doesn't cover; Resin brings a remediation proposal in
-September, no action needed from you now). The two items flagged "to watch" in January —
-email opt-outs and incomplete addresses — are both still climbing with no owner, though
-the opt-out number looks worse than it is (half of it is archived contacts; the
-active-contact rate is 23%). The ownership question is part of the OKR working session
-(data ownership agenda item), not this packet.
-*(Attachment: Data Health Snapshot — August 2026)*
-
-## 4. Membership structure changes — REPLY NEEDED (one word)
-
-The 2026 plan scoped membership structure changes (paid model / intake form /
-"Outdoor State" concepts) for February. It's now August and the status is unclear.
-
-**Reply with one of:**
-
-- **ACTIVE** — still a 2026 initiative; we'll schedule a scoping conversation
-- **SHELVED** — not happening in 2026; Resin stops holding design scope for it
-  (it can be revived any time, this just clears the books)
-
-## 5. System documentation (user manual) — DONE, no action needed
-
-The Salesforce User Manual is complete. The nine chapters outstanding since March are
-written, and v1's duplicated/placeholder content is cleaned up. Comments welcome any
-time — it's a living document.
-*(Attachment: Salesforce User Manual v2, August 2026)*
-
----
-
-### Summary of what each person needs to do
+## Summary of asks
 
 | Item | Action | Who |
 |------|--------|-----|
-| 1. KnowWho | Reply KEEP / ARCHIVE / DROP | Anyone using it; otherwise Hannah decides |
-| 2. Retention policy | "Approved as redlined" or comments | All committee members |
-| 3. Health snapshot | Read (no reply) | All |
-| 4. Membership changes | Reply ACTIVE / SHELVED | Hannah / Erin |
-| 5. User manual v2 | None — done; comments welcome | All |
-
-Thanks — one week, no meeting, and the governance backlog from January is clear.
+| 1. Quorum/KnowWho retirement | REMOVE / KEEP | Anyone using it; else Hannah |
+| 2. Retention policy | "Approved" or doc comments | All |
+| 3. GitHub read access | Name a contact (optional) | Hannah / Erin |
+| Manual, OKR ref, snapshot | FYI only | All |
