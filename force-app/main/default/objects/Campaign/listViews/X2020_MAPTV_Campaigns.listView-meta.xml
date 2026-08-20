@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2020_MAPTV_Campaigns</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>CAMPAIGN.BUDGETED_COST</columns>
+    <columns>CAMPAIGN.ACTUAL_COST</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.ID</field>
+        <operation>equals</operation>
+        <value>7014P000001Jce2</value>
+    </filters>
+    <filters>
+        <field>PARENT_ID</field>
+        <operation>equals</operation>
+        <value>7014P000001Jce2</value>
+    </filters>
+    <label>2020 MAPTV Campaigns</label>
+</ListView>

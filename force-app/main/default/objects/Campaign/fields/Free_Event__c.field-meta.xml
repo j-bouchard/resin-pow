@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Free_Event__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Pulled from Blackthorn Events to indicate the event is free</description>
+    <inlineHelpText>Indicates the event was free</inlineHelpText>
+    <label>Free Event</label>
+    <type>Checkbox</type>
+</CustomField>

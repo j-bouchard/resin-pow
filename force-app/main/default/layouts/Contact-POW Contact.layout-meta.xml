@@ -14,6 +14,7 @@
     <excludeButtons>EnableSelfService</excludeButtons>
     <excludeButtons>RequestUpdate</excludeButtons>
     <excludeButtons>Share</excludeButtons>
+    <excludeButtons>SmartFillEnrich</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <excludeButtons>ViewPartnerPortalUser</excludeButtons>
     <excludeButtons>ViewSelfService</excludeButtons>
@@ -231,10 +232,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>End_of_Year_Gift__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Previous_Donor_Level__c</field>
             </layoutItems>
         </layoutColumns>
@@ -273,6 +270,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Total_Gifts_Mem_Merch_Soft_Cred_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Total_Gifts_Soft_Cred_Member_Past_Years__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -690,6 +691,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OwnerId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Secondary_Owner__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

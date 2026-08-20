@@ -1,64 +1,86 @@
 # POW Org Automation
-Generated: 2026-04-15 | Org: protectourwinters.org
+Generated: 2026-08-20 | Org: protectourwinters.org (00D4P000001dRZ9)
 
 ## Overview
 
 | Type | Total | Active | Draft | Obsolete |
 |------|-------|--------|-------|----------|
-| Flows | 49 | 28 | 8 | 13 |
-| Workflow Rules | 71 | varies | - | - |
-| Apex Classes | 21 | 21 | - | - |
+| Flows (unmanaged) | 52 | 32 | 8 | 12 |
+| Workflow Rules | 71 | 24 | - | - |
+| Apex Classes | 25 | 25 | - | - |
 | Apex Triggers | 3 | 3 | - | - |
-| Validation Rules | 1 | 1 | - | - |
+| Validation Rules (active, custom) | 5 | 5 | - | - |
 | DLRS Rollup Configs | 14 | - | - | - |
+| NPSP TDTM Handlers (active) | 55 | 55 | - | - |
 | NPSP Filter Groups | 13 | - | - | - |
-| NPSP Filter Rules | 90+ | - | - | - |
+
+> Changes vs 2026-04-15: +4 Higher Logic Apex classes; +4 validation rules;
+> flows: `Membership_Flow_Opportunities_Donations_Merchandise_3` and
+> `Speaker_Main_Flow` activated, `Alert_Lindsey_on_Campaign_Member_Add` and
+> `Donor_Level_Tasks_30_and_90_Days` reactivated,
+> `Contact_Update_Secondary_Owner_on_Household_Account` and
+> `Recurring_Donation_Update_Open_Ended_Status` are new-and-active, while
+> `Engagement_Campaign_Member` (→ Obsolete) and
+> `Recurring_Donor_Cancelled_Close_Future_Opportunities` (→ Draft) were
+> deactivated. `Case_Category_Automation_8fkiw9` and
+> `CiviClickWebhookHandler` were modified in-org (drift now synced to repo).
+> Workflow "71 active" in the April doc was overstated — 71 rules exist,
+> 24 are active.
 
 ---
 
-## Active Flows (28)
+## Active Flows (32)
 
-### Record-Triggered: After Save (19 active)
+### Record-Triggered: After Save (24 active)
 
 | Name | Object | Description |
 |------|--------|-------------|
+| Alert_Lindsey_on_Campaign_Member_Add | CampaignMember | Email alert on new campaign member _(reactivated since Apr 2026)_ |
 | Alliance_Registration_Email_Alert | VisualAntidote__Form_Submission__c | Routes registration alerts |
-| Call_to_Action_Main_Flow | Call_to_Action__c | CTA processing |
-| Campaign_Member_Status | CampaignMemberStatus | Campaign member status updates |
-| Campaign_Membership_Type | Campaign | Campaign type processing |
-| Case_Category_Automation_8fkiw9 | Case | Assigns Case.OwnerId and sends email alert based on category |
-| Contact_Update_State_from_Zip_Code | Zip_Code__c | Zip code → state population |
-| Engagement_Attendee | Contact | Determines if attendee is alliance member |
-| Engagement_Campaign_Member | Contact | Adds engagement number to Campaign Member |
-| Engagement_Record_Creation | Engagement__c | Populates engagement ID on contact |
-| Engagment_Emails | Contact | Adds engagement ID to task |
-| Event_Main_Flow | Campaign | Event logistics and campaign linking |
-| Event_Partner_Main_Flow | conference360__Sponsor__c | Event partner processing |
+| Call_to_Action_Main_Flow | Call_to_Action__c | Copies event details when CTA linked to an Event |
+| Campaign_Member_Status | Campaign | Creates campaign member statuses for new Event campaigns |
+| Campaign_Membership_Type | Campaign | Sets campaign type on creation |
+| Case_Category_Automation_8fkiw9 | Case | Assigns Case.OwnerId and sends email alert based on category _(modified in-org since Apr 2026)_ |
+| Contact_Update_Secondary_Owner_on_Household_Account | Contact | Updates Secondary Owner on Household Account _(new since Apr 2026)_ |
+| Contact_Update_State_from_Zip_Code | Contact | Fills Mailing/Other State from zip code |
+| Engagement_Attendee | conference360__Attendee__c | Links Alliance member event attendance to Engagement |
+| Engagement_Record_Creation | Contact | Populates engagement ID on contact |
+| Engagment_Emails | Task | Links email Tasks to Engagement record |
+| Event_Main_Flow | conference360__Event__c | Ensures related campaign exists; event logistics |
+| Event_Partner_Main_Flow | conference360__Sponsor__c | Copies event details to Event Partner |
 | GoFundMe_Home_Phone_to_Mobile | Contact | Phone field mapping |
-| Grant_Tasks | Task | Close date minus 28 days task creation |
+| Grant_Tasks | Opportunity | Grant deadline task creation |
 | Membership_Flow_Campaigns_P2A_Opt_In_2 | CampaignMember | Updates POW Action Fund field on contact |
 | Membership_Flow_Event_Attendee_2 | conference360__Attendee__c | Event attendee membership processing |
+| Membership_Flow_Opportunities_Donations_Merchandise_3 | Contact | Donation/merchandise membership fields _(activated since Apr 2026 — was InvalidDraft)_ |
 | Membership_Flow_Opportunities_Soft_Credits | Opportunity | Soft credit membership processing |
-| One_time_donation_of_500_999_Task | Task | Stewardship task for $500-999 donations |
-| Opportunity_Assign_Tasks | Task | Updates POW Action Fund field on contact |
-| Recurring_Donor_Cancelled_Close_Future_Opportunities | Contact | Closes future opps when recurring donor cancels |
+| One_time_donation_of_500_999_Task | Opportunity | Stewardship task for $500-999 donations |
+| Opportunity_Assign_Tasks | Opportunity | Assigns follow-up tasks, updates related fields |
+| Recurring_Donation_Update_Open_Ended_Status | npe03__Recurring_Donation__c | Updates open-ended status _(new since Apr 2026)_ |
+| Speaker_Main_Flow | conference360__Speaker__c | Speaker → Campaign linking _(activated since Apr 2026)_ |
 | Staff_Main_Flow | conference360__Staff__c | Event staff processing |
+
+Also active in-org from the Blackthorn package family (not in this repo's
+FlowDefinition list): `Blackthorn_Events_ERS_Failed` (email on failed Event
+Registration Submission), `Blackthorn_Events_WebinarService_Failed` (email
+on WebinarService Blackthorn Log errors).
 
 ### Record-Triggered: Before Save (2 active)
 
 | Name | Object | Description |
 |------|--------|-------------|
-| Account_Update_Billing_State | Zip_Code__c | Optimized before-save flow for fast field updates with duplicate rule workaround |
-| Campaign_Flow | Campaign | Campaign pre-save processing |
+| Account_Update_Billing_State | Account | Optimized before-save flow for fast field updates with duplicate rule workaround |
+| Campaign_Flow | Campaign | Campaign pre-save processing (tags "Fundraise") |
 
-### Scheduled (7 active)
+### Scheduled (6 active)
 
 | Name | Object | Description |
 |------|--------|-------------|
 | Account_Bypass_Dupe_Rule_Scheduled_Flow | Account | Scheduled duplicate rule bypass |
 | Contact_Archive_Scheduled_Flow | Contact | Sets Archived=TRUE per data retention policy |
 | Contact_Stages_v2 | Contact | Daily lifecycle segmentation (Current/Lapsed) — today minus 18 months |
-| Event_CTA_Main_Flow | CampaignMember | Scheduled CTA event processing |
+| Donor_Level_Tasks_30_and_90_Days | Task | Donor outreach tasks 30/90 days out _(reactivated since Apr 2026)_ |
+| Event_CTA_Main_Flow | Call_to_Action__c | Daily CTA count updates per event |
 | Recurring_Donor_Level_Task_30_or_90_Days | Task | Recurring donor stewardship tasks based on days since last task |
 
 ### Draft Flows (8)
@@ -70,32 +92,35 @@ Generated: 2026-04-15 | Org: protectourwinters.org
 | Data_Retention_Policy_Campaign_Delete | Campaign | Data retention — campaign deletion |
 | Data_Retention_Policy_Campaign_Delete_Flow | Campaign | Data retention — campaign deletion (v2) |
 | Duplicate_Contact_Deletion | Contact | Duplicate contact cleanup |
+| Event_Alliance_Training_Campaign_Sync | conference360__Event__c | ⚠ Deployed 2026-08-20 (PR #21) as v1 Draft — org's "deploy flows as active" setting is off; **needs manual activation by Joe** |
 | Membership_Flow_Merchandise_Campaign_Member | Opportunity | Merchandise membership processing |
-| Membership_Flow_Opportunities_Donations_Merchandise_3 | Contact | InvalidDraft status |
-| Speaker_Main_Flow | conference360__Speaker__c | Speaker → Campaign linking |
+| Recurring_Donor_Cancelled_Close_Future_Opportunities | Contact | ⚠ Was ACTIVE in Apr 2026 — deactivated in-org since |
 
-### Obsolete Flows (13)
-Alert_Lindsey_on_Campaign_Member_Add, Create_Job_and_Shift_from_Campaign, Crushit4Climate_Referred_By_Soft_Credit, Delete_Mailchimp_Events_After_30_DAys, Delete_Mailchimp_Events_from_30_Days_Ago, Donor_Level_Tasks_30_and_90_Days, Donor_Level_Tasks_First_Task, Event_Case_Auto_Response, First_Donor_Level_Task, Generate_Membership_Order_from_Opportunity, Membership_Kit_Uncheck_Fields, Order_Fulfillment_Platform_Event, POW_Membership
+### Obsolete Flows (12)
+Create_Job_and_Shift_from_Campaign, Crushit4Climate_Referred_By_Soft_Credit, Delete_Mailchimp_Events_After_30_DAys, Delete_Mailchimp_Events_from_30_Days_Ago, Donor_Level_Tasks_First_Task, Engagement_Campaign_Member _(was active in Apr 2026)_, Event_Case_Auto_Response, First_Donor_Level_Task, Generate_Membership_Order_from_Opportunity, Membership_Kit_Uncheck_Fields, Order_Fulfillment_Platform_Event, POW_Membership
 
 ---
 
-## Apex Classes (12 custom + 9 test = 21 total)
+## Apex Classes (12 custom + 10 test + 3 DLRS test = 25 total)
 
 ### Custom Classes
 
 | Name | Purpose |
 |------|---------|
 | ChangePasswordController | Site password change |
-| CiviClickWebhookHandler | CiviClick/P2A advocacy webhook processing |
+| CiviClickWebhookHandler | CiviClick/P2A advocacy webhook processing _(modified in-org since Apr 2026: savepoint/rollback added after the May 2026 partial-write sync gap)_ |
 | ForgotPasswordController | Site forgot password |
 | GoogleAdsLeadApi | Google Ads lead integration API |
+| HigherLogicActivityProcessor | Processes Higher Logic (POW Connected) community activity into SF records _(new since Apr 2026)_ |
+| HigherLogicActivityWebhook | REST endpoint receiving Higher Logic activity webhooks _(new since Apr 2026)_ |
+| HigherLogicConfig | Higher Logic integration configuration (reads `HL_Webhook_Config__mdt`) _(new since Apr 2026)_ |
 | MyProfilePageController | Site profile page |
 | ShopifyOrderWebhook | Shopify e-commerce order webhook |
 | SiteLoginController | Site login |
 | SiteRegisterController | Site registration |
 | UpdateCountryBatch | Batch job to update country fields |
 
-### Test Classes (9)
+### Test Classes (10)
 
 | Name | Tests |
 |------|-------|
@@ -103,6 +128,7 @@ Alert_Lindsey_on_Campaign_Member_Add, Create_Job_and_Shift_from_Campaign, Crushi
 | CiviClickWebhookHandlerTest | CiviClickWebhookHandler |
 | ForgotPasswordControllerTest | ForgotPasswordController |
 | GoogleAdsLeadApiTest | GoogleAdsLeadApi |
+| HigherLogicActivityProcessorTest | HigherLogicActivityProcessor + webhook _(new since Apr 2026)_ |
 | MyProfilePageControllerTest | MyProfilePageController |
 | ShopifyOrderWebhookTest | ShopifyOrderWebhook |
 | SiteLoginControllerTest | SiteLoginController |
@@ -154,10 +180,14 @@ Rollups on Engagement__c tracking attendance and participation:
 
 ---
 
-## Validation Rules (1 total)
+## Validation Rules (5 active, custom)
 
-| Object | Rule Name | Error Message |
-|--------|-----------|---------------|
+| Object | Rule Name | Notes |
+|--------|-----------|-------|
+| Contact | POW_Cannot_be_Blank | _(new since Apr 2026)_ |
+| Contact | Contact_Preferred_Email | _(new since Apr 2026)_ |
+| Contact | Contact_Preferred_Phone | _(new since Apr 2026)_ |
+| Opportunity | Require_Reason_Closed_Lost | _(new since Apr 2026)_ |
 | Partnership_Deliverables__c | Partner_Action_OR_POW_Deliverable | A value needs to be added to either POW Deliverable or Partner Action. Values cannot exist in both fields. |
 
 ---
@@ -179,21 +209,27 @@ These control NPSP rollup calculations:
 - OppsWonHCGiftsandMembership (x2) — Gifts + membership combined
 - OppsWonHCMemberandDonations — Members + donations combined
 
-### NPSP Trigger Handlers
-NPSP uses TDTM (Table-Driven Trigger Management). Trigger handlers are stored as data records (npsp__Trigger_Handler__c), not metadata. They fire on:
-- **Contact** — Address management, household sync, relationships, affiliations, rollups
-- **Account** — Household/org account handling, address sync, rollups
-- **Opportunity** — Donation processing, payment creation, allocation, rollups
-- **Campaign** — Campaign member status management
-- **Lead** — Lead conversion handling
+### NPSP Trigger Handlers (55 active)
+NPSP uses TDTM (Table-Driven Trigger Management). Trigger handlers are stored as data records (npsp__Trigger_Handler__c), not metadata. Active handler counts by object (2026-08-20):
+
+| Object | Handlers | | Object | Handlers |
+|--------|----------|-|--------|----------|
+| Opportunity | 12 | | npe01__OppPayment__c | 4 |
+| Contact | 8 | | Task / Campaign / Allocation__c / Address__c | 2 each |
+| Account | 5 | | npo02__Household__c, npe4/npe5, User, CampaignMember, Level__c, GAU, Engagement Plan objects, DataImport objects, soft-credit objects | 1 each |
+| npe03__Recurring_Donation__c | 4 | | | |
 
 **WARNING:** Before adding automation on Contact, Account, Opportunity, or Campaign, be aware that NPSP trigger handlers fire alongside your custom automation. Check for conflicts.
 
 ---
 
-## Workflow Rules (71 rules across 8 objects)
+## Workflow Rules (71 rules across 8 objects — 24 active)
 
-> Note: Many of these are legacy. Salesforce recommends migrating workflow rules to Flows.
+> Note: Many of these are legacy. Salesforce recommends migrating workflow
+> rules to Flows. Active counts (2026-08-20): Account 6/16, Contact 16/42,
+> Alliance_Reviews__c 1/1, Lead 1/1; Campaign 0/4, CampaignMember 0/2,
+> Opportunity 0/5, Case 0 are all inactive. The April doc's "71 active" was
+> the total rule count, not the active count.
 
 ### Account (16 rules)
 - Account Foundation Stage — Current / Lapsed / Lost (based on donation recency)

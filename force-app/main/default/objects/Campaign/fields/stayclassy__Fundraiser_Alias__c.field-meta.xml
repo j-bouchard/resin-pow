@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__Fundraiser_Alias__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Used to distinguish multiple fundraising pages created by a single Contact.  Since a single user can sign up multiple people to create fundraising pages, the alias can be used to represent one of the additional supporters.  For example, a parent might sign up their children for fundraising pages.  The parent remains the Contact attached to the fundraising page, and the alias would be the children&apos;s names.</description>
+    <externalId>false</externalId>
+    <label>Fundraiser Alias</label>
+    <length>100</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipment__c</fullName>
+    <label>Equipment</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Table Clothes</fullName>
+                <default>false</default>
+                <label>Table Clothes</label>
+            </value>
+            <value>
+                <fullName>Tent Topper/10x10</fullName>
+                <default>false</default>
+                <label>Tent Topper/10x10</label>
+            </value>
+            <value>
+                <fullName>6ft table</fullName>
+                <default>false</default>
+                <label>6ft table</label>
+            </value>
+            <value>
+                <fullName>Special Activation</fullName>
+                <default>false</default>
+                <label>Special Activation</label>
+            </value>
+            <value>
+                <fullName>Raffle - only with speaker</fullName>
+                <default>false</default>
+                <label>Raffle - only with speaker</label>
+            </value>
+            <value>
+                <fullName>VR Headsets</fullName>
+                <default>false</default>
+                <label>VR Headsets</label>
+            </value>
+            <value>
+                <fullName>Giant Jenga</fullName>
+                <default>false</default>
+                <label>Giant Jenga</label>
+            </value>
+            <value>
+                <fullName>Dip Jars?</fullName>
+                <default>false</default>
+                <label>Dip Jars?</label>
+            </value>
+            <value>
+                <fullName>Give-always - Consumables</fullName>
+                <default>false</default>
+                <label>Give-always - Consumables</label>
+            </value>
+            <value>
+                <fullName>Stickers</fullName>
+                <default>false</default>
+                <label>Stickers</label>
+            </value>
+            <value>
+                <fullName>Buttons</fullName>
+                <default>false</default>
+                <label>Buttons</label>
+            </value>
+            <value>
+                <fullName>Possibly new options</fullName>
+                <default>false</default>
+                <label>Possibly new options</label>
+            </value>
+            <value>
+                <fullName>Marketing Materials</fullName>
+                <default>false</default>
+                <label>Marketing Materials</label>
+            </value>
+            <value>
+                <fullName>Postcards</fullName>
+                <default>false</default>
+                <label>Postcards</label>
+            </value>
+            <value>
+                <fullName>Posters</fullName>
+                <default>false</default>
+                <label>Posters</label>
+            </value>
+            <value>
+                <fullName>Banners</fullName>
+                <default>false</default>
+                <label>Banners</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

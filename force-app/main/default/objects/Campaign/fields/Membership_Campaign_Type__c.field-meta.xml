@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership_Campaign_Type__c</fullName>
+    <label>Membership Campaign Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Donation</fullName>
+                <default>false</default>
+                <label>Donation</label>
+            </value>
+            <value>
+                <fullName>Merch Purchase</fullName>
+                <default>false</default>
+                <label>Merch Purchase</label>
+            </value>
+            <value>
+                <fullName>POW Opt-In</fullName>
+                <default>false</default>
+                <label>POW Opt-In</label>
+            </value>
+            <value>
+                <fullName>Partner Opt-In</fullName>
+                <default>false</default>
+                <label>Partner Opt-In</label>
+            </value>
+            <value>
+                <fullName>Event Attendee</fullName>
+                <default>false</default>
+                <label>Event Attendee</label>
+            </value>
+            <value>
+                <fullName>Advocacy Action</fullName>
+                <default>false</default>
+                <label>Advocacy Action</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

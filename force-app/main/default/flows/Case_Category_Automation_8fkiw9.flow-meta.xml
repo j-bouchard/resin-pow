@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Send_Case_Notification_to_case_owner</name>
         <label>Send Case Notification to case owner</label>
-        <locationX>1106</locationX>
+        <locationX>1238</locationX>
         <locationY>839</locationY>
         <actionName>Case.New_Case_Assignment</actionName>
         <actionType>emailAlert</actionType>
@@ -38,7 +38,7 @@
     <decisions>
         <name>Check_Category</name>
         <label>Check Category</label>
-        <locationX>1106</locationX>
+        <locationX>1238</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -161,6 +161,21 @@
             </connector>
             <label>Merchandise</label>
         </rules>
+        <rules>
+            <name>Community_Chapters</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Community Chapters</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Update_CaseOwner_to_Maddy_Peavy</targetReference>
+            </connector>
+            <label>Community Chapters</label>
+        </rules>
     </decisions>
     <description>After-save record-triggered flow to assign Case.OwnerId and send an email alert to the new owner based on Case.Subject__c (Category).</description>
     <environments>Default</environments>
@@ -235,6 +250,30 @@
             <field>OwnerId</field>
             <value>
                 <stringValue>005Rn000001bTth</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_2_of_Update_CaseOwner_to_Maddy_Peavy</name>
+        <label>Update Case Owner to Hannah</label>
+        <locationX>2162</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Send_Case_Notification_to_case_owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>005Rn000000vOteIAE</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -384,12 +423,12 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>980</locationX>
+        <locationX>1112</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Check_Category</targetReference>
         </connector>
-        <filterLogic>1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8</filterLogic>
+        <filterLogic>1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9</filterLogic>
         <filters>
             <field>Subject__c</field>
             <operator>EqualTo</operator>
@@ -444,6 +483,13 @@
             <operator>EqualTo</operator>
             <value>
                 <stringValue>Donor Relations</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Subject__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Community Chapters</stringValue>
             </value>
         </filters>
         <object>Case</object>

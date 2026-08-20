@@ -1,14 +1,25 @@
 # POW Org Schema
-Generated: 2026-04-15 | Org: protectourwinters.org
+Generated: 2026-08-20 | Org: protectourwinters.org (00D4P000001dRZ9)
 
 ## Overview
 
 | Metric | Count |
 |--------|-------|
-| Custom Objects | 12 (+1 Custom Metadata Type, +1 Platform Event) |
-| Custom Fields on Standard Objects | Account: 36, Contact: 169, Opportunity: 39 |
-| Installed Packages | 29 |
+| Custom Objects | 12 (+2 Custom Metadata Types, +1 Platform Event) |
+| Custom Fields on Standard Objects | Account: 39, Contact: 172, Opportunity: 40, Campaign: 73 |
+| Installed Packages | 30 |
 | Record Types (custom objects) | 1 (Partnership_Deliverables__c) |
+
+> Changes vs the 2026-04-15 snapshot: +3 Account fields (`DAF_Sponsor__c`,
+> `HL_Community_ID__c`, `Secondary_Owner__c`), +3 Contact fields (incl.
+> `HL_Contact_ID__c`), +1 Opportunity field (`Expected_Amount__c`),
+> Campaign fields now documented (73, incl. `Alliance_Training__c` deployed
+> 2026-08-20), new `HL_Webhook_Config__mdt` custom metadata type, new
+> `clientell_sf` package.
+>
+> ⚠ `Contact.End_of_Year_Gift__c` (PR #19) and
+> `Contact.Preferred_Communication_Method__c` exist in this repo but are
+> NOT present in production — that deploy appears to have never landed.
 
 ## Installed Packages
 
@@ -43,12 +54,13 @@ Generated: 2026-04-15 | Org: protectourwinters.org
 | rhx | RollupHelper Extended | Rollup helper extended |
 | sf_chttr_apps | Chatter Apps | Chatter extensions |
 | sf_com_apps | Salesforce.com Apps | SF platform apps |
+| clientell_sf | Clientell | New since April 2026 snapshot |
 
 ---
 
 ## Standard Object Customizations
 
-### Account (37 custom fields)
+### Account (39 custom fields)
 
 | API Name | Label | Category |
 |----------|-------|----------|
@@ -62,7 +74,9 @@ Generated: 2026-04-15 | Org: protectourwinters.org
 | Contract_Renewal_Date__c | Contract Renewal Date | Partnership |
 | Contract_Start_Date__c | Contract Start Date | Partnership |
 | Contract__c | Contract | Partnership |
+| DAF_Sponsor__c | DAF Sponsor | Donation _(new since Apr 2026)_ |
 | Divest_From_Fossil_Fuels__c | Divest From Fossil Fuels | Sustainability |
+| HL_Community_ID__c | HL Community ID | Higher Logic integration _(new since Apr 2026)_ |
 | First_Gift_Amount__c | First Gift Amount | Donation |
 | Group_Region__c | Group Region | Alliance |
 | Group_Status__c | Group Status | Alliance |
@@ -81,6 +95,7 @@ Generated: 2026-04-15 | Org: protectourwinters.org
 | Prospect_Status__c | Prospect Status | Pipeline |
 | Renewal_Date__c | Renewal Date | Partnership |
 | Salesforce_ID__c | Salesforce ID | Admin |
+| Secondary_Owner__c | Secondary Owner | Ownership _(new since Apr 2026)_ |
 | Social_Post__c | Social Post | Engagement |
 | Stage__c | Stage | Pipeline |
 | Total_Gifts_117_Days_Ago__c | Total Gifts 117 Days Ago | Donation Analytics |
@@ -91,7 +106,11 @@ Generated: 2026-04-15 | Org: protectourwinters.org
 
 **Account Layouts:** Government Office, Household Lightning, Local Alliance, Organization Lightning, POW Partner
 
-### Contact (169 custom fields)
+### Contact (172 custom fields)
+
+New since Apr 2026: `HL_Contact_ID__c` (Higher Logic member ID) and two
+other additions. NOT in production despite being in this repo:
+`End_of_Year_Gift__c` (PR #19), `Preferred_Communication_Method__c`.
 
 Key field categories:
 
@@ -311,7 +330,7 @@ Key field categories:
 
 **Contact Layouts:** Alliance Member, Alliance Member - Captains, Contact Lightning, Legislators, POW Contact, Volunteers Contact
 
-### Opportunity (39 custom fields)
+### Opportunity (40 custom fields)
 
 | API Name | Label | Category |
 |----------|-------|----------|
@@ -325,6 +344,7 @@ Key field categories:
 | Completed_Payout_Count__c | Completed Payout Count | Stripe/Payments |
 | Completed_Payouts__c | Completed Payouts | Stripe/Payments |
 | Discount_Code__c | Discount Code | E-commerce |
+| Expected_Amount__c | Expected Amount | Finance _(new since Apr 2026)_ |
 | Final_Report_Deadline__c | Final Report Deadline | Grants |
 | Flow_Update__c | Flow Update | Admin |
 | Fund_Designation__c | Fund Designation | Finance |
@@ -356,6 +376,44 @@ Key field categories:
 | Shopify_Order_Id__c | Shopify Order ID | E-commerce |
 
 **Opportunity Layouts:** Event Ticket, Merchandise, POW Partner
+
+### Campaign (73 custom fields) — newly documented in this snapshot
+
+Campaign is heavily customized for POW's event/advocacy model. Full field
+metadata now lives in `force-app/main/default/objects/Campaign/fields/`.
+Key groups:
+
+**Alliance / OKR tracking**
+| API Name | Label | Type |
+|----------|-------|------|
+| Alliance_Training__c | Alliance Training | Checkbox _(deployed 2026-08-20, PR #21 — feeds Alliance OKRs Leadership View)_ |
+| Alliance_Training_Type__c | Alliance Training Type | Picklist |
+| Alliance_Training_Category__c | Alliance Training Category | Picklist |
+| Alliance_Mobilization_Type__c | Alliance Mobilization Type | Picklist |
+| OKR_Type__c | OKR Type | Picklist |
+| OKR_Win_Loss__c | OKR Win/Loss | Picklist |
+
+**Event logistics (~35 fields):** venue address fields (`Venue_*__c`),
+`Event_Start/End_Date_and_Time__c`, `Set_Up_Date_and_Time__c`,
+`Event_Audience__c`, `Event_Category__c`, `Event_Components__c`,
+`Equipment__c`, `Giveaways__c`, `Marketing_Materials__c`,
+`Speakers_Needed__c` + `Speaker__c`/`Speaker_2-4__c` lookups,
+`Onsite_Contact__c` (Host Contact), `Liquor_License_Requested__c`,
+`Lodging_Needed__c`, `Volunteers_Needed__c`, post-event retro fields
+(`What_went_well__c`, `What_can_we_do_better__c`, `Attended__c`,
+`How_many_people_attended__c`).
+
+**Advocacy / CTA:** `Advocacy_Effort__c`, `CTA_Details__c`,
+`of_CTA_s_Taken__c`, `How_many_people_took_action__c`, `Target_Reach__c` /
+`Actual_Reach__c`, `Target_Conversion__c` / `Conversion__c`.
+
+**Integration IDs (External IDs):** `Campaign_ID__c` (auto number),
+`CiviClick_Campaign_ID__c` (unique), `HL_Event_ID__c` + `HL_Event_Type__c`
+(Higher Logic events).
+
+**Classification:** `Campaign_Type__c`, `Membership_Campaign_Type__c`,
+`Department__c`, `Subtype__c`, `Fundraising_Type__c`, `Priority__c`,
+`Communications_Tier__c`, `Related_Account__c` / `_2__c` / `_3__c`.
 
 ---
 
@@ -426,3 +484,9 @@ Key field categories:
 
 ### Testing__mdt
 **Type:** Custom Metadata Type (no fields deployed)
+
+### HL_Webhook_Config__mdt _(new since Apr 2026)_
+**Type:** Custom Metadata Type
+**Purpose:** Configuration for the Higher Logic (POW Connected) activity
+webhook integration (see `HigherLogicActivityWebhook` /
+`HigherLogicConfig` Apex classes)

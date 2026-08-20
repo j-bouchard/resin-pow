@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__Classy_External_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <deprecated>false</deprecated>
+    <description>Represents the ID of a Campaign, Fundraising Page, or Team.  The ID is a combination of the type of campaign and the GoFundMe Pro ID.</description>
+    <externalId>true</externalId>
+    <label>External ID (GFM Pro)</label>
+    <length>50</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

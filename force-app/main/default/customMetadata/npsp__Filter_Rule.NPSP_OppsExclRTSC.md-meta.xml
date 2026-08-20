@@ -4,7 +4,7 @@
     <protected>false</protected>
     <values>
         <field>npsp__Constant__c</field>
-        <value xsi:type="xsd:string">InKindGift;Merchandise;Membership</value>
+        <value xsi:type="xsd:string">InKindGift;Merchandise;Membership;Partner_Commitment;Grant</value>
     </values>
     <values>
         <field>npsp__Field__c</field>

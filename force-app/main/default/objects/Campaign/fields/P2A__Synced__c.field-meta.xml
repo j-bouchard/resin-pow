@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>P2A__Synced__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Indicates if this record has been synced with Capitol Canary</description>
+    <inlineHelpText>Indicates if this record has been synced with Phone2Action</inlineHelpText>
+    <label>Synced with Capitol Canary</label>
+    <type>Checkbox</type>
+</CustomField>

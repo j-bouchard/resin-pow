@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__Team_Role__c</fullName>
+    <deprecated>false</deprecated>
+    <description>For fundraising pages that belong to a team, this field denotes whether the individual fundraiser is either a captain or a co-captain of the team.</description>
+    <label>Team Role</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>primary-captain</fullName>
+                <default>false</default>
+                <label>primary-captain</label>
+            </value>
+            <value>
+                <fullName>co-captain</fullName>
+                <default>false</default>
+                <label>co-captain</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Speaker_4__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Speaker #4</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Campaigns (Speaker #4)</relationshipLabel>
+    <relationshipName>Campaigns4</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

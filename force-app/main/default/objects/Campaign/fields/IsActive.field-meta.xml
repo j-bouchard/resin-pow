@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsActive</fullName>
+    <inlineHelpText>If marked as active, this campaign will be sent to Mailchimp with the related campaign members for segmentation.</inlineHelpText>
+</CustomField>

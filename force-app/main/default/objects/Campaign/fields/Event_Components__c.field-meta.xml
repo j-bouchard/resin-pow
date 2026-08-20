@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Components__c</fullName>
+    <label>Event Components</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Alliance Gathering</fullName>
+                <default>false</default>
+                <label>Alliance Gathering</label>
+            </value>
+            <value>
+                <fullName>Film Screening</fullName>
+                <default>false</default>
+                <label>Film Screening</label>
+            </value>
+            <value>
+                <fullName>Film Toolkit</fullName>
+                <default>false</default>
+                <label>Film Toolkit</label>
+            </value>
+            <value>
+                <fullName>Grant</fullName>
+                <default>false</default>
+                <label>Grant</label>
+            </value>
+            <value>
+                <fullName>Keynote</fullName>
+                <default>false</default>
+                <label>Keynote</label>
+            </value>
+            <value>
+                <fullName>Panel</fullName>
+                <default>false</default>
+                <label>Panel</label>
+            </value>
+            <value>
+                <fullName>Partner Product</fullName>
+                <default>false</default>
+                <label>Partner Product</label>
+            </value>
+            <value>
+                <fullName>POW Merchandise</fullName>
+                <default>false</default>
+                <label>POW Merchandise</label>
+            </value>
+            <value>
+                <fullName>Shout-Out</fullName>
+                <default>false</default>
+                <label>Shout-Out</label>
+            </value>
+            <value>
+                <fullName>Tabling</fullName>
+                <default>false</default>
+                <label>Tabling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

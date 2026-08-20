@@ -45,6 +45,9 @@
         <label>Any opps Found?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Update_npsp_Recurring_Donation_record</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
@@ -162,10 +165,33 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <description>Updates npsp recurring donation record so Open Ended Status and Status are equal to Closed, and future Pledged Opportunities won&apos;t be created by npsp</description>
+        <name>Update_npsp_Recurring_Donation_record</name>
+        <label>Update NPSP Recurring Donation record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>npe03__Open_Ended_Status__c</field>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>npsp__Status__c</field>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.classy_npsp__Recurring_Donations__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_the_Opps</name>
         <label>Update the Opps</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_npsp_Recurring_Donation_record</targetReference>
+        </connector>
         <inputReference>varOppsToUpdate</inputReference>
     </recordUpdates>
     <start>
@@ -194,7 +220,7 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>varOppsToUpdate</name>
         <dataType>SObject</dataType>

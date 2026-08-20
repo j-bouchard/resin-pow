@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advocacy_Effort__c</fullName>
+    <label>Advocacy Effort</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Campaign_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call Rep</fullName>
+                <default>false</default>
+                <label>Call Rep</label>
+            </value>
+            <value>
+                <fullName>Email Rep</fullName>
+                <default>false</default>
+                <label>Email Rep</label>
+            </value>
+            <value>
+                <fullName>Phone2Action</fullName>
+                <default>false</default>
+                <label>Phone2Action</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__Classy_Campaign_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Indicates the level of the Campaign hierarchy for a record, either Campaign (a parent GoFundMe Pro Campaign), Team, or Fundraiser</description>
+    <label>Campaign Hierarchy (GFM Pro)</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+                <label>Campaign</label>
+            </value>
+            <value>
+                <fullName>Fundraiser</fullName>
+                <default>false</default>
+                <label>Fundraiser</label>
+            </value>
+            <value>
+                <fullName>Team</fullName>
+                <default>false</default>
+                <label>Team</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

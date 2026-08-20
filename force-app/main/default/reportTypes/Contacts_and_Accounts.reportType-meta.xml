@@ -2375,6 +2375,16 @@
             <field>CiviClick_Advocate_ID__c</field>
             <table>Contact</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Secondary_Owner__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Total_Gifts_Soft_Cred_Member_Past_Years__c</field>
+            <table>Contact</table>
+        </columns>
         <masterLabel>Contacts</masterLabel>
     </sections>
     <sections>
@@ -3651,6 +3661,16 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Contact_Record_Type__c</field>
+            <table>Contact.kw__CapitolOffice__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>DAF_Sponsor__c</field>
+            <table>Contact.kw__CapitolOffice__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Secondary_Owner__c</field>
             <table>Contact.kw__CapitolOffice__r</table>
         </columns>
         <masterLabel>Accounts</masterLabel>

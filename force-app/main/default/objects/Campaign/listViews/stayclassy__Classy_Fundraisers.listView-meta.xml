@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__Classy_Fundraisers</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>stayclassy__sc_event_id__c</columns>
+    <columns>stayclassy__sf_contact_id__c</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>stayclassy__Team_Role__c</columns>
+    <columns>CAMPAIGN.EXP_REVENUE</columns>
+    <columns>CAMPAIGN.TOT_WON_OPPORTUNITIES</columns>
+    <columns>TOT_AMOUNT_WON</columns>
+    <columns>stayclassy__Classy_Team_ID__c</columns>
+    <columns>CAMPAIGN.CREATED_DATE</columns>
+    <columns>CAMPAIGN.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>stayclassy__Classy_Campaign_Type__c</field>
+        <operation>equals</operation>
+        <value>Fundraiser</value>
+    </filters>
+    <label>Classy Fundraising Pages</label>
+    <sharedTo></sharedTo>
+</ListView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General_Equipment__c</fullName>
+    <label>General Equipment</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Table Cloths</fullName>
+                <default>false</default>
+                <label>Table Cloths</label>
+            </value>
+            <value>
+                <fullName>Tent Topper/Frame</fullName>
+                <default>false</default>
+                <label>Tent Topper/Frame</label>
+            </value>
+            <value>
+                <fullName>6ft Table</fullName>
+                <default>false</default>
+                <label>6ft Table</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

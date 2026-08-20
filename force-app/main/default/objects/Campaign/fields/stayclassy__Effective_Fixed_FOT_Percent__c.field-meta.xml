@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>stayclassy__Effective_Fixed_FOT_Percent__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Percentage to be added to fee_on_top transactions for the campaign to cover fees. If fixed_fot_percent is null falls back on the organization&apos;s fixed_fot_percent.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Percentage to be added to fee_on_top transactions for the campaign to cover fees. If fixed_fot_percent is null falls back on the organization&apos;s fixed_fot_percent.</inlineHelpText>
+    <label>Effective Fixed FOT Percent</label>
+    <length>20</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

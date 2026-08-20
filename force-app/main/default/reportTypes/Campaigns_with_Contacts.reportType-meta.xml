@@ -854,6 +854,11 @@
             <field>CiviClick_Campaign_ID__c</field>
             <table>Campaign</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Alliance_Training__c</field>
+            <table>Campaign</table>
+        </columns>
         <masterLabel>Campaigns</masterLabel>
     </sections>
 </ReportType>
